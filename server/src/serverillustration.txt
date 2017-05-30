@@ -1,0 +1,41 @@
+TTServer(TeamTalk服务器端)主要包含了以下几种服务器:
+LoginServer (C++): 负载均衡服务器，分配一个负载小的MsgServer给客户端使用
+MsgServer (C++): 消息服务器，提供客户端大部分信令处理功能，包括私人聊天、群组聊天等
+RouteServer (C++): 路由服务器，为登录在不同MsgServer的用户提供消息转发功能
+FileServer (C++): 文件服务器，提供客户端之间得文件传输服务，支持在线以及离线文件传输
+MsfsServer (C++): 图片存储服务器，提供头像，图片传输中的图片存储服务
+DBProxy (C++): 数据库代理服务器，提供mysql以及redis的访问服务，屏蔽其他服务器与mysql与redis的直接交互
+HttpMsgServer(C++) :对外接口服务器，提供对外接口功能。（目前只是框架）
+PushServer(C++): 消息推送服务器，提供IOS系统消息推送。（IOS消息推送必须走apns）
+
+服务端流程
+服务端的启动没有严格的先后流程，因为各端在启动后会去主动连接其所依赖的服务端，如果相应的服务端还未启动，会始终尝试连接。不过在此，如果是线上环境,还是建议按照如下的启动顺序去启动(也不是唯一的顺序)：
+1、启动db_proxy。
+2、启动route_server，file_server，msfs
+3、启动login_server
+4、启动msg_server
+ 
+那么我就按照服务端的启动顺序去讲解服务端的一个流程概述。
+第一步:启动db_proxy后，db_proxy会去根据配置文件连接相应的MySQL实例，以及redis实例。
+第二步:启动route_server,file_server,msfs后，各个服务端都会开始监听相应的端口。
+第三步:启动login_server,login_server就开始监听相应的端口(8080)，等待客户端的连接，而分配一个负载相对较小的msg_server给客户端。
+第四步:启动msg_server(端口8000)，msg_server启动后，会去主动连接route_server，login_server，db_proxy_server，会将自己的监听的端口信息注册到login_server去，同时在用户上线，下线的时候会将自己的负载情况汇报给login_server.
+ 
+各个服务的端口号
+(ps:这里是按照新版TeamTalk部署教程上的设置的，不同设置会有不同结果^_^，详情见新版TeamTalk完整部署教程，注意：如果出现部署完成后但是服务进程启动有问题或者只有部分服务进程启动了，请查看相应的log日志，请查看相应的log日志，请查看相应的log日志，重要的事情说3遍。)
+服务
+端口
+login_server
+8080/8008
+msg_server
+8000
+db_proxy_server
+10600
+route_server
+8200
+http_msg_server
+8400
+file_server
+8600/8601
+
+文章来源：http://blog.csdn.net/mao834099514/article/details/54016854

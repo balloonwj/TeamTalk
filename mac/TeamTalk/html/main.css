@@ -1,0 +1,369 @@
+body{
+	position: relative;
+}
+l,menu,ol,ul {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.hide {
+	display: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:before,.clearfix:after {
+	display: table;
+	content: "";
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+*:focus {
+	outline: none;
+}
+
+.text-warn {
+	color: #f6bb42;
+}
+
+body {
+	overflow: hidden;
+	font: 13px/1 "Microsoft YaHei","黑体","宋体",sans-serif;
+}
+
+.J-chat-display {
+	height: 500px;
+	overflow-y: auto;
+	padding: 0 15px;
+}
+
+.J-chat-display .message {
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.J-chat-display .message .message_content {
+	max-width: 90%;
+}
+
+.J-chat-display .message .avatar {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.avatar,.load-more{
+	-webkit-user-select: none;
+	-webkit-touch-callout:none;
+}
+
+.J-chat-display .message .message_render {
+	border-radius: 5px;
+	min-height: 12px;
+}
+
+.J-chat-display .message.me .avatar {
+	float: right;
+	margin-left: 5px;
+}
+
+.J-chat-display .message .message_render_audio {
+	width: 80px;
+	cursor: pointer;
+}
+
+.unread {
+	position: absolute;
+	background: rgb(227,78,78);
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+}
+
+.message-status-2{
+	width: 15px;
+	height: 15px;
+	background: url("msgfail.png");
+	background-size: 15px 15px;
+}
+
+
+.J-chat-display .message.other .message-status-2{
+	margin-top: 20px;
+	margin-left: 10px;
+	float: left;
+}
+
+.J-chat-display .message.me .message-status-2{
+	margin-top: 20px;
+	margin-right: 10px;
+	float: right;
+}
+
+.J-chat-display .message-group.message.other .message-status-2{
+	margin-top: 0px;
+}
+.J-chat-display .message-group.message.me .message-status-2{
+	margin-top: 0px;
+}
+
+/*.second {
+	position: absolute;
+}
+
+
+.message-user.message.me .second {
+	right: 150px;
+	top: 35px;
+}
+
+.message-user.message.other .second {
+	left: 150px;
+	top: 35px;
+}
+
+.message-group.message.me .second {
+	right: 110px;
+	top: 25px;
+}
+
+.message-group.message.other .second {
+	left: 110px;
+	top: 25px;
+}*/
+
+.message-user.message.me .unread {
+	right: 150px;
+	top: 16px;
+}
+
+.message-user.message.other .unread {
+	left: 150px;
+	top: 16px;
+}
+
+.message-group.message.me .unread {
+	right: 110px;
+	top: 6px;
+}
+
+.message-group.message.other .unread {
+	left: 110px;
+	top: 6px;
+}
+
+.message_render img {
+	max-width:100%;
+}
+
+.message_render_content {
+	white-space: normal;
+	word-break: break-all;
+	margin-top: -5px;
+	line-height: 20px;
+}
+
+.message_render_content img:hover{
+	cursor: -webkit-zoom-in;
+	/*background: #000;*/
+	/*cursor: url(big.cur) , auto!important;;*/
+	/*cursor: pointer;*/
+}
+
+.message-alert-time {
+	margin: 20px 0;
+	text-align: center;
+	color: #aaa;
+	font-size: 10px;
+	-webkit-user-select: none;
+}
+
+.message-group .avatar,.message-group .message_content .message_userinfo{
+	display: none;
+}
+.J-chat-display .message.other.message-group .message_content .message_userinfo{
+	display: none;
+}
+
+.J-chat-display .message.me .message_content {
+	float: right;
+}
+
+.J-chat-display .message.me .message_content .message_userinfo {
+	cursor: pointer;
+	color: #9ea8c7;
+	text-align: right;
+	margin-bottom: 5px;
+	margin-right: 10px;
+}
+
+.J-chat-display .message.me .message_content .message_render {
+	color: #000;
+	border-style: solid;
+	border-width: 15px 14px 8px 7px;
+	-webkit-border-image: url(brw.png) 15 14 8 7 repeat;
+	border-image: url(brw.png) 15 14 8 7 fill repeat;
+}
+
+
+.J-chat-display .message.other .avatar {
+	float: left;
+	margin-right: 5px;
+}
+
+.J-chat-display .message.other .message_content {
+	float: left;
+}
+
+.J-chat-display .message.other .message_content .message_userinfo {
+	cursor: pointer;
+	color: #9ea8c7;
+	text-align: left;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.J-chat-display .message.other .message_content .message_render {
+	color: #000;
+	border-style: solid;
+	border-width: 15px 7px 8px 14px;
+	-webkit-border-image: url(blb.png) 15 7 8 14 repeat;
+	border-image: url(blb.png) 15 7 8 14 fill repeat;
+}
+
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+	.J-chat-display .message.me .message_content .message_render {
+		color: #000;
+		border-style: solid;
+		border-width: 15px 14px 8px 7px;
+		-webkit-border-image: url(brwb.png) 30 28 16 14 repeat;
+		border-image: url(brwb.png) 30 28 16 14 fill repeat;
+	}
+	.J-chat-display .message.other .message_content .message_render {
+		color: #000;
+		border-style: solid;
+		border-width: 15px 7px 8px 14px;
+		-webkit-border-image: url(blbb.png) 30 14 16 28 repeat;
+		border-image: url(blbb.png) 30 14 16 28 fill repeat;
+	}
+}
+.user-menu{
+	position: absolute;
+	border: 1px solid #ddd;
+	padding: 2px 0;
+	border-radius: 5px;
+	background: rgb(240,240,240);
+}
+.user-menu li{
+	width: 60px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0px 5px;
+	text-align: center;
+	cursor: pointer;
+}
+.user-menu li:hover{
+	background: rgb(53,141,249);
+	color: white;
+}
+.message.other .user-menu{
+	left: 80px;
+}
+.load-more{
+	color:#aaa;
+	margin-top:10px;
+	display: inline-block;
+}
+.load-more:hover{
+	color: #333;
+}
+.new-msg-alert{
+	cursor: pointer;
+	display: none;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background: rgb(247,165,94);
+	padding: 4px 10px;
+	border-radius: 20px 10px 20px 10px;
+	color: white;
+	z-index:999999;
+}
+.voice_me{
+	width: 15px;
+	float: right;
+	margin-top: -5px;
+}
+.voice_other{
+	width: 15px;
+	float: left;
+	margin-top: -5px;	
+}
+.J-chat-display .message.other .second{
+	margin-top: 40px;
+	margin-left: 10px;
+	float: left;
+}
+
+.J-chat-display .message.me .second{
+	margin-top: 40px;
+	margin-right: 10px;
+	float: right;
+}
+
+.J-chat-display .message-group.message.other .second{
+	margin-top: 20px;
+}
+.J-chat-display .message-group.message.me .second{
+	margin-top: 20px;
+}
+.scroller::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+.scroller::-webkit-scrollbar-thumb  {
+    border-radius: 10px;
+    background: transparent;
+}
+/* 设置滚动条的样式 */
+/*::-webkit-scrollbar {*/
+    /*width: 8px;*/
+/*}*/
+
+/* 滚动条滑块 */
+/*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(127,127,127,0.5); 
+}*/

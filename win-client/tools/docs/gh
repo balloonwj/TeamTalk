@@ -1,0 +1,34 @@
+/*******************************************************************************
+ *  @file      $FILE_BASE$.$FILE_EXT$ $YEAR$\$MONTH$\$DAY$ $HOUR$:$MINUTE$:$SECOND$ $
+ *  @author    ¿ìµ¶<kuaidao@mogujie.com>
+ *  @brief     $end$
+ ******************************************************************************/
+
+#ifndef $FILE_BASE_UPPER$_$GUID_SYMBOL_UPPER$_$FILE_EXT_UPPER$__
+#define $FILE_BASE_UPPER$_$GUID_SYMBOL_UPPER$_$FILE_EXT_UPPER$__
+
+#include <>
+/******************************************************************************/
+
+/**
+ * The class <code>$FILE_BASE$</code> 
+ *
+ */
+class $FILE_BASE$
+{
+public:
+    /** @name Constructors and Destructor*/
+
+    //@{
+    /**
+     * Constructor 
+     */
+    $FILE_BASE$();
+    /**
+     * Destructor
+     */
+    ~$FILE_BASE$();
+    //@}
+};
+/******************************************************************************/
+#endif// $FILE_BASE_UPPER$_$GUID_SYMBOL_UPPER$_$FILE_EXT_UPPER$__

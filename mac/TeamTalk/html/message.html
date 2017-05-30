@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TeamTalk</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <link rel="stylesheet" href="./pure-min.css">
+        <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="./solarized_light.css">
+        <link rel="stylesheet" href="./solarized_dark.css">
+
+        <script type="text/javascript" src="./jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="./template.js"></script>
+        <script type="text/javascript" src="./moment-with-locales.min.js"></script>
+        <script type="text/javascript" src="./msg.js"></script>
+        <script type="text/javascript" src="./highlight.min.js"></script>
+        <script type="text/javascript" src="./gifffer.js"></script>
+    </head>
+    <body>
+        <script>
+            function renderMessage(params,order,bottom){
+                // $(".debug").text(params);
+                var msg = JSON.parse(params);
+                if(msg.length<20){
+                    $(".load-more-div").hide();
+                }
+                // 记录第一条
+                if(order){    
+                    $(".J-chat-display .message:first").addClass("first_msg");
+                }
+                for(i in msg){
+                    msgRender.render(msg[i],order,bottom);
+                    // if(order){
+                    //     if(!$(".first_msg").length){
+                    //         setTimeout(function(){
+                    //             $(".J-chat-display").scrollTop(100000);
+                    //         },100)
+                    //     }
+                    // }
+                }
+                if(order){
+                    var last_msg = JSON.parse(msg[i]);;
+                    $(".load-more-div").after('<p class="message-alert-time">'+moment.unix(last_msg.MessageTime).startOf('minute').calendar()+'</p>');
+                    if($(".first_msg").length){
+                        window.af_height = $(".message:last").offset().top;
+                        $(".J-chat-display").scrollTop(af_height-bf_height);
+                        $(".first_msg").removeClass("first_msg");
+                    }else{
+                        setTimeout(function(){
+                            $(".J-chat-display").scrollTop(100000);
+                        },100)
+                    }
+                }
+                var result = {'message':'render msg'};
+                return result;
+            }
+        
+            function updateStatus(id,status){
+                msgRender.update(id,status)
+            }
+            function webViewBoundChange(height){
+                 $(".J-chat-display").css("height",height)
+            }
+            $(function(){
+                // Gifffer();
+
+                moment.locale('zh-cn'); 
+
+                if(native){
+                    var ownerInfo = JSON.parse(native.getOwnInfo());
+                    window.ownerId = ownerInfo.ID;
+                    native.loadMoreHistoryMessage();
+                    $(".J-chat-display").css("height",bounds)
+                }
+                
+                $(document).on({
+                    dragleave:function(e){
+                        e.preventDefault();
+                    },
+                    drop:function(e){
+                        e.preventDefault();
+                    },
+                    dragenter:function(e){
+                        e.preventDefault();
+                    },
+                    dragover:function(e){
+                        e.preventDefault();
+                    }
+                });
+                
+                $(".J-chat-display").on("click",".message.other .message_userinfo,.message.other .avatar",function(event){
+                    var uid = $(this).parents(".message").data('uid');
+                    event=event||window.event;
+                    event.stopPropagation();
+                    var html =  ['<div class="user-menu" style="left:'+event.clientX+'px;" data-uid="'+uid+'">',
+                                '   <ul class="clearfix">',
+                                '       <li class="start-chat">开始聊天</li>',
+                                '        <li class="show-profile">查看资料</li>',
+                                '    </ul>',
+                                '</div>'].join("\n");
+                    $(".user-menu").remove();
+                    $(this).parents(".message").append(html);
+                })
+
+                $(document).click(function(e){
+                    $(".user-menu").remove();
+                });
+
+                // 加载更多
+                $(".load-more").click(function(){
+                    native.loadMoreHistoryMessage();
+                })
+
+                // 图片点击事件
+                $(".J-chat-display").on("click",".message_render_content img",function(){
+                                        
+                    var src = $(this).attr("src");
+                    native.previewImagesForURL(src)
+                })
+              
+                // 开始聊天事件
+                $(".J-chat-display").on("click",".start-chat",function(){
+                    var uid = $(this).parents(".user-menu").data('uid')+'';
+                    native.chatWithUid(uid);
+                })
+              
+                // 查看资料事件
+                $(".J-chat-display").on("click",".show-profile",function(){
+                    var uid = $(this).parents(".user-menu").data('uid')+'';
+                    native.viewInfoWithUid(uid);
+                })
+
+                // 滚动事件
+                $(".J-chat-display").scroll(function() {
+                    if($(".message:first").offset().top >= -200){
+                        window.bf_height = $(".message:last").offset().top;
+                        native.loadMoreHistoryMessage();
+                    }
+                    var offset = $(".message:last").offset().top - $(".J-chat-display").height();
+                    if(offset < 50){
+
+                        $(".new-msg-alert").hide();
+                    }
+                });
+
+                $(".new-msg-alert").click(function(){
+                    $(".J-chat-display").scrollTop(100000);
+                })
+
+                $(".J-chat-display").on("click",".open_link",function(){
+                    var url = $(this).data("href");
+                    if(url.indexOf("http") == -1){
+                        url = "http://"+url;
+                    }
+                    native.openURL($.trim(url));
+                });
+                // 播放语音
+                $(".J-chat-display").on("click",".message_render_audio",function(){
+
+                    var node = $(this);
+                    var path = node.data("path");
+                    var length = node.data("length")+0.5;
+                    var gif = node.find("img").data("gif");
+                    $(".voice_img").removeClass("voice_play");
+                    node.find("img").prop("src",gif+".gif").addClass("voice_play");
+                    // $(".debug").html("bofang"+gif+".gif"+path);
+                    var html = '<audio src="'+path+'" class="hide"></audio>';
+                    // 移除原来的语音节点,添加新的语音并且播放
+                    $("audio").remove();
+                    $("body").append(html);
+                    $("audio")[0].play();
+                    setTimeout(function(){
+                        node.find("img").prop("src",gif+".png")
+                        node.find("img").removeClass("voice_play");
+                    },length*1000);
+                })
+            })
+        </script>
+            <div class="debug"></div>
+                <div class="new-msg-alert">
+                    <p>新消息</p>
+                </div>
+                <div class="chat-content">
+                    <div class="J-chat-display" style="height:220px;">
+                        <div class="load-more-div" style="text-align:center;">
+                            <a href="javascript:;" class="load-more">点击加载更多</a>
+                        </div>
+                        <script id="J_Chat_Display_Text_Tpl" type="text/html">
+                            <div class="message {{type}} message-{{message.sessionType}} message-{{message.id}} clearfix" data-time="{{message.msgTime}}" data-uid="{{message.fromUserId}}">
+                                <img src="{{user.avatar_100}}" class="avatar"> 
+                                <div class="message_content"> 
+                                    <p class="message_userinfo">{{user.name}}</p>
+                                    <div class="message_render">
+                                        <p class="message_render_content">{{#message.content_value}}</p>   
+                                    </div>
+                                </div> 
+                                <div class="message-status message-status-{{message.status}}">
+                                </div> 
+                            </div>
+                        </script>
+                        <script id="J_Chat_Display_Audio_Tpl" type="text/html">
+                            <div class="message {{type}} message-{{message.sessionType}} clearfix" data-uid="{{message.fromUserId}}">
+                                <img src="{{user.avatar_100}}" class="avatar"> 
+                                <div class="message_content"> 
+                                    <p class="message_userinfo">{{user.name}}</p>
+                                    <div class="message_render message_render_audio" data-path="{{message.content.path}}" data-length="{{message.content.length}}" style="width:{{message.content.width}}px;">
+                                        <p><img class="voice_img voice_{{type}}" src="voice_{{type}}.png" data-gif="voice_{{type}}"></p>   
+                                    </div>
+                                </div>
+                                <div class="message-status message-status-{{message.status}}">
+                                </div> 
+                                <div class="unread hide"></div>
+                                <div class="second">
+                                    {{message.content.length}}''
+                                </div>
+                            </div>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

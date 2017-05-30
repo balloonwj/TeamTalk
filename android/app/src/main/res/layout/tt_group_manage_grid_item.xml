@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/desktop_news_count_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        >
+        <FrameLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp">
+
+            <com.mogujie.tt.ui.widget.IMBaseImageView
+                android:id="@+id/grid_item_image"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:adjustViewBounds="false"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="9dp"
+                />
+            <ImageView
+                android:id="@+id/grid_item_image_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:visibility="gone"
+                android:src="@drawable/tt_group_tag_admin"/>
+
+            <LinearLayout
+                android:id="@+id/deleteLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:gravity="left|top"
+                android:visibility="invisible" >
+
+                <ImageView
+                    android:id="@+id/grid_delete_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tt_clear_bar" >
+                </ImageView>
+            </LinearLayout>
+
+        </FrameLayout>
+        <TextView
+            android:id="@+id/group_manager_user_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7.5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/group_manager_user_title"
+            android:textSize="13sp" >
+        </TextView>
+    </LinearLayout>
+

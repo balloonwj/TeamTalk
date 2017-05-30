@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,36" roundcorner="4,4" size="300,120" >
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="12" bold="true"/>
+  <Default name="Button" value="size=&quot;#8&quot; textcolor=&quot;#FFFFFF&quot; hottextcolor=&quot;#000000&quot; disabledtextcolor=&quot;#ffffff&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#ffffff&quot; normalimage=&quot;file='LoginDialog/LoginBtnBack.png' corner='4,4,4,4' source='0,0,0,0'&quot; hotimage=&quot;file='LoginDialog/LoginBtnBack.png' corner='4,4,4,4' source='0,0,0,0'&quot; pushedimage=&quot;file='LoginDialog/LoginBtnBack.png' corner='4,4,4,4' source='0,0,0,0'&quot; disabledimage=&quot;file='LoginDialog/LoginBtnBack.png' corner='4,4,4,4' source='0,0,0,0'&quot;" />
+
+  <VerticalLayout bkcolor="#FFFCFCFC" bordersize="3"  bkimage="file=&apos;SysConfigDialog/border_black.png&apos; corner=&apos;6,6,6,6&apos; " inset="3,3,3,3">
+
+    <HorizontalLayout name="header" height="40" bkcolor="#FFFCFCFC" >
+      <HorizontalLayout>
+        <Text  text="登录服务器地址配置" padding="5,8,0,0" textcolor="#FF999999" font="1" />
+      </HorizontalLayout>
+      <HorizontalLayout  padding="0,8,8,0"  height="16" width="50">
+        <Button name="minbtn" tooltip="最小化" padding="10,0,0,0" height="16" width="16" normalimage="LoginDialog/minimize.png" hotimage="LoginDialog/minimize_h.png" pushedimage="LoginDialog/minimize_h.png"/>
+        <Button name="closebtn" tooltip="关闭" padding="10,0,0,0" height="16" width="16" normalimage="LoginDialog/close.png" hotimage="LoginDialog/close_h.png" pushedimage="LoginDialog/close_h.png"/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+	<Edit name="Address" padding="20,0,20,0" visible="true" height="26" textpadding="10,3,3,3" bordersize="1" borderround="2,2" bordercolor="FFDADADA" inset="4,4,4,3"  tooltip="请输入服务器地址" multiline="false" />	
+    <VerticalLayout  bkcolor="#FFFCFCFC">
+		<HorizontalLayout height="32" padding="0,5,20,0" >
+			    <Control />
+			    <Button name="applybtn" padding="0,4,0,0" textcolor="#FFFFFFFF"  hottextcolor="#FF333333" tooltip="确定" text="确定" width="69" height="24" bkimage="file='SessionDialog/btn_bg.bmp' corner='4,4,4,4'" normalimage="file='SessionDialog/btn_bg.png' corner='4,4,4,4'" hotimage="file='SessionDialog/btn_bg.png' corner='4,4,4,4'" pushedimage="file='SessionDialog/btn_bg.png' corner='4,4,4,4'"  />
+		</HorizontalLayout>		
+	</VerticalLayout>  
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_default_height"
+        android:background="@drawable/tt_top_default_bk" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="照片"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/top_title_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/top_bar_btn_right_margin"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="right|center_vertical"
+            android:text="@string/cancel"
+            android:textColor="@drawable/tt_text_while"
+            android:textSize="@dimen/album_top_cancel_size" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/top"
+        android:layout_weight="5"
+        android:divider="@color/list_divider_color"
+        android:dividerHeight="1dp"
+        android:paddingBottom="8dip"
+        android:drawSelectorOnTop="false"
+        android:listSelector="@drawable/tt_pickimage_item_bg"
+        android:cacheColorHint="#00000000"
+        >
+    </ListView>
+
+</RelativeLayout>

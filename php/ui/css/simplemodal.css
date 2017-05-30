@@ -1,0 +1,193 @@
+/*
+* Mootools Simple Modal
+* Version 1.0
+* Copyright (c) 2011 Marco Dell'Anna - http://www.plasm.it
+*
+* Markup Modal
+* <div class="simple-modal" id="simple-modal">
+*   <div class="simple-modal-header">
+*     <a class="close" href="#">×</a>
+*     <h1>SimpleModal Title</h1>
+*   </div>
+*   <div class="simple-modal-body">
+*     <div class="contents">
+*       <p>
+*         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+*       </p>
+*     </div>
+*   </div>
+*   <div class="simple-modal-footer">
+*     <a class="btn primary" href="#">Primary</a>
+*     <a class="btn secondary" href="#">Secondary</a>
+*   </div>
+* </div>
+*/
+/* Vars */
+/* Overlay style */
+#simple-modal-overlay {
+  position: fixed ;
+  display: block;
+  z-index: 99998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#ffffff), to(#291a49));
+  background: -webkit-radial-gradient(circle, #ffffff, #291a49);
+  background: -moz-radial-gradient(circle, #ffffff, #291a49);
+  background: -ms-radial-gradient(circle, #ffffff, #291a49);
+}
+.simple-modal {
+  /* Style rewrite */
+
+  width: 600px;
+  left: 20px;
+  top: 20px;
+  /* */
+
+  position: absolute;
+  position: fixed;
+  margin: 0;
+  color: #808080;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEEFA;
+  border: 1px solid rgba(234, 238, 250, 0.6);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+}
+.simple-modal .simple-modal-header {
+  padding: 5px 15px;
+  margin: 0;
+  border-bottom: 1px solid #EEEEEE;
+}
+.simple-modal .simple-modal-header h1 {
+  margin: 0;
+  color: #404040;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 36px;
+}
+.simple-modal a.close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #999;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 10px;
+  text-decoration: none;
+}
+.simple-modal a.close:hover {
+  color: #444;
+}
+.simple-modal .simple-modal-body {
+  padding: 15px;
+  /* Extra style */
+
+}
+.simple-modal .simple-modal-body div.contents {
+  overflow: hidden;
+}
+.simple-modal .simple-modal-body p {
+  font-size: 13px;
+  font-weight: normal;
+  color: #606060;
+  line-height: 18px;
+}
+.simple-modal .simple-modal-body p img {
+  display: block;
+  margin: 0 auto 10px auto;
+}
+.simple-modal .simple-modal-footer {
+  display: block;
+  background-color: #F5F5F5;
+  padding: 14px 15px 15px;
+  border-top: 1px solid #EEEEEE;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: inset 0 1px 0 #FFF;
+  -moz-box-shadow: inset 0 1px 0 #FFF;
+  box-shadow: inset 0 1px 0 #FFF;
+  zoom: 1;
+  margin-bottom: 0;
+  text-align: center;
+}
+.simple-modal .simple-modal-footer a.btn {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  background-repeat: no-repeat;
+  padding: 5px 14px 6px;
+  color: #333;
+  font-size: 13px;
+  line-height: normal;
+  border: 1px solid transparent;
+  -webkit-transition: 0.2s linear all;
+  -moz-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+.simple-modal .simple-modal-footer a.btn.primary {
+  color: #FFF;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #999;
+  background-repeat: repeat-x;
+  margin-right: 15px;
+}
+.simple-modal .simple-modal-footer a.btn.primary:hover {
+  border: 1px solid #444;
+  background-color: #444;
+}
+.simple-modal .simple-modal-footer a.btn.secondary {
+  padding: 5px 2px 6px;
+}
+.simple-modal .simple-modal-footer a.btn.secondary:hover {
+  color: #999;
+}
+/* Draggable style */
+.simple-modal.draggable .simple-modal-header:hover {
+  cursor: move;
+  background-color: #f8f8f8;
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+/* Loading style */
+.simple-modal.loading .simple-modal-body {
+  min-height: 60px;
+  background: transparent url("../images/loader.gif") no-repeat center center;
+}
+.simple-modal.loading .simple-modal-body div.contents {
+  display: none;
+}
+.simple-modal.loading .close, .simple-modal.loading .simple-modal-header, .simple-modal.loading .simple-modal-footer {
+  display: none;
+}
+/* Hide header */
+.simple-modal.hide-header .simple-modal-header {
+  display: none;
+}
+/* Hide header */
+.simple-modal.hide-footer .simple-modal-footer {
+  display: none;
+}

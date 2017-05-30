@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AnimSpeeker"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_bar_default_height"
+    android:background="@drawable/tt_speeker_tip_bg"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/top_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

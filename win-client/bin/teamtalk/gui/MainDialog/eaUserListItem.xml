@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+  <ListContainerElement>
+    <HorizontalLayout>
+      <VerticalLayout name="logo_container" width="40" padding="7,10,0,0">
+        <Control name="logo" width="40" height="40" />
+      </VerticalLayout>
+      <Label name="nickname" padding="5,0,0,0" bordersize="0" width="170" textcolor="#FF000000" disabledtextcolor="#FF808080" />
+      <Button name="unreadcnt" visible="false" padding="0,25,0,0" text="计数" enabled="false" width="30" height="13" bkimage="file=&apos;MainDialog/unrreadcntbk.png&apos; corner=&apos;2,8,2,2&apos;" textcolor="#FFFFFFFF" disabledtextcolor="#FFFFFFFF" align="center" hotimage="file=&apos;MainDialog/unrreadcntbk.png&apos; corner=&apos;2,8,2,2&apos;" /> 
+    </HorizontalLayout>
+  </ListContainerElement>
+</Window>

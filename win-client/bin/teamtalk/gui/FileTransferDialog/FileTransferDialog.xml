@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,36" roundcorner="4,4" size="310,300">
+  <Font name="微软雅黑" size="14" bold="false" default="true" />
+  <Font name="微软雅黑" size="14" bold="true"/> 
+  <Default name="VScrollBar" value="button1normalimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button1hotimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button1pushedimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button2normalimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; button2hotimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; button2pushedimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; thumbnormalimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; thumbhotimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; thumbpushedimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; bknormalimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,6,8,17&apos;&quot;" />
+  <VerticalLayout bkcolor="#FFFFFFFF" bordersize="3" bkimage="file=&apos;SysConfigDialog/border_black.png&apos; corner=&apos;6,6,6,6&apos; " inset="3,3,3,3">
+    <HorizontalLayout name="header" height="35" bkcolor="#FFF7F7F7" bkcolor2="#FFFFFFFF">
+        <HorizontalLayout>
+            <Control width="10"/>
+            <Label name="apptitle" text="文件传输" padding="0,0,0,10" font="1" textcolor="#FF000000" />
+        </HorizontalLayout>
+        <HorizontalLayout height="25" width="45">
+            <Button name="minbtn" tooltip="最小化" height="16" width="16" normalimage="LoginDialog/minimize.png" hotimage="LoginDialog/minimize_h.png" pushedimage="LoginDialog/minimize_h.png"/>
+            <Button name="closebtn" tooltip="关闭" padding="10,0,0,0" height="16" width="16" normalimage="LoginDialog/close.png" hotimage="LoginDialog/close_h.png" pushedimage="LoginDialog/close_h.png"/>
+        </HorizontalLayout>
+    </HorizontalLayout>
+    <List name="FileTransferList" header="hidden" itemshowhtml="true" vscrollbar="true"/>
+  </VerticalLayout>
+</Window>

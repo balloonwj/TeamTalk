@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,36" roundcorner="4,4" size="296,566" caption="0,0,0,250">
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="16" bold="true"/>
+  <Default name="Button" value="size=&quot;#8&quot; textcolor=&quot;#FFFFFF&quot; hottextcolor=&quot;#000000&quot; disabledtextcolor=&quot;#ffffff&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#ffffff&quot; normalimage=&quot;file='LoginDialog/LoginBtnBack.png' corner='4,4,4,4' source='0,0,0,0'&quot; hotimage=&quot;file='LoginDialog/LoginBtnBack.png' corner='4,4,4,4' source='0,0,0,0'&quot; pushedimage=&quot;file='LoginDialog/LoginBtnBack.png' corner='4,4,4,4' source='0,0,0,0'&quot; disabledimage=&quot;file='LoginDialog/LoginBtnBack.png' corner='4,4,4,4' source='0,0,0,0'&quot;" />
+  <Default name="CheckBox" value="textcolor=&quot;#FFbac0c5&quot; hottextcolor=&quot;#FF386382&quot; selectedtextcolor=&quot;#FF386382&quot; disabledtextcolor=&quot;#FFbac0c5&quot; textpadding=&quot;20,0,0,0&quot; align=&quot;left&quot; selectedimage=&quot;file='LoginDialog/checked.png' dest='0,0,15,15'&quot; normalimage=&quot;file='LoginDialog/unchecked.png' dest='0,0,15,15'&quot;" />
+  
+  <VerticalLayout bkcolor="#FFF7F7F7" bordersize="3"  bkimage="file=&apos;LoginDialog/border.png&apos; corner=&apos;6,6,6,6&apos; " inset="3,3,3,3">
+    <HorizontalLayout name="header" height="50" bkcolor="#FFF7F7F7">
+      <HorizontalLayout>
+        <Control width="10"/>
+      </HorizontalLayout>
+      <HorizontalLayout  padding="0,8,8,0"  height="16" width="68">
+        <Button name="setting" tooltip="服务器地址配置" visible="true" keyboard="false" height="16" width="16" normalimage="LoginDialog/setting.png" hotimage="LoginDialog/setting_h.png" pushedimage="LoginDialog/setting_h.png"/>	  
+        <Button name="minbtn" tooltip="最小化" keyboard="false" padding="10,0,0,0" height="16" width="16" normalimage="LoginDialog/minimize.png" hotimage="LoginDialog/minimize_h.png" pushedimage="LoginDialog/minimize_h.png"/>
+        <Button name="closebtn" tooltip="关闭" keyboard="false" padding="10,0,0,0" height="16" width="16" normalimage="LoginDialog/close.png" hotimage="LoginDialog/close_h.png" pushedimage="LoginDialog/close_h.png"/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+    <VerticalLayout  bkcolor="#FFF7F7F7">
+		<Control  padding="70,40,0,0" bkimage="LoginDialog/card_user.png" maxwidth="152" maxheight="128" />
+        <Text name="tipText" padding="0,10,0,0"  height="26" textpadding="0,0,0,0"  textcolor="#FFF43466" align="center"/>
+		<Edit name="edit_name" padding="20,5,20,0" visible="true" height="46" textpadding="10,3,3,3" bordersize="1" borderround="2,2" bordercolor="FFDADADA" inset="4,4,4,3"  tooltip="请输入用户名" multiline="false" />
+		<Edit name="edit_pwd" padding="20,15,20,0" visible="true" height="46" textpadding="10,3,3,3" bordersize="1" borderround="2,2" bordercolor="FFDADADA" inset="4,4,4,3"  tooltip="请输入密码" multiline="false" password="true"/>		
+		<CheckBox name="isRememberPWD" padding="20,15,0,0" width="80" height="27" selected="true" text="记住密码" />
+	    <Button name="loginBtn" padding="20,30,20,0" height="44" shortcut="Enter" text="登录"  bold="true" font="1"/>
+	</VerticalLayout>  
+  </VerticalLayout>
+</Window>

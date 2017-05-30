@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/mogu_notification_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/mogu_notification_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/tt_logo"
+
+        />
+
+    <TextView
+        android:id="@+id/mogu_notification_date"
+        style="@android:style/TextAppearance.StatusBar.EventContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="10dp"
+        android:text="15:26"
+        />
+
+    <ImageView
+        android:id="@+id/mogu_notification_icon2"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignBottom="@id/mogu_notification_icon"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/tt_login_logo"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/mogu_notification_style1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="1dp"
+        android:layout_toLeftOf="@id/mogu_notification_date"
+        android:layout_toRightOf="@id/mogu_notification_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/mogu_notification_style1_title"
+            style="@android:style/TextAppearance.StatusBar.EventContent.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="16dp"
+            android:text="title"
+            />
+
+        <TextView
+            android:id="@+id/mogu_notification_style1_content"
+            style="@android:style/TextAppearance.StatusBar.EventContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:maxLines="2"
+            android:textSize="13dp"
+            android:text="content"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mogu_notification_style2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="1dp"
+        android:layout_toLeftOf="@id/mogu_notification_date"
+        android:layout_toRightOf="@id/mogu_notification_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/mogu_notification__style2_title"
+            style="@android:style/TextAppearance.StatusBar.EventContent.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textSize="19dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mogu_notification_style3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="1dp"
+        android:layout_toLeftOf="@id/mogu_notification_date"
+        android:layout_toRightOf="@id/mogu_notification_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/mogu_notification_style3_content"
+            style="@android:style/TextAppearance.StatusBar.EventContent.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mogu_notification_style4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/mogu_notification_date"
+        android:layout_toRightOf="@id/mogu_notification_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/mogu_notification_download_content"
+            style="@android:style/TextAppearance.StatusBar.EventContent.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textSize="16dp" />
+
+        <ProgressBar
+            android:id="@+id/mogu_notification_download_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+</RelativeLayout>

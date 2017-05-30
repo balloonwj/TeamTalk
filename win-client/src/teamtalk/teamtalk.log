@@ -1,0 +1,29 @@
+﻿Build started 2017/5/15 22:25:56.
+     1>Project "F:\mycode\TeamTalk\win-client\src\teamtalk\teamtalk.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\ /I"F:\mycode\TeamTalk\win-client\solution\..\include" /I"F:\mycode\TeamTalk\win-client\solution\..\include\utility" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src\json\include\\" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\include" /I"F:\mycode\TeamTalk\win-client\solution\\..\..\\" /I"F:\mycode\TeamTalk\win-client\solution\\..\core" /I"F:\mycode\TeamTalk\win-client\solution\\..\..\TTServer\cpp" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _CRT_SECURE_NO_WARNINGS /D _CRT_NON_CONFORMING_SWPRINTFS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\teamtalk.pch" /Fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\\" /Fd"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\ /I"F:\mycode\TeamTalk\win-client\solution\..\include" /I"F:\mycode\TeamTalk\win-client\solution\..\include\utility" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src\json\include\\" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\include" /I"F:\mycode\TeamTalk\win-client\solution\\..\..\\" /I"F:\mycode\TeamTalk\win-client\solution\\..\core" /I"F:\mycode\TeamTalk\win-client\solution\\..\..\TTServer\cpp" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _CRT_SECURE_NO_WARNINGS /D _CRT_NON_CONFORMING_SWPRINTFS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\teamtalk.pch" /Fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\\" /Fd"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt teamtalk.cpp UI\MainDialog.cpp UI\MainDialog_Event.cpp UI\MainDialog_TrayIcon.cpp
+         MainDialog_TrayIcon.cpp
+         MainDialog_Event.cpp
+         MainDialog.cpp
+         teamtalk.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\bin\rc.exe /D _DEBUG /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /I"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\\" /nologo /fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\teamtalk.res" teamtalk.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\teamtalk.exe" /INCREMENTAL /NOLOGO /LIBPATH:"F:\mycode\TeamTalk\win-client\solution\\..\lib\Debug" /LIBPATH:"F:\mycode\TeamTalk\win-client\solution\\..\3rdParty\lib\Debug" utility.lib network.lib DuiLib.lib Modules.lib GifSmiley.lib "libprotobuf-lite.lib" httpclient.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\teamtalk.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\teamtalk.lib" /MACHINE:X86 "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\teamtalk.res"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\stdafx.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\teamtalk.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\MainDialog.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\MainDialog_Event.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\teamtalk_Debug\MainDialog_TrayIcon.obj"
+     1>libprotobuf-lite.lib(common.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libprotobuf-lite.lib(common.obj)' or at 'F:\mycode\TeamTalk\win-client\bin\teamtalk\Debug\vc120.pdb'; linking object as if no debug info
+     1>libprotobuf-lite.lib(once.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libprotobuf-lite.lib(once.obj)' or at 'F:\mycode\TeamTalk\win-client\bin\teamtalk\Debug\vc120.pdb'; linking object as if no debug info
+     1>libprotobuf-lite.lib(atomicops_internals_x86_msvc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libprotobuf-lite.lib(atomicops_internals_x86_msvc.obj)' or at 'F:\mycode\TeamTalk\win-client\bin\teamtalk\Debug\vc120.pdb'; linking object as if no debug info
+         teamtalk.vcxproj -> F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\teamtalk.exe
+     1>Done Building Project "F:\mycode\TeamTalk\win-client\src\teamtalk\teamtalk.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.29

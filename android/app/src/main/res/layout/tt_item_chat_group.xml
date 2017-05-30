@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tt_list_item_bk"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="71dp"
+        android:gravity="center_vertical"
+        >
+
+        <com.mogujie.tt.ui.widget.IMGroupAvatar
+            android:id="@+id/contact_portrait"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="8.5dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/group_avatar_bk" />
+
+        <TextView
+            android:id="@+id/message_count_notify"
+            android:layout_width="wrap_content"
+            android:minWidth="18dp"
+            android:layout_height="18dp"
+            android:layout_toRightOf="@id/contact_portrait"
+            android:background="@drawable/tt_message_notify"
+            android:gravity="center"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="3dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/contact_portrait"
+            android:layout_toRightOf="@id/contact_portrait"
+            android:layout_marginLeft="11dp"
+            android:background="@android:color/transparent"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxEms="12"
+            android:paddingTop="3dp"
+            android:singleLine="true"
+            android:textColor="@color/contact_name_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/message_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/contact_portrait"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/contact_portrait"
+            android:background="@android:color/transparent"
+            android:ellipsize="end"
+            android:ems="17"
+            android:singleLine="true"
+            android:paddingBottom="3dp"
+            android:textColor="@color/message_body_text_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/shop_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/message_time_color"
+            android:textSize="12sp" />
+        <ImageView
+            android:id="@+id/message_time_no_disturb_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/message_body"
+            android:src="@drawable/tt_no_disturb_image"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+    <View
+
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="1dp"
+        android:background="@drawable/tt_divide_line" />
+
+</LinearLayout>

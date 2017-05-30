@@ -1,0 +1,10 @@
+﻿Build started 2017/5/16 21:39:30.
+     1>Project "F:\mycode\TeamTalk\win-client\3rdParty\src\libspeex\libspeex\libspeex.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1361,5): warning MSB8012: TargetPath(F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\libspeex.lib) does not match the Library's OutputFile property value (F:\mycode\TeamTalk\win-client\lib\Debug\libspeex.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>Lib:
+         libspeex.vcxproj -> F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\libspeex.lib
+     1>Done Building Project "F:\mycode\TeamTalk\win-client\3rdParty\src\libspeex\libspeex\libspeex.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.07

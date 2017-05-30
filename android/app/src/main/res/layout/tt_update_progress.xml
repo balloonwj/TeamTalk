@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--自动更新下载进度条  todo 样式需要调整-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        />
+</LinearLayout>

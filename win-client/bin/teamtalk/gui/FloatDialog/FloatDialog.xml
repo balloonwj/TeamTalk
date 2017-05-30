@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,36" roundcorner="5,5" size="260,106" visible="false">
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="12" bold="true"/>  
+  <VerticalLayout bkcolor="#FFFFFFFF" bordersize="3" bkimage="file=&apos;SysConfigDialog/border_black.png&apos; corner=&apos;6,6,6,6&apos; " inset="3,3,3,3">
+    <HorizontalLayout name="header" height="35" bkcolor="#FFF7F7F7" bkcolor2="#FFFFFFFF">
+      <HorizontalLayout>
+        <Control width="10"/>
+        <Label name="apptitle" text="新消息" font="1" textcolor="#FF000000" />
+      </HorizontalLayout>
+      <HorizontalLayout height="25" width="20">
+		<Button name="closebtn" tooltip="关闭" height="16" width="16" normalimage="LoginDialog/close.png" hotimage="LoginDialog/close_h.png" pushedimage="LoginDialog/close_h.png"/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+    <HorizontalLayout  name="ContentLayout" padding="20,0,0,0" >	
+		<Button name="Avatar" width="44" height="44" maxheight="44" maxwidth="44" bkimage="file='MainDialog/default.png' corner='5,5,5,5'"/>
+		<VerticalLayout padding="15,0,0,0">
+			<Text name="username"  endellipsis="true" textcolor="#FF333333"  font="1" text="子烨" showhtml="true" width="140"/>
+			<Text name="content"   endellipsis="true" padding="0,10,0,0" textcolor="#FF333333" showhtml="true"  text="我请吃下午茶！" width="150"/>
+		</VerticalLayout>
+	</HorizontalLayout>  
+  </VerticalLayout>
+</Window>

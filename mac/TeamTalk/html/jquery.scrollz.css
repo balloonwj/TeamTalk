@@ -1,0 +1,151 @@
+.scrollz-thumb {
+    width : 5px;
+    height : 30px;
+    opacity: 0.6;
+    background-color: #333;
+    border: solid 1px rgba(200, 200, 200, .5);
+    margin: 2px 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.scrollz-pull-header {
+    font-family: Helvetica,Arial,sans-serif;
+    color: white;
+    text-shadow: 0 -1px -1px #333;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px 0 15px 0;
+    /*background-color: #555;*/
+}
+
+.scrollz-pull-header .label {
+    margin: 2px 0 0 20px;
+}
+
+.scrollz-pull-header .icon {
+    float: left;
+    width: 24px;
+    height: 24px;
+    background-repeat : no-repeat;
+    background-position: left center;
+    background-size: 24px 24px;
+    position : relative;
+    left: 50%;
+}
+
+.scrollz-pull-header.initial .icon {
+    animation: rotate-arrow-up 0.25s linear 0s forwards;
+    -webkit-animation: rotate-arrow-up 0.25s linear 0s forwards;
+    -moz-animation: rotate-arrow-up 0.25s linear 0s forwards;
+    -ms-animation: rotate-arrow-up 0.25s linear 0s forwards;
+    -o-animation: rotate-arrow-up 0.25s linear 0s forwards;
+    
+    background-image: url(hook-spinner.gif);
+}
+
+.scrollz-pull-header.release .icon {
+    animation: rotate-arrow-down 0.25s linear 0s forwards;
+    -webkit-animation: rotate-arrow-down 0.25s linear 0s forwards;
+    -moz-animation: rotate-arrow-down 0.25s linear 0s forwards;
+    -ms-animation: rotate-arrow-down 0.25s linear 0s forwards;
+    -o-animation: rotate-arrow-down 0.5s linear 0s forwards;
+    
+    background-image: url(hook-spinner.gif);
+}
+
+.scrollz-pull-header.waiting .icon {
+    background-image: url(hook-spinner.gif);
+}
+
+/* Retina support */
+/*@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 240dpi) {
+
+    .scrollz-pull-header.initial .icon {
+        background-image: url(hook-spinner.gif);
+    }
+    
+    .scrollz-pull-header.release .icon {
+        background-image: url(hook-spinner.gif);
+    }
+    
+    .scrollz-pull-header.waiting .icon {
+        background-image: url(hook-spinner.gif);
+    }
+        
+}*/
+
+/* Arrow down animation */
+@keyframes rotate-arrow-down {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-180deg);
+    }
+}
+@-webkit-keyframes rotate-arrow-down {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-180deg);
+    }
+}
+@-moz-keyframes rotate-arrow-down {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(-180deg);
+    }
+}
+@-o-keyframes rotate-arrow-down {
+    from {
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(-180deg);
+    }
+}
+
+/* Arrow up animation */
+@keyframes rotate-arrow-up {
+    from {
+        transform: rotate(-180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+} 
+@-webkit-keyframes rotate-arrow-up {
+    from {
+        -webkit-transform: rotate(-180deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
+@-moz-keyframes rotate-arrow-up {
+    from {
+        -moz-transform: rotate(-180deg);
+    }
+    to {
+        -moz-transform: rotate(0deg);
+    }
+}
+@-o-keyframes rotate-arrow-up {
+    from {
+        -o-transform: rotate(-180deg);
+    }
+    to {
+        -o-transform: rotate(0deg);
+    }
+} 
+

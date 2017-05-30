@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="446,272" sizebox="4,4,6,6" caption="0,0,0,30" mininfo="446,272" maxinfo="446,272">
+    <Font name="微软雅黑" size="12" bold="false" italic="false" default="true" />
+    <Font name="微软雅黑" size="12" bold="true" italic="false" />
+    <VerticalLayout name="VerticalLayoutUI1" width="446" height="239"  bkimage="file=&apos;MainDialog/border.png&apos; corner=&apos;5,5,5,5&apos;" inset="3,3,3,3">
+        <TabLayout name="tabs" bordersize="2">
+            <VerticalLayout name="emotion_list" width="446" height="239" >
+                <EmotionButton height="239" name="emotion_button" width="446" />
+            </VerticalLayout>
+        </TabLayout>
+        <HorizontalLayout name="HorizontalLayoutUI2" width="446" height="33" bkcolor="#FFFCFCFC">
+            <Control name="ControlUI1" width="4" />
+            <Button name="prev_page" text="上一页" width="60" height="23" padding="0,5,0,0" textcolor="#FF0187DC" disabledtextcolor="#FFA7A6AA" align="center" hotimage="file=&apos;EmotionDialog/btn_hot.png&apos; corner=&apos;2,3,2,2&apos;" />
+            <Control name="ControlUI2" width="4" />
+            <Button name="next_page" text="下一页" width="60" height="23" padding="0,5,0,0" textcolor="#FF0187DC" disabledtextcolor="#FFA7A6AA" align="center" hotimage="file=&apos;EmotionDialog/btn_hot.png&apos; corner=&apos;2,3,2,2&apos;" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

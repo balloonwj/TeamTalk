@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window bkcolor="#FFFFFFFF">
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Default name="Menu" value="inset=&quot;2,2,2,2&quot; itemtextpadding=&quot;30,0,0,0&quot; bkimage=&quot;file='menu\menu_bk.png' corner='30,4,4,4'&quot; hole=&quot;false&quot;" />
+  <Menu>
+	<MenuElement name="SendFileMenuItem" text="发送文件" />
+	<MenuElement name="SendOfflineFileMenuItem" text="发送离线文件"/>
+  </Menu>
+</Window>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <Font name="微软雅黑" size="12" bold="false" default="true"/>
+    <Default name="VScrollBar" value="button1normalimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button1hotimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button1pushedimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button2normalimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; button2hotimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; button2pushedimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; thumbnormalimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; thumbhotimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; thumbpushedimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; bknormalimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,6,8,17&apos;&quot;" />
+    <ListContainerElement name="FileTransferListItem" height="64">
+        <VerticalLayout>
+            <Label name="TextfileName" text="工牌照.psd（25.6M）" endellipsis="true" width="273" height="16" padding="15,0,15,10"/>
+            <Progress name="transProgress" height="5" bkcolor="#FFCACDCD" bordercolor="#FFC9CECD" foreimage="file='SessionDialog/btn_bg.png' source='5,5,7,10' dest='0,0,2,5'"  padding="15,0,15,0" hor="true"/>
+            <HorizontalLayout padding="15,0,15,0">
+               <Text name="TextTime" padding="0,4,0,0" text="09:22" textcolor="0xFF999999"/>
+               <Text name="TextFileStatus" padding="0,4,0,0" visible="false" text="发送中…" textcolor="0xFF999999"/>
+               <Control />
+               <Button name="btnOpenFile" text="打开文件" width="50" textcolor="0xFF01AFF4" visible="f"/>
+               <Button name="btnOpenFolder" text="打开所在文件夹" width="90" textcolor="0xFF01AFF4" visible="f"/>
+               <Button name="btnAccpet" text="接受" width="30" textcolor="0xFF01AFF4" />
+			   <Button name="btnRefuse" text="拒绝" width="30" textcolor="0xFF01AFF4" />
+			   <Button name="btnCancel" text="取消" width="30" textcolor="0xFF01AFF4" visible="f"/>			   
+            </HorizontalLayout>
+        </VerticalLayout>
+    </ListContainerElement>
+</Window>

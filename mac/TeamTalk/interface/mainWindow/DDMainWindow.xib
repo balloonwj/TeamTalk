@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DDMainWindowController">
+            <connections>
+                <outlet property="chattingBackgroudView" destination="sgO-Tb-lzk" id="t0q-yW-dXL"/>
+                <outlet property="firstColumnView" destination="zsn-HM-bUg" id="rkI-Q6-9b3"/>
+                <outlet property="leftBarViewController" destination="j2t-ep-ZBR" id="74A-iG-NLC"/>
+                <outlet property="mainSplitView" destination="in5-NJ-PS7" id="V95-Vm-oAU"/>
+                <outlet property="window" destination="4hX-Y6-6g1" id="p93-kJ-33m"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="4hX-Y6-6g1" customClass="DDMainWindow">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="988" height="629"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <value key="minSize" type="size" width="755" height="440"/>
+            <view key="contentView" id="J5X-jN-Caq">
+                <rect key="frame" x="0.0" y="0.0" width="988" height="629"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <splitView dividerStyle="thin" vertical="YES" id="in5-NJ-PS7" customClass="DDSplitView">
+                        <rect key="frame" x="68" y="0.0" width="920" height="629"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <customView id="85r-Ty-tY9" customClass="DDAppBackgroundColorView">
+                                <rect key="frame" x="0.0" y="0.0" width="919" height="629"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <customView id="zsn-HM-bUg">
+                                        <rect key="frame" x="0.0" y="0.0" width="919" height="629"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </customView>
+                                </subviews>
+                            </customView>
+                            <customView id="sgO-Tb-lzk">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <imageView id="aJd-FC-N5U">
+                                        <rect key="frame" x="251" y="-458" width="169" height="201"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="u1S-5H-24e"/>
+                                    </imageView>
+                                </subviews>
+                            </customView>
+                        </subviews>
+                        <holdingPriorities>
+                            <real value="126"/>
+                            <real value="250"/>
+                        </holdingPriorities>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="bAm-2J-qAb"/>
+                        </connections>
+                    </splitView>
+                    <customView id="u5u-Z4-Um5" customClass="DDGridBackgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="68" height="629"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView focusRingType="none" id="dzl-wR-xr5" customClass="EGOImageView">
+                                <rect key="frame" x="9" y="558" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="axesIndependently" id="d8U-cv-4mW"/>
+                            </imageView>
+                            <button id="HDc-c0-yyT">
+                                <rect key="frame" x="9" y="558" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="Fbe-bW-rko">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="showMyInfo:" target="-2" id="zBJ-vT-s4y"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" id="euY-bb-fnK">
+                                <rect key="frame" x="26" y="538" width="15" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" inset="2" id="Srd-Yr-eBw">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="showOnlineChangedMenu:" target="j2t-ep-ZBR" id="ihZ-So-Nqx"/>
+                                </connections>
+                            </button>
+                            <button id="f1X-2y-kCQ">
+                                <rect key="frame" x="23" y="20" width="20" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="setting" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="TRS-A4-Dbf">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="showSettingMenu:" target="j2t-ep-ZBR" id="jf0-71-jFr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </customView>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="1176" y="25.5"/>
+        </window>
+        <customObject id="nKH-ZS-DYp" customClass="DDSearchFieldEditorDelegate"/>
+        <customObject id="Z9W-u8-hGc" customClass="DDSearchFieldController"/>
+        <viewController id="j2t-ep-ZBR" customClass="DDLeftBarViewController">
+            <connections>
+                <outlet property="avatarImageView" destination="dzl-wR-xr5" id="ffe-5j-Aan"/>
+                <outlet property="onlineStateMenu" destination="HRM-DC-uYc" id="oSn-zv-NLP"/>
+                <outlet property="settingMenu" destination="FtL-4n-zTG" id="AX7-gB-2OJ"/>
+                <outlet property="settionButton" destination="f1X-2y-kCQ" id="Ldm-se-EMh"/>
+                <outlet property="stateButton" destination="euY-bb-fnK" id="5KL-uP-lV1"/>
+                <outlet property="view" destination="u5u-Z4-Um5" id="QhT-0D-mBs"/>
+            </connections>
+        </viewController>
+        <menu id="HRM-DC-uYc">
+            <items>
+                <menuItem title="在线" image="state-online" tag="1" id="ZSW-YM-nsO">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="changeOnlineState:" target="j2t-ep-ZBR" id="E7h-6R-Dp3"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="离线" image="state-offline" tag="2" id="iXc-cD-5NS">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="changeOnlineState:" target="j2t-ep-ZBR" id="dB4-1F-nmi"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+        <menu id="FtL-4n-zTG">
+            <items>
+                <menuItem title="偏好设置" id="5dp-8n-dAB">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showPerferenceSetting:" target="j2t-ep-ZBR" id="lgI-NJ-Upn"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="文件管理" id="mTW-hM-VXq">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showFileManagerView:" target="j2t-ep-ZBR" id="m0F-Vl-4CH"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+    </objects>
+    <resources>
+        <image name="setting" width="20" height="23"/>
+        <image name="state-offline" width="11" height="11"/>
+        <image name="state-online" width="11" height="11"/>
+    </resources>
+</document>

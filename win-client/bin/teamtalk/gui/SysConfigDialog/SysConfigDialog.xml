@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,36" roundcorner="4,4" size="465,470" >
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="12" bold="true"/>
+  <Default name="Button" value="size=&quot;#8&quot; textcolor=&quot;#FFFFFF&quot; hottextcolor=&quot;#000000&quot; disabledtextcolor=&quot;#ffffff&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#ffffff&quot; normalimage=&quot;file='LoginDialog/LoginBtnBack.png' corner='4,4,4,4' source='0,0,0,0'&quot; hotimage=&quot;file='LoginDialog/LoginBtnBack.png' corner='4,4,4,4' source='0,0,0,0'&quot; pushedimage=&quot;file='LoginDialog/LoginBtnBack.png' corner='4,4,4,4' source='0,0,0,0'&quot; disabledimage=&quot;file='LoginDialog/LoginBtnBack.png' corner='4,4,4,4' source='0,0,0,0'&quot;" />
+  <Default name="CheckBox" value="textcolor=&quot;#FFbac0c5&quot; hottextcolor=&quot;#FF386382&quot; selectedtextcolor=&quot;#FF386382&quot; disabledtextcolor=&quot;#FFbac0c5&quot; textpadding=&quot;20,0,0,0&quot; align=&quot;left&quot; selectedimage=&quot;file='LoginDialog/checked.png' dest='0,0,15,15'&quot; normalimage=&quot;file='LoginDialog/unchecked.png' dest='0,0,15,15'&quot;" />
+  <Default name="Option" value="textcolor=&quot;#FFbac0c5&quot; hottextcolor=&quot;#FF386382&quot; selectedtextcolor=&quot;#FF386382&quot; disabledtextcolor=&quot;#FFbac0c5&quot; textpadding=&quot;18,2,0,0&quot; align=&quot;left&quot; selectedimage=&quot;file='SysConfigDialog/radio_checked.png' source='0,0,10,10' dest='0,5,10,15'&quot; normalimage=&quot;file='SysConfigDialog/radio_unchecked.png' source='0,0,10,10' dest='0,5,10,15'&quot;" />
+
+  <VerticalLayout bkcolor="#FFFCFCFC" bordersize="3"  bkimage="file=&apos;SysConfigDialog/border_black.png&apos; corner=&apos;6,6,6,6&apos; " inset="3,3,3,3">
+
+    <HorizontalLayout name="header" height="50" bkcolor="#FFFCFCFC" >
+      <HorizontalLayout>
+        <Text  text="基本设置" padding="5,8,0,0" textcolor="#FF999999" font="1" />
+      </HorizontalLayout>
+      <HorizontalLayout  padding="0,8,8,0"  height="16" width="50">
+        <Button name="minbtn" tooltip="最小化" padding="10,0,0,0" height="16" width="16" normalimage="LoginDialog/minimize.png" hotimage="LoginDialog/minimize_h.png" pushedimage="LoginDialog/minimize_h.png"/>
+        <Button name="closebtn" tooltip="关闭" padding="10,0,0,0" height="16" width="16" normalimage="LoginDialog/close.png" hotimage="LoginDialog/close_h.png" pushedimage="LoginDialog/close_h.png"/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+    <VerticalLayout  bkcolor="#FFFCFCFC">
+		<VerticalLayout padding="20,0,0,0" height="90" >
+			<Text  text="面板设置"  padding="0,0,0,0" textcolor="#FF999999" font="1" />
+			<CheckBox name="topmostBtn" padding="10,15,0,0"  height="16" width="200" text="始终保持在其他窗口前端" />
+			<CheckBox name="newmessagealertBtn" padding="10,10,0,0"  height="16" width="200" text="当有新消息时，弹出提示框" />	
+		</VerticalLayout>
+		<VerticalLayout padding="20,0,0,0" height="90" >
+			<Text  text="声音设置"  padding="0,0,0,0" textcolor="#FF999999" font="1" />
+			<CheckBox name="soundBtn" padding="10,15,0,0"  height="16" width="80" text="开启消息声音" />
+			<HorizontalLayout padding="10,10,0,0" height="22">
+					<Option text="叮咚声" name="DingdongRdo"width="55" selected="true" group="RadioBoxGroup" />
+					<Option text="呼叫声" name="HujiaoRdo" padding="30,0,0,0" width="55" group="RadioBoxGroup" />
+					<Option text="键盘声" name="JianpanRdo" padding="30,0,0,0" width="55" group="RadioBoxGroup" />
+					<Option text="叮铃声" name="DinglinRdo" padding="30,0,0,0" width="55" group="RadioBoxGroup" />
+					<Button name="TestSoundBtn"  padding="30,0,0,0" textcolor="#FFFFFFFF"  hottextcolor="#FF333333" tooltip="试听" text="试听" width="55" height="20" bkimage="file='SessionDialog/btn_bg.bmp' corner='4,4,4,4'" normalimage="file='SessionDialog/btn_bg.png' corner='4,4,4,4'" hotimage="file='SessionDialog/btn_bg.png' corner='4,4,4,4'" pushedimage="file='SessionDialog/btn_bg.png' corner='4,4,4,4'"  />			
+			</HorizontalLayout>		
+		</VerticalLayout>
+		<VerticalLayout padding="20,0,0,0" height="150">
+			<Text  text="快捷键设置"  padding="0,0,0,0" textcolor="#FF999999" font="1" />
+				<HorizontalLayout padding="10,15,0,0" height="22" >
+					<Text text="发送消息" width="100" padding="0,2,0,0" textcolor="#FF999999" />
+					<Control width="72"/>
+					<Option text="Ctrl + Enter" name="CtrlEntrtRdo" width="90"  group="SendMsgGroup" />
+					<Option text="Enter" name="EnterRdo" selected="true" padding="30,0,0,0" width="55" group="SendMsgGroup" />						
+				</HorizontalLayout>		
+				<HorizontalLayout padding="10,15,0,0" height="22"  visible="false">
+						<Text text="截图" width="100" padding="0,2,0,0" textcolor="#FF999999" />
+						<Control width="100"/>
+						<Edit name="editSearch"  readonly="true" enabled="false" width="150" height="22" textpadding="10,3,3,3" bordersize="1" borderround="2,2" bordercolor="FFDADADA" inset="4,4,4,3"  text="Ctrl + Alt + P" multiline="false" />
+				</HorizontalLayout>		
+				<HorizontalLayout padding="10,10,0,0" height="22"  visible="false">
+						<Text text="打开会话窗口" width="80"  padding="0,2,0,0" textcolor="#FF999999" />
+						<Control width="52"/>
+						<Edit name="editSearch"  readonly="true" enabled="false" width="150" height="22" textpadding="10,3,3,3" bordersize="1" borderround="2,2" bordercolor="FFDADADA" inset="4,4,4,3"  text="Ctrl + Shift + Z" multiline="false" />
+				</HorizontalLayout>		
+		</VerticalLayout>
+		<VerticalLayout />		
+		<HorizontalLayout height="32" padding="0,0,20,0" >
+			    <Control />
+			    <Button name="applybtn" padding="0,4,0,0" textcolor="#FFFFFFFF"  hottextcolor="#FF333333" tooltip="保存" text="保存" width="69" height="24" bkimage="file='SessionDialog/btn_bg.bmp' corner='4,4,4,4'" normalimage="file='SessionDialog/btn_bg.png' corner='4,4,4,4'" hotimage="file='SessionDialog/btn_bg.png' corner='4,4,4,4'" pushedimage="file='SessionDialog/btn_bg.png' corner='4,4,4,4'"  />
+			    <Control width="5"/>
+			    <Button name="closebtn" padding="0,4,0,0" textcolor="#FF999999" hottextcolor="#FF000000" tooltip="关闭" text="关闭" width="69" height="24"  bkimage="file='SessionDialog/btn_bg.bmp' corner='4,4,4,4'" normalimage="file='SessionDialog/blackbtn_bg.png' corner='4,4,4,4'" hotimage="file='SessionDialog/blackbtn_bg.png' corner='4,4,4,4'" pushedimage="file='SessionDialog/blackbtn_bg.png' corner='4,4,4,4'"  />	  
+		</HorizontalLayout>		
+	</VerticalLayout>  
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,48 @@
+﻿Build started 2017/5/15 22:24:26.
+     1>Project "F:\mycode\TeamTalk\win-client\core\network\network.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\mycode\TeamTalk\win-client\solution\..\include" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _WINSOCK_DEPRECATED_NO_WARNINGS /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D NETWORK_EXPORTS /D BUILD_PDU /D CLIENT /D _CRT_SECURE_NO_WARNINGS /D YAOLOG_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\network.pch" /Fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\\" /Fd"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\mycode\TeamTalk\win-client\solution\..\include" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _WINSOCK_DEPRECATED_NO_WARNINGS /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D NETWORK_EXPORTS /D BUILD_PDU /D CLIENT /D _CRT_SECURE_NO_WARNINGS /D YAOLOG_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\\" /Fd"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\3rdParty\src\yaolog\yaolog.cpp BaseSocket.cpp EventDispatch.cpp imconn.cpp ImCore.cpp Lock.cpp netlib.cpp network.cpp Operation.cpp OperationManager.cpp TcpSocketsManager.cpp TTPBHeader.cpp util.cpp UtilPdu.cpp
+         UtilPdu.cpp
+         util.cpp
+         TTPBHeader.cpp
+         TcpSocketsManager.cpp
+         OperationManager.cpp
+     1>f:\mycode\teamtalk\win-client\include\network\operation.h(58): warning C4251: 'imcore::Operation::m_name' : class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'imcore::Operation'
+         Operation.cpp
+         network.cpp
+         netlib.cpp
+         Lock.cpp
+         ImCore.cpp
+         imconn.cpp
+         EventDispatch.cpp
+         BaseSocket.cpp
+         yaolog.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\mycode\TeamTalk\win-client\solution\..\include" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _WINSOCK_DEPRECATED_NO_WARNINGS /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D NETWORK_EXPORTS /D BUILD_PDU /D CLIENT /D _CRT_SECURE_NO_WARNINGS /D YAOLOG_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\network.pch" /Fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\\" /Fd"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\network.dll" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\network.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\mycode\TeamTalk\win-client\solution\..\lib\Debug\network.lib" /MACHINE:X86 /DLL "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\yaolog.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\BaseSocket.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\dllmain.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\EventDispatch.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\imconn.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\ImCore.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\Lock.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\netlib.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\network.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\Operation.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\OperationManager.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\stdafx.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\TcpSocketsManager.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\TTPBHeader.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\util.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\network_Debug\UtilPdu.obj"
+            Creating library F:\mycode\TeamTalk\win-client\solution\..\lib\Debug\network.lib and object F:\mycode\TeamTalk\win-client\solution\..\lib\Debug\network.exp
+         network.vcxproj -> F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\network.dll
+     1>Done Building Project "F:\mycode\TeamTalk\win-client\core\network\network.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:22.65

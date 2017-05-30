@@ -1,0 +1,117 @@
+/**
+*  下拉刷新、滚动翻页样式
+*  SnoopyChen (ceo@vmeitime.com)
+*  2013-04-26
+*/
+
+/*------------- S 默认必须样式  -------------*/
+/**
+ *
+ * 下拉样式 Pull down styles
+ *
+ */
+#pullDown, #pullUp {
+	background:#fff;
+	height:40px;
+	line-height:40px;
+	padding:5px 10px;
+	border-bottom:1px solid #ccc;
+	font-weight:bold;
+	font-size:14px;
+	color:#888;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+	display:block; float:left;
+	width:40px; height:40px;
+	background:url(pull-icon@2x.png) 0 0 no-repeat;
+	-webkit-background-size:40px 80px; background-size:40px 80px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullDown .pullDownIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+/*------------- E 默认必须样式  -------------*/		
+		
+
+
+
+/*------------- S 以下css主要是仿IOS滚动条样式(可选样式)  -------------*/		
+/**
+ * Horizontal Scrollbar
+ */
+.myScrollbarH {
+	position:absolute;
+	z-index:100;
+	height:7px;
+	bottom:1px;
+	left:2px;
+	right:7px
+}
+
+.myScrollbarH > div {
+	height:100%;
+}
+
+/**
+ * Vertical Scrollbar
+ */
+.myScrollbarV {
+	position:absolute;
+	z-index:100;
+	width:7px;bottom:7px;top:2px;right:1px
+}
+
+.myScrollbarV > div {
+	width:100%;
+}
+
+/**
+ * Both Scrollbars
+ */
+.myScrollbarH > div,
+.myScrollbarV > div {
+	position:absolute;
+	z-index:100;
+
+	/* The following is probably what you want to customize */
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+	
+	border-width:3px;
+	-webkit-border-image:url(scrollbar.png) 6 6 6 6;
+	-moz-border-image:url(scrollbar.png) 6 6 6 6;
+	-o-border-image:url(scrollbar.png) 6 6 6 6;
+	border-image:url(scrollbar.png) 6 6 6 6;
+}
+/*------------- E 以上css主要是仿IOS滚动条样式  -------------*/
+

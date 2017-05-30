@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,36" roundcorner="5,5" size="500,230" visible="false">
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="12" bold="true"/>
+  <Font name="宋体" size="22" bold="true"/>    
+  <VerticalLayout bkcolor="#FFFFFFFF" bordersize="3" bkimage="file=&apos;SysConfigDialog/border_black.png&apos; corner=&apos;6,6,6,6&apos; " inset="3,3,3,3">
+    <HorizontalLayout name="header" height="35" bkcolor="#FFF7F7F7" bkcolor2="#FFFFFFFF">
+      <HorizontalLayout>
+        <Control width="10"/>
+        <Label name="apptitle" text="详细信息" font="1" textcolor="#FF000000" />
+      </HorizontalLayout>
+      <HorizontalLayout height="25" width="20">
+		<Button name="closebtn" tooltip="关闭" height="16" width="16" normalimage="LoginDialog/close.png" hotimage="LoginDialog/close_h.png" pushedimage="LoginDialog/close_h.png"/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+    <HorizontalLayout  name="ContentLayout" padding="20,0,0,0"  width="465">	
+		<Button name="Avatar" width="150" height="160" maxheight="160" maxwidth="150" bkimage="file='MainDialog/Face.png' corner='5,5,5,5'"/>
+		<VerticalLayout padding="15,0,0,0">
+			<HorizontalLayout>
+				<Edit name="name" trans="true" readonly="true"  width="100" textcolor="#FF333333"  font="2" text="子烨" />
+				<Edit name="realname" readonly="true"  width="60" padding="0,8,0,0" textcolor="#FF333333"  text="廖明亮是垮蛋" />
+			</HorizontalLayout>	
+			<HorizontalLayout  padding="0,5,0,0">
+				<Text endellipsis="true" padding="0,6,0,0" textcolor="#FF333333"  font="1" text="性别：" />
+				<Edit name="sex"  endellipsis="true"  trans="true" readonly="true" textcolor="#FF333333"  text="不详" />					
+			</HorizontalLayout>
+			<HorizontalLayout>
+				<Text endellipsis="true" padding="0,6,0,0" textcolor="#FF333333"  font="1" text="部门：" />
+				<Edit name="department"  endellipsis="true"  trans="true" readonly="true" textcolor="#FF333333"  text="SWAT别地加以考察的认识活动" />					
+			</HorizontalLayout>
+			<HorizontalLayout>
+				<Text endellipsis="true" padding="0,6,0,0" textcolor="#FF333333"  font="1" text="电话：" />
+				<Edit name="telphone" width="130" trans="true" readonly="true" endellipsis="true" textcolor="#FF333333"  text="01234567890123" />					
+			</HorizontalLayout>	
+			<HorizontalLayout>
+				<Text endellipsis="true" padding="0,6,0,0" textcolor="#FF333333"  font="1" text="邮箱：" />
+				<Edit name="mail" textcolor="#FF333333"  trans="true" readonly="true"  endellipsis="true" text="ziye@gmail.com" />		
+			</HorizontalLayout>
+			<HorizontalLayout>
+				<Text endellipsis="true" padding="0,6,0,0" textcolor="#FF333333"  font="1" text="签名：" />
+				<Edit name="signInfo" padding="0,3,0,0" textcolor="#FF333333"  trans="true" readonly="true"  endellipsis="true" text="签名"/>	
+			</HorizontalLayout>
+			<HorizontalLayout>
+				<Control />
+				<Button name="closebtn" padding="0,4,0,0" textcolor="#FFFFFFFF"  hottextcolor="#FF333333" tooltip="关闭" text="关闭" width="69" height="24" bkimage="file='SessionDialog/btn_bg.bmp' corner='4,4,4,4'" normalimage="file='SessionDialog/btn_bg.png' corner='4,4,4,4'" hotimage="file='SessionDialog/btn_bg.png' corner='4,4,4,4'" pushedimage="file='SessionDialog/btn_bg.png' corner='4,4,4,4'"  />			
+			</HorizontalLayout>
+			<Control height="5"/>	
+		</VerticalLayout>
+	</HorizontalLayout>  
+  </VerticalLayout>
+</Window>

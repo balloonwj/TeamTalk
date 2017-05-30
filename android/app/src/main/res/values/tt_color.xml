@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="listview_color">#F0F0F0</color>
+    <color name="message_date">#20465A</color>
+    <color name="panel_bk_color">#fffafafa</color>
+    <color name="emo_bk_color">#ffffffff</color>
+    <color name="default_light_black_color">#424242</color>
+    <color name="txt_hint_color">#999999</color>
+
+    <!-- contact item color -->
+    <color name="messgae_uname_color">#ffee4566</color>
+    <color name="messgae_uname_dark_color">#000000</color>
+    <color name="message_body_text_color">#999999</color>
+    <color name="message_body_nottext_color">#ffee4566</color>
+    <color name="message_time_color">#a0a0a0</color>
+
+    <!-- album -->
+    <color name="list_divider_color">#d1d1d1</color>
+    <color name="album_list_item_count_color">#bcbcbc</color>
+    <color name="user_portrait_bk">#20465A</color>
+
+    <!-- login -->
+    <color name="default_bk">#ffffff</color>
+    <color name="half_transparent_dark">#e0000000</color>
+    <color name="half_transparent_light">#AA000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="login_hint_color">#d4d4d4</color>
+
+    <!-- default -->
+    <color name="default_light_grey_color">#929292</color>
+    <color name="default_blue_color">#01aff4</color>
+    <color name="default_black_color">#000000</color>
+    <color name="default_title_color">#343434</color>
+    <color name="default_fragment_bk_color">#f2f2f2</color>
+    <color name="default_fragment_title_bk_color">#f4f5f7</color>
+    <color name="default_fragment_search_bk_color">#e3e4e6</color>
+    <color name="default_value_color">#333333</color>
+    <color name="contact_name_color">#222222</color>
+    <color name="contact_realname_color">#aaaaaa</color>
+    <color name="default_key_color">#999999</color>
+    <color name="default_line_color">#cccccc</color>
+
+    <!-- contact -->
+    <color name="contact_default_bk">#dedee0</color>
+    <color name="contact_category_title_bk">#f1f0f6</color>
+    <color name="contact_list_item_bk">#ffffff</color>
+    <color name="contact_category_text_color">#858585</color>
+    <color name="contact_side_word_color">#909293</color>
+
+    <!-- group manager -->
+    <color name="group_manager_group_title">#010101</color>
+    <color name="group_manager_user_title">#666666</color>
+    <color name="list_item_sel_color">#eaeaea</color>
+
+    <!--user detail-->
+    <color name="user_detail_base">#ececec</color>
+    <color name="pickimage_item_bg">#ffffff</color>
+
+</resources>

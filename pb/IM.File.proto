@@ -1,0 +1,105 @@
+package IM.File;
+import "IM.BaseDefine.proto";
+option java_package = "com.mogujie.tt.protobuf";
+//option java_outer_classname = "MOGUJIEIMMessage";
+option optimize_for = LITE_RUNTIME;
+
+message IMFileLoginReq{
+	//cmd id:	0x0501
+	required uint32 user_id = 1;
+	required string task_id = 2;
+	required IM.BaseDefine.ClientFileRole file_role= 3;
+}
+
+message IMFileLoginRsp{
+	//cmd id:	0x0502
+	required uint32 result_code = 1;		//0:successed    1:failed
+	required string task_id = 2;
+}
+
+message IMFileState{
+	//cmd id: 	0x0503
+	required IM.BaseDefine.ClientFileState state = 1;
+	required string task_id = 2;
+	required uint32 user_id = 3;
+}
+
+message IMFilePullDataReq{
+	//cmd id:	0x0504
+	required string task_id = 1;
+	required uint32 user_id = 2;
+	required IM.BaseDefine.TransferFileType trans_mode = 3;
+	required uint32 offset = 4;
+	required uint32 data_size = 5;
+}
+
+message IMFilePullDataRsp{
+	//cmd id: 	0x0505
+	required uint32 result_code = 1;
+	required string task_id = 2;
+	required uint32 user_id = 3;
+	required uint32 offset = 4;
+	required bytes file_data = 5;
+}
+
+message IMFileReq{
+	//cmd id: 	0x0506
+	required uint32 from_user_id = 1;
+	required uint32 to_user_id = 2;
+	required string file_name = 3;
+	required uint32 file_size = 4;
+	required IM.BaseDefine.TransferFileType trans_mode = 5;
+}
+
+message IMFileRsp{
+	//cmd id: 	0x0507
+	required uint32	result_code = 1;			//1: 失败 0:成功
+	required uint32 from_user_id = 2;
+	required uint32 to_user_id = 3;
+	required string file_name = 4;
+	required string task_id = 5;
+	repeated IM.BaseDefine.IpAddr ip_addr_list = 6;
+	required IM.BaseDefine.TransferFileType trans_mode = 7;
+}
+
+message IMFileNotify{
+	//cmd id: 	0x0508
+	required uint32 from_user_id = 1;
+	required uint32 to_user_id = 2;
+	required string file_name = 3;
+	required uint32 file_size = 4;
+	required string task_id = 5;
+	repeated IM.BaseDefine.IpAddr ip_addr_list = 6;
+	required IM.BaseDefine.TransferFileType trans_mode = 7;
+	required uint32 offline_ready = 8;				//1:True 0:False
+}
+
+message IMFileHasOfflineReq{
+	//cmd id: 	0x0509
+	required uint32 user_id = 1;
+	optional bytes attach_data = 20;
+}
+
+message IMFileHasOfflineRsp{
+	//cmd id:	0x050a
+	required uint32 user_id = 1;
+	repeated IM.BaseDefine.OfflineFileInfo offline_file_list = 2;
+	repeated IM.BaseDefine.IpAddr ip_addr_list = 3;
+	optional bytes attach_data = 20;
+}
+
+message IMFileAddOfflineReq{
+	//cmd id:	0x050b
+	required uint32 from_user_id = 1;
+	required uint32 to_user_id = 2;
+	required string task_id = 3;
+	required string file_name = 4;
+	required uint32 file_size = 5;
+}
+
+message IMFileDelOfflineReq{
+	//cmd id:	0x050c
+	required uint32 from_user_id = 1;
+	required uint32 to_user_id = 2;
+	required string task_id = 3;
+}

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,65" roundcorner="4,4" size="280,550" sizebox="0,4,0,4" mininfo="280,550" >
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="14" bold="true"/>
+  <Default name="VScrollBar" value="button1normalimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button1hotimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button1pushedimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,0,8,7&apos;&quot; button2normalimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; button2hotimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; button2pushedimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,17,8,24&apos;&quot; thumbnormalimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; thumbhotimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; thumbpushedimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,24,8,72&apos; corner=&apos;2,2,2,2&apos;&quot; bknormalimage=&quot;file=&apos;MainDialog/scrollbar.png&apos; source=&apos;0,6,8,17&apos;&quot;" />
+  <VerticalLayout bkcolor="#FFFCFCFC" bordersize="3"  bkimage="file=&apos;MainDialog/border.png&apos; corner=&apos;5,5,5,5&apos;" inset="3,3,3,3">
+
+    <HorizontalLayout name="header" height="24"  bkcolor="#FFF7F7F7">
+      <HorizontalLayout>
+        <Control width="10"/>
+        <Label name="apptitle" font="1" textcolor="#FFFFFFFF" />
+      </HorizontalLayout>
+      <HorizontalLayout  padding="0,8,8,0"  height="16" width="68">
+        <Button name="sysconfig" tooltip="设置"  height="16" width="16" normalimage="MainDialog/setting.png" hotimage="MainDialog/setting_h.png" pushedimage="MainDialog/setting_h.png"/>	
+        <Button name="minbtn" tooltip="最小化" padding="10,0,0,0" height="16" width="16" normalimage="MainDialog/minimize.png" hotimage="MainDialog/minimize_h.png" pushedimage="MainDialog/minimize_h.png"/>
+        <Button name="closebtn" tooltip="关闭" padding="10,0,0,0" height="16" width="16" normalimage="MainDialog/close.png" hotimage="MainDialog/close_h.png" pushedimage="MainDialog/close_h.png"/>
+      </HorizontalLayout>
+   </HorizontalLayout>
+    <VerticalLayout  bkcolor="#FFF7F7F7">
+		<HorizontalLayout name="UserInfoLayout" height="70" padding="5,0,0,0"  bkcolor="#FFF7F7F7">
+            <Button name="myfacebtn" bordersize="0" borderround="2,2" bordercolor="FFCD7F32" width="60" height="60" padding="0,0,0,3" bkimage="file=&apos;MainDialog/Face.png&apos;" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+		    <VerticalLayout padding="10,8,0,0">
+                <HorizontalLayout height="30">
+					<Button name="onlineStatus" padding="0,5,0,0" width="16" height="16" bkimage="file=&apos;MainDialog/online.png&apos; dest=&apos;0,0,16,16&apos;" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" hotimage="file=&apos;MainDialog/btn_hot.png&apos; corner=&apos;2,8,2,2&apos;" /> 
+				    <Text name="unametxt" padding="0,3,0,0" textpadding="2,0,2,0" text="登陆者名称" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="1" align="wrap" />
+				</HorizontalLayout>
+				<Edit name="signature" endellipsis="true" textcolor="#FF333333" multiline="false" bkcolor="#FFF7F7F7" textcolor="#FF999999" tooltip="编辑个性签名" />
+			</VerticalLayout>
+		</HorizontalLayout>
+		<Control height="1" bkcolor="#FFD1DCE1"/>		
+		<SearchLayout name="SearchLayout" height="27">
+			<HorizontalLayout height="27" bkcolor="#FFFFFFFF">
+				<Edit name="editSearch"  height="27" textpadding="10,3,3,3" bordersize="0" borderround="2,2" bordercolor="FFDADADA" inset="4,4,4,3"  tooltip="搜索：员工、讨论组、群" multiline="false" />
+				<Button name="searchbtn" showhtml="true" mouse="false" height="27" width="24" text="{i MainDialog/search_btn.png}{/i}" />
+				<Button name="cancelbtn" visible="false" showhtml="true" height="27" width="24" text="{i MainDialog/cancel_btn.png}{/i}" />				
+			</HorizontalLayout>
+			<VerticalLayout name="searchResultLayout">
+				<Control height="1"  padding="0,2,0,0" bkcolor="#FFD1DCE1"/>	
+				<GroupList header="hidden"  itemshowhtml="true" name="searchResultList" vscrollbar="true" childpadding="2"/>			
+			</VerticalLayout>
+		</SearchLayout>
+		<VerticalLayout name="MainListLayout" padding="0,2,0,0">
+			<Control height="1" bkcolor="#FFD1DCE1"/>		
+            <HorizontalLayout name="tabbtns" height="35"  inset="0,0,0,0" bkcolor="#FFF7F7F7">
+				<Option name="RecentlyListbtn" tooltip="最近联系人" width="92" height="35"  selected="true" group="true" normalimage="file=&apos;MainDialog/tab_btn.png&apos; source=&apos;0,0,92,35&apos;" selectedimage="file=&apos;MainDialog/tab_btn.png&apos; source=&apos;0,36,92,71&apos;"/>
+                <Option name="friendbtn" tooltip="组织架构" width="93" height="35"  group="true"  normalimage="file=&apos;MainDialog/tab_btn.png&apos; source=&apos;93,0,186,35&apos;" selectedimage="file=&apos;MainDialog/tab_btn.png&apos; source=&apos;93,36,186,71&apos;" />
+                <Option name="groupbtn" tooltip="群/讨论组" width="92" height="35" group="true"  normalimage="file=&apos;MainDialog/tab_btn.png&apos; source=&apos;187,0,280,35&apos;" selectedimage="file=&apos;MainDialog/tab_btn.png&apos; source=&apos;187,36,280,71&apos;"  />
+				<Text name="msgCount" visible="false" text="1" float="true" pos="62,15" mouse="false" textcolor="#FFFFFFFF"  width="25" height="15" bkimage="file='MainDialog/unrreadcntbk.png' corner='2,2,2,2'"  roundcorner="2,2,2,2" align="center"/>
+            </HorizontalLayout>
+			<ListLayout >			
+                <TabLayout name="tabs">
+                    <HorizontalLayout bkcolor="#FFFFFFFF">
+						<FriendList header="hidden" itemshowhtml="true"  name="friends" vscrollbar="true" />    
+                    </HorizontalLayout>
+                    <HorizontalLayout bkcolor="#FFFFFFFF">
+                        <GroupList header="hidden" itemshowhtml="true"  name="groupsList" vscrollbar="true" />
+                    </HorizontalLayout>
+                    <HorizontalLayout bkcolor="#FFFFFFFF">
+                        <SessionList header="hidden" itemshowhtml="true"  name="recentlyList" vscrollbar="true"/>
+                    </HorizontalLayout>
+                </TabLayout> 
+			</ListLayout>					
+		</VerticalLayout>  		
+	</VerticalLayout>  
+  </VerticalLayout>
+</Window>

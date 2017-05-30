@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window sizebox="4,4,6,6" caption="0,0,0,30" size="78,78" mininfo="78,78" maxinfo="78,78" opacity="true" transparency="0">
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="12" bold="true"/>
+  <VerticalLayout bordersize="0" bkimage="file='bg.bmp' corner='4,4,2,2' mask='0xffffffff'">
+    <VerticalLayout>
+      <EmotionButton name="emotion" float="true" pos="26,26,52,52" bordersize="0" hotimage="file='btn_hot.png' corner='2,3,2,2'" pushedimage="file='btn_push.png' corner='2,5,2,2'" />
+      <Label name="description" folat="true" pos="0,52,78,78" textcolor="#FF0187DC" align="center"/>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>

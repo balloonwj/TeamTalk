@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mogujie.tt.ui.widget.message.TextRenderView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/default_bk"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp" >
+
+    <com.mogujie.tt.ui.widget.IMBaseImageView
+        android:id="@+id/user_portrait"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tt_default_user_portrait_corner" />
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/user_portrait"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="60dp"
+        android:layout_toRightOf="@id/user_portrait"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="5dp"
+            android:text="小明"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/user_portrait"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/message_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tt_other_item_bg_normal"
+                android:gravity="left"
+                android:paddingBottom="8dp"
+                android:paddingLeft="18dp"
+                android:paddingTop="8dp"
+                android:paddingRight="6dp"
+                android:text="1111111111111"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                android:textColorLink="@android:color/black"
+                />
+
+            <!--
+                 <TextView
+                android:id="@+id/message_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tt_other_item_bg"
+                android:paddingBottom="13dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="13dp"
+                android:paddingTop="13dp"
+                android:text="1111111111111"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+            -->
+
+            <ImageView
+                android:id="@+id/message_state_failed"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/message_image_desc"
+                android:src="@drawable/tt_msg_tip"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.mogujie.tt.ui.widget.message.TextRenderView>

@@ -1,0 +1,354 @@
+package IM.BaseDefine;
+option java_package = "com.mogujie.tt.protobuf";
+//option java_outer_classname = "MOGUJIEIMMessage";
+option optimize_for = LITE_RUNTIME;
+
+// service id
+enum ServiceID{
+    SID_LOGIN           = 0x0001;           // for login
+    SID_BUDDY_LIST      = 0x0002;		    // for friend list
+    SID_MSG             = 0x0003;           //
+    SID_GROUP           = 0x0004;           // for group message
+    SID_FILE            = 0x0005;
+    SID_SWITCH_SERVICE  = 0x0006;
+    SID_OTHER           = 0x0007;
+    SID_INTERNAL        = 0x0008;		     
+}
+
+// command id for login
+enum LoginCmdID{
+    CID_LOGIN_REQ_MSGSERVER         = 0x0101; 	//
+    CID_LOGIN_RES_MSGSERVER         = 0x0102;	//
+    CID_LOGIN_REQ_USERLOGIN         = 0x0103;	//
+    CID_LOGIN_RES_USERLOGIN         = 0x0104;	//
+    CID_LOGIN_REQ_LOGINOUT          = 0x0105;	//
+    CID_LOGIN_RES_LOGINOUT          = 0x0106; 	//
+    CID_LOGIN_KICK_USER				= 0x0107; 	//
+    CID_LOGIN_REQ_DEVICETOKEN       = 0x0108;  //
+    CID_LOGIN_RES_DEVICETOKEN       = 0x0109;  //
+    CID_LOGIN_REQ_KICKPCCLIENT      = 0x010a;
+    CID_LOGIN_RES_KICKPCCLIENT      = 0x010b;
+    CID_LOGIN_REQ_PUSH_SHIELD       = 0x010c;	//勿扰
+    CID_LOGIN_RES_PUSH_SHIELD       = 0x010d; 	//
+    CID_LOGIN_REQ_QUERY_PUSH_SHIELD = 0x010e; 	//
+    CID_LOGIN_RES_QUERY_PUSH_SHIELD = 0x010f;
+}
+
+// command id for buddy list
+enum BuddyListCmdID{
+    CID_BUDDY_LIST_RECENT_CONTACT_SESSION_REQUEST       = 0x0201;
+    CID_BUDDY_LIST_RECENT_CONTACT_SESSION_RESPONSE      = 0x0202;
+    CID_BUDDY_LIST_STATUS_NOTIFY                        = 0x0203; //
+    CID_BUDDY_LIST_USER_INFO_REQUEST                    = 0x0204; //
+    CID_BUDDY_LIST_USER_INFO_RESPONSE                   = 0x0205;
+    CID_BUDDY_LIST_REMOVE_SESSION_REQ                   = 0x0206;
+    CID_BUDDY_LIST_REMOVE_SESSION_RES                   = 0x0207;
+    CID_BUDDY_LIST_ALL_USER_REQUEST                     = 0x0208;
+    CID_BUDDY_LIST_ALL_USER_RESPONSE                    = 0x0209;
+    CID_BUDDY_LIST_USERS_STATUS_REQUEST                 = 0x020a;
+    CID_BUDDY_LIST_USERS_STATUS_RESPONSE                = 0x020b;
+    CID_BUDDY_LIST_CHANGE_AVATAR_REQUEST                = 0x020c;
+    CID_BUDDY_LIST_CHANGE_AVATAR_RESPONSE               = 0x020d;
+    CID_BUDDY_LIST_PC_LOGIN_STATUS_NOTIFY               = 0x020e;
+    CID_BUDDY_LIST_REMOVE_SESSION_NOTIFY                = 0x020f;
+    CID_BUDDY_LIST_DEPARTMENT_REQUEST                   = 0x0210;
+    CID_BUDDY_LIST_DEPARTMENT_RESPONSE                  = 0x0211;
+    CID_BUDDY_LIST_AVATAR_CHANGED_NOTIFY                = 0x0212; //头像更改通知
+    CID_BUDDY_LIST_CHANGE_SIGN_INFO_REQUEST             = 0x0213; //修改个性签名请求
+    CID_BUDDY_LIST_CHANGE_SIGN_INFO_RESPONSE            = 0x0214; //
+    CID_BUDDY_LIST_SIGN_INFO_CHANGED_NOTIFY             = 0x0215; //签名修改通知
+}
+
+// command id for msg
+enum MessageCmdID{
+    CID_MSG_DATA					= 0x0301;	//
+    CID_MSG_DATA_ACK				= 0x0302; 	//
+    CID_MSG_READ_ACK				= 0x0303; 	//
+    CID_MSG_READ_NOTIFY     		= 0x0304;    //  已读消息通知
+    CID_MSG_TIME_REQUEST 			= 0x0305;	//
+    CID_MSG_TIME_RESPONSE			= 0x0306; 	//
+    CID_MSG_UNREAD_CNT_REQUEST		= 0x0307; 	//
+    CID_MSG_UNREAD_CNT_RESPONSE		= 0x0308;	//
+    CID_MSG_LIST_REQUEST            = 0x0309;    //获取指定队列消息
+    CID_MSG_LIST_RESPONSE           = 0x030a;
+    CID_MSG_GET_LATEST_MSG_ID_REQ   = 0x030b;
+    CID_MSG_GET_LATEST_MSG_ID_RSP   = 0x030c;
+    CID_MSG_GET_BY_MSG_ID_REQ       = 0x030d;
+    CID_MSG_GET_BY_MSG_ID_RES       = 0x030e;
+}
+
+// command id for group message
+enum GroupCmdID{
+    CID_GROUP_NORMAL_LIST_REQUEST			= 0x0401;
+    CID_GROUP_NORMAL_LIST_RESPONSE			= 0x0402;
+    CID_GROUP_INFO_REQUEST          		= 0x0403;
+    CID_GROUP_INFO_RESPONSE         		= 0x0404;
+    CID_GROUP_CREATE_REQUEST                = 0x0405;
+    CID_GROUP_CREATE_RESPONSE               = 0x0406;
+    CID_GROUP_CHANGE_MEMBER_REQUEST 		= 0x0407;
+    CID_GROUP_CHANGE_MEMBER_RESPONSE 		= 0x0408;
+    CID_GROUP_SHIELD_GROUP_REQUEST  		= 0x0409;
+    CID_GROUP_SHIELD_GROUP_RESPONSE 		= 0x040a;
+    CID_GROUP_CHANGE_MEMBER_NOTIFY			= 0x040b;
+}
+
+enum FileCmdID{
+    CID_FILE_LOGIN_REQ              = 0x0501; // sender/receiver need to login to
+    CID_FILE_LOGIN_RES              = 0x0502; // login success or failure
+    CID_FILE_STATE                  = 0x0503;
+    CID_FILE_PULL_DATA_REQ          = 0x0504;
+    CID_FILE_PULL_DATA_RSP          = 0x0505;
+    // To MsgServer
+    CID_FILE_REQUEST                = 0x0506; // sender -> receiver
+    CID_FILE_RESPONSE               = 0x0507; // receiver -> sender
+    CID_FILE_NOTIFY                 = 0x0508;
+    CID_FILE_HAS_OFFLINE_REQ        = 0x0509;
+    CID_FILE_HAS_OFFLINE_RES        = 0x050a;
+    CID_FILE_ADD_OFFLINE_REQ        = 0x050b;
+    CID_FILE_DEL_OFFLINE_REQ        = 0x050c;
+}
+
+// command id for switch service
+enum SwitchServiceCmdID{
+    CID_SWITCH_P2P_CMD	= 0x0601;	//
+}
+
+enum OtherCmdID{
+    CID_OTHER_HEARTBEAT                     = 0x0701;
+    CID_OTHER_STOP_RECV_PACKET              = 0x0702;
+    CID_OTHER_VALIDATE_REQ                  = 0x0703;
+    CID_OTHER_VALIDATE_RSP                  = 0x0704;
+    CID_OTHER_GET_DEVICE_TOKEN_REQ          = 0x0705;
+    CID_OTHER_GET_DEVICE_TOKEN_RSP          = 0x0706;
+    CID_OTHER_ROLE_SET                      = 0x0707;
+    CID_OTHER_ONLINE_USER_INFO              = 0x0708;
+    CID_OTHER_MSG_SERV_INFO                 = 0x0709;
+    CID_OTHER_USER_STATUS_UPDATE            = 0x070a;
+    CID_OTHER_USER_CNT_UPDATE               = 0x070b;
+    CID_OTHER_SERVER_KICK_USER              = 0x070d;
+    CID_OTHER_LOGIN_STATUS_NOTIFY           = 0x070e;
+    CID_OTHER_PUSH_TO_USER_REQ              = 0x070f;
+    CID_OTHER_PUSH_TO_USER_RSP              = 0x0710;
+    CID_OTHER_GET_SHIELD_REQ                = 0x0711;
+    CID_OTHER_GET_SHIELD_RSP                = 0x0712;
+    CID_OTHER_FILE_TRANSFER_REQ             = 0x0731;
+    CID_OTHER_FILE_TRANSFER_RSP             = 0x0732;
+    CID_OTHER_FILE_SERVER_IP_REQ            = 0x0733;
+    CID_OTHER_FILE_SERVER_IP_RSP            = 0x0734;
+}
+
+enum ResultType{
+	REFUSE_REASON_NONE				= 0;
+	REFUSE_REASON_NO_MSG_SERVER		= 1;
+	REFUSE_REASON_MSG_SERVER_FULL 	= 2;
+	REFUSE_REASON_NO_DB_SERVER		= 3;
+	REFUSE_REASON_NO_LOGIN_SERVER	= 4;
+	REFUSE_REASON_NO_ROUTE_SERVER	= 5;
+	REFUSE_REASON_DB_VALIDATE_FAILED = 6;
+	REFUSE_REASON_VERSION_TOO_OLD	= 7;
+
+}
+
+enum KickReasonType{
+	KICK_REASON_DUPLICATE_USER = 1;
+    KICK_REASON_MOBILE_KICK    = 2;
+}
+
+enum OnlineListType{
+	ONLINE_LIST_TYPE_FRIEND_LIST = 1;
+}
+
+enum UserStatType{
+	USER_STATUS_ONLINE 	= 1;
+	USER_STATUS_OFFLINE	= 2;
+	USER_STATUS_LEAVE	= 3;
+
+}
+enum SessionType{
+	SESSION_TYPE_SINGLE = 1;          	//单个用户会话
+	SESSION_TYPE_GROUP = 2;          	//群会话
+}
+
+enum MsgType{
+	MSG_TYPE_SINGLE_TEXT    = 0x01;
+    MSG_TYPE_SINGLE_AUDIO   = 0x02;
+    MSG_TYPE_GROUP_TEXT     = 0x11;
+    MSG_TYPE_GROUP_AUDIO    = 0x12;
+}
+
+enum ClientType{
+	CLIENT_TYPE_WINDOWS     = 0x01;
+    CLIENT_TYPE_MAC         = 0x02;
+    CLIENT_TYPE_IOS         = 0x11;
+    CLIENT_TYPE_ANDROID     = 0x12;
+}
+
+enum GroupType{
+	GROUP_TYPE_NORMAL		= 0x01;
+	GROUP_TYPE_TMP			= 0x02;
+}
+
+enum GroupModifyType{
+	GROUP_MODIFY_TYPE_ADD	= 0x01;
+	GROUP_MODIFY_TYPE_DEL	= 0x02;
+}
+
+enum TransferFileType{
+    FILE_TYPE_ONLINE        = 0x01;
+    FILE_TYPE_OFFLINE       = 0x02;
+}
+
+enum ClientFileState{
+    CLIENT_FILE_PEER_READY  = 0x00;
+    CLIENT_FILE_CANCEL      = 0x01;
+    CLIENT_FILE_REFUSE      = 0x02;
+    CLIENT_FILE_DONE       = 0x03;
+}
+
+enum ClientFileRole{
+    CLIENT_REALTIME_SENDER  = 0x01;
+    CLIENT_REALTIME_RECVER  = 0x02;
+    CLIENT_OFFLINE_UPLOAD   = 0x03;
+    CLIENT_OFFLINE_DOWNLOAD = 0x04;
+}
+
+enum FileServerError{
+    FILE_SERVER_ERRNO_OK                                = 0x00;
+    FILE_SERVER_ERRNO_CREATE_TASK_ID_ERROR              = 0x01;
+    FILE_SERVER_ERRNO_CREATE_TASK_ERROR                 = 0x02;
+    FILE_SERVER_ERRNO_LOGIN_INVALID_TOKEN               = 0x03;
+    FILE_SERVER_ERRNO_INVALID_USER_FOR_TASK             = 0x04;
+    FILE_SERVER_ERRNO_PULL_DATA_WITH_INVALID_TASK_ID    = 0x05;
+    FILE_SERVER_ERRNO_PULL_DATA_ILLIEAGE_USER           = 0x06;
+    FILE_SERVER_ERRNO_PULL_DATA_MKDIR_ERROR             = 0x07;
+    FILE_SERVER_ERRNO_PULL_DATA_OPEN_FILE_ERROR         = 0x08;
+    FILE_SERVER_ERRNO_PULL_DATA_READ_FILE_HEADER_ERROR  = 0x09;
+    FILE_SERVER_ERRNO_PULL_DATA_ALLOC_MEM_ERROR         = 0x0a;
+    FILE_SERVER_ERRNO_PULL_DATA_SEEK_OFFSET_ERROR       = 0x0b;
+    FILE_SERVER_ERRNO_PULL_DATA_FINISHED                = 0x0c;
+}
+
+enum SessionStatusType{
+    SESSION_STATUS_OK           = 0x00;
+    SESSION_STATUS_DELETE       = 0x01;
+}
+
+enum DepartmentStatusType{
+    DEPT_STATUS_OK              = 0x00;
+    DEPT_STATUS_DELETE          = 0x01;
+}
+
+message IpAddr{
+	required string ip = 1;
+	required uint32 port = 2;
+}
+
+message UserInfo{
+	required uint32 user_id = 1;
+	required uint32 user_gender = 2; 	//// 用户性别,男：1 女：2 人妖/外星人：0
+	required string user_nick_name = 3;	//绰号
+	required string avatar_url = 4;
+	required uint32 department_id = 5;
+	required string email = 6;
+	required string user_real_name = 7;	//真名
+	required string user_tel = 8;
+	required string user_domain = 9;	//用户名拼音
+    required uint32 status = 10;        //0:在职  1. 试用期 2. 正式 3. 离职 4.实习,  client端需要对“离职”进行不展示
+    optional string sign_info = 11;
+}
+
+message ContactSessionInfo{
+	required uint32 session_id = 1;
+	required SessionType session_type = 2;
+    required SessionStatusType session_status = 3;
+	required uint32 updated_time = 4;
+	required uint32 latest_msg_id = 5;
+	required bytes latest_msg_data = 6;
+    required MsgType latest_msg_type = 7;
+    required uint32 latest_msg_from_user_id = 8;
+}
+
+message UserStat{
+	required uint32 user_id = 1;
+	required UserStatType status = 2;
+}
+
+message ServerUserStat{
+	required uint32 user_id = 1;
+	required UserStatType status = 2;
+	required ClientType client_type = 3;
+}
+
+message UnreadInfo{
+	required uint32 session_id = 1;
+	required SessionType session_type = 2;
+	required uint32 unread_cnt = 3;
+	required uint32 latest_msg_id = 4;
+	required bytes latest_msg_data = 5;
+    required MsgType latest_msg_type = 6;
+    required uint32 latest_msg_from_user_id = 7;        //发送得用户id
+}
+
+message MsgInfo{
+	required uint32 msg_id = 1;
+	required uint32 from_session_id = 2;   //发送的用户id
+	required uint32 create_time = 3;
+	required MsgType msg_type = 4;
+	required bytes msg_data = 5;
+}
+
+message GroupVersionInfo{
+	required uint32 group_id = 1;
+	required uint32 version = 2;
+	
+}
+
+message GroupInfo{
+	required uint32 group_id = 1;
+	required uint32 version = 2;
+	required string group_name = 3;
+	required string group_avatar = 4;
+	required uint32 group_creator_id = 5;
+	required GroupType group_type = 6;
+	required uint32 shield_status = 7;		//1: shield  0: not shield 
+	repeated uint32 group_member_list = 8;
+}
+
+message UserTokenInfo{
+    required uint32 user_id = 1;
+	required ClientType user_type = 2;
+	required string token = 3;
+	required uint32 push_count = 4;
+	required uint32 push_type = 5;			//1: 正常推送  	2:无打扰式推送
+}
+
+message PushResult{
+	required string user_token = 1;
+	required uint32 result_code = 2;
+}
+
+message ShieldStatus{
+	required uint32 user_id = 1;		
+	required uint32 group_id = 2;	
+	required uint32 shield_status = 3;		//1: shield  0: not shield 
+}
+
+message OfflineFileInfo{
+    required uint32 from_user_id = 1;
+    required string task_id = 2;
+    required string file_name = 3;
+    required uint32 file_size = 4;
+}
+
+message DepartInfo{
+	required uint32 dept_id = 1;
+	required uint32 priority = 2;
+	required string dept_name = 3;
+    required uint32 parent_dept_id = 4;
+    required DepartmentStatusType dept_status = 5;
+}
+
+message PushShieldStatus{
+    required uint32 user_id = 1;
+    required uint32 shield_status = 2;		//1: shield  0: not shield
+}

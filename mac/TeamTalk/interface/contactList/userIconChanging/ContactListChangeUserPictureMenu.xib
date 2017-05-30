@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A598" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1060" defaultVersion="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DDContactListUserPictureMenuController">
+            <connections>
+                <outlet property="imageCollectionView" destination="296" id="304"/>
+                <outlet property="menu" destination="261" id="267"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <menu autoenablesItems="NO" id="261">
+            <items>
+                <menuItem title="Recent Icons:" onStateImage="09F0363A-78A8-4DC8-9BF2-46B6CDC6D14F" mixedStateImage="2D4EB043-7C1E-49C9-9DFB-58D132DCF01B" enabled="NO" id="262">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem onStateImage="41FA57F9-995B-412F-AFCE-5D98A140064D" mixedStateImage="645EAB42-D6C7-4E4F-99BA-C736A1A7712E" enabled="NO" id="263">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <outlet property="view" destination="388" id="397"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" onStateImage="A21EE586-3C3C-4446-829F-E550555F1BE9" mixedStateImage="316CF5D5-A99A-4E0A-A59C-C7E3750B4A6E" id="265"/>
+            </items>
+            <connections>
+                <outlet property="delegate" destination="-2" id="272"/>
+            </connections>
+        </menu>
+        <arrayController objectClassName="NSImage" editable="NO" preservesSelection="NO" selectsInsertedObjects="NO" avoidsEmptySelection="NO" id="321">
+            <declaredKeys>
+                <string>image</string>
+            </declaredKeys>
+            <connections>
+                <binding destination="-2" name="contentArray" keyPath="images" id="375"/>
+            </connections>
+        </arrayController>
+        <customView id="388" userLabel="Alignment View">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView focusRingType="none" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="293">
+                    <rect key="frame" x="20" y="0.0" width="180" height="72"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="mVa-u1-Dq1">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="72"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView focusRingType="none" selectable="YES" maxNumberOfRows="5" maxNumberOfColumns="2" id="296" customClass="AIImageCollectionView">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="72"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <binding destination="321" name="content" keyPath="arrangedObjects" id="361"/>
+                                    <binding destination="321" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="361" id="378"/>
+                                    <outlet property="delegate" destination="-2" id="367"/>
+                                    <outlet property="itemPrototype" destination="297" id="299"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.0044843049327354259" horizontal="YES" id="295">
+                        <rect key="frame" x="-100" y="-100" width="180" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.95833333333333348" horizontal="NO" id="294">
+                        <rect key="frame" x="-100" y="-100" width="15" height="55"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+        </customView>
+        <collectionViewItem id="297">
+            <connections>
+                <outlet property="view" destination="355" id="387"/>
+            </connections>
+        </collectionViewItem>
+        <imageView id="355" userLabel="Image View">
+            <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" id="356"/>
+            <connections>
+                <binding destination="297" name="value" keyPath="representedObject" id="363"/>
+            </connections>
+        </imageView>
+    </objects>
+    <resources>
+        <image name="09F0363A-78A8-4DC8-9BF2-46B6CDC6D14F" width="128" height="128"/>
+        <image name="2D4EB043-7C1E-49C9-9DFB-58D132DCF01B" width="128" height="128"/>
+        <image name="316CF5D5-A99A-4E0A-A59C-C7E3750B4A6E" width="128" height="128"/>
+        <image name="41FA57F9-995B-412F-AFCE-5D98A140064D" width="128" height="128"/>
+        <image name="645EAB42-D6C7-4E4F-99BA-C736A1A7712E" width="128" height="128"/>
+        <image name="A21EE586-3C3C-4446-829F-E550555F1BE9" width="128" height="128"/>
+    </resources>
+</document>

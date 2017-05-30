@@ -1,0 +1,1089 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Project Files">
+      <UniqueIdentifier>{d80d02fc-2854-4baa-a73f-eef5c18b1a80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Login">
+      <UniqueIdentifier>{a7a03a66-e523-4bfe-8ad2-2a932231ff99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HttpPool">
+      <UniqueIdentifier>{6688ab7a-a56c-4bbc-8ea3-3248fb0738a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Database">
+      <UniqueIdentifier>{6f70893f-0416-442d-b125-878b6fe9d15e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{b7fdb971-942d-4056-b844-e25349518229}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SysConfig">
+      <UniqueIdentifier>{95300389-4e39-46e8-b705-edc1b7ff59cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UserList">
+      <UniqueIdentifier>{1e7c9cd8-e0d5-4631-b5a0-1be8cf22cab6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GroupList">
+      <UniqueIdentifier>{0d70c858-2060-4e1b-8c82-92e3d1058a98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session">
+      <UniqueIdentifier>{07f8a13b-7442-4d67-aa9c-12b5c9012ad8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Emotion">
+      <UniqueIdentifier>{2037dec1-aa03-41fa-9742-b3750d3eec66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Emotion\cxImage">
+      <UniqueIdentifier>{72240a67-f098-469b-a474-46245d041c9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Message">
+      <UniqueIdentifier>{54f075ee-ca11-4f8d-ab7d-3dcfe4513cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\UI">
+      <UniqueIdentifier>{8cec06dc-595d-4869-9c24-e1c0c75dbea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GroupList\UI">
+      <UniqueIdentifier>{8e455d05-b50a-4eda-83d3-73608d7071a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\operations">
+      <UniqueIdentifier>{80980e71-8408-411f-9c20-4d9a9de9db33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\UI\SessionDialog">
+      <UniqueIdentifier>{cbe20212-e07d-4d3d-9865-422883e64a9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2PCmd">
+      <UniqueIdentifier>{03b5445f-359d-40df-bbd8-1efde60665a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Emotion\cxImage\cxImage">
+      <UniqueIdentifier>{5bae7e1c-df28-41d8-94a3-642c8cd3beee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Emotion\cxImage\jpeg">
+      <UniqueIdentifier>{1237a86e-cd12-4b54-8e7c-c08fffd61666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Session\UI\MainList">
+      <UniqueIdentifier>{b7ef5138-4290-4cb5-a0da-e0bf4461e554}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Emotion\cxImage\png">
+      <UniqueIdentifier>{c4d146ef-9564-4103-b7e4-f52b34e77120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Emotion\cxImage\zlib">
+      <UniqueIdentifier>{bd629d61-10df-44bf-bd8b-5e19fa3211cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{40db4c19-bd14-4b3f-9862-0ad318deab68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TcpClient">
+      <UniqueIdentifier>{1d31fdd9-dc2c-4c5f-8925-5c72eb4d9132}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\MKO">
+      <UniqueIdentifier>{9ab3c2a1-5e09-40bc-ae3c-f7c536f7823f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\UIEvent">
+      <UniqueIdentifier>{a9fb4a38-27f9-46ea-ae36-8a6e636b540c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol Buffer">
+      <UniqueIdentifier>{65d8d9b6-ddb2-4d8f-9291-ff51686b5a70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileTransfer">
+      <UniqueIdentifier>{2888ae8c-ff1f-402e-ac3d-6918c2092715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScreenCapture">
+      <UniqueIdentifier>{8203252e-2a7e-443b-a739-3cc840271642}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScreenCapture\ScreenCapture">
+      <UniqueIdentifier>{9e28220e-9100-4b41-8e13-302b0f37f6e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScreenCapture\ScreenCapture\UI">
+      <UniqueIdentifier>{25451613-548e-4d4a-b11a-e23574841c7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScreenCapture\ScreenCapture\CaptureMode">
+      <UniqueIdentifier>{9a93c0ae-0212-4e38-b77f-7359c9d79dea}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Modules.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Login\LoginModule_Impl.cpp">
+      <Filter>Login</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpPool\HttpPoolModule_Impl.cpp">
+      <Filter>HttpPool</Filter>
+    </ClCompile>
+    <ClCompile Include="Login\LoginOperation.cpp">
+      <Filter>Login</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\DatabaseModule_Impl.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc\MiscModule_Impl.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="SysConfig\SysConfigModule_Impl.cpp">
+      <Filter>SysConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="Login\LoginDialog.cpp">
+      <Filter>Login</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupList\GroupListModule_Impl.cpp">
+      <Filter>GroupList</Filter>
+    </ClCompile>
+    <ClCompile Include="UserList\UserListModule_Impl.cpp">
+      <Filter>UserList</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\SessionModule_Impl.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+    <ClCompile Include="Emotion\EmotionButton.cpp">
+      <Filter>Emotion</Filter>
+    </ClCompile>
+    <ClCompile Include="Emotion\EmotionDialog.cpp">
+      <Filter>Emotion</Filter>
+    </ClCompile>
+    <ClCompile Include="Emotion\EmotionModule_Impl.cpp">
+      <Filter>Emotion</Filter>
+    </ClCompile>
+    <ClCompile Include="Message\MessageModule_Impl.cpp">
+      <Filter>Message</Filter>
+    </ClCompile>
+    <ClCompile Include="SysConfig\SysConfigDialog.cpp">
+      <Filter>SysConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="Message\MessageEntity.cpp">
+      <Filter>Message</Filter>
+    </ClCompile>
+    <ClCompile Include="Message\ReceiveMsgManage.cpp">
+      <Filter>Message</Filter>
+    </ClCompile>
+    <ClCompile Include="Message\SendMsgManage.cpp">
+      <Filter>Message</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupList\UI\CreateDiscussionGrpDialog.cpp">
+      <Filter>GroupList\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\Operation\SendImgHttpOperation.cpp">
+      <Filter>Session\operations</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\SessionManager.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\UIIMList.cpp">
+      <Filter>Session\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Login\ReloginManager.cpp">
+      <Filter>Login</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\Operation\SyncTimerTimer.cpp">
+      <Filter>Session\operations</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\SessionDialog.cpp">
+      <Filter>Session\UI\SessionDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\SessionLayout.cpp">
+      <Filter>Session\UI\SessionDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\MainListLayout.cpp">
+      <Filter>Session\UI\MainList</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\MainListLayout_Event.cpp">
+      <Filter>Session\UI\MainList</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\SearchLayout.cpp">
+      <Filter>Session\UI\MainList</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\UIEAUserTreelist.cpp">
+      <Filter>Session\UI\MainList</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\UIGroupsTreelist.cpp">
+      <Filter>Session\UI\MainList</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\SessionLayout_Event.cpp">
+      <Filter>Session\UI\SessionDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\SessionLayout_Function.cpp">
+      <Filter>Session\UI\SessionDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="P2PCmd\P2PCmdModule_Impl.cpp">
+      <Filter>P2PCmd</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\UIIMEdit.cpp">
+      <Filter>Session\UI\SessionDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximabmp.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximaenc.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximage.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximagif.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximainfo.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximajpg.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximalpha.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximalyr.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximapal.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximatran.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximawbmp.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximawnd.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\xmemfile.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jcapimin.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jcapistd.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jccoefct.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jccolor.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jcdctmgr.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jchuff.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jcinit.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jcmainct.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jcmarker.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jcmaster.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jcomapi.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jcparam.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jcphuff.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jcprepct.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jcsample.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jctrans.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdapimin.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdapistd.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdatadst.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdatasrc.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdcoefct.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdcolor.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jddctmgr.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdhuff.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdinput.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdmainct.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdmarker.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdmaster.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdmerge.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdphuff.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdpostct.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdsample.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jdtrans.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jerror.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jfdctflt.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jfdctfst.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jfdctint.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jidctflt.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jidctfst.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jidctint.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jidctred.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jmemmgr.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jmemnobs.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jquant1.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jquant2.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\jpeg\jutils.c">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximaexif.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\UIIMListCommonDefine.cpp">
+      <Filter>Session\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\cxImage\ximapng.cpp">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\png.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngerror.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pnggccrd.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngget.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngmem.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngpread.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngread.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngrio.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngrtran.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngrutil.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngset.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngtrans.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngvcrd.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngwio.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngwrite.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngwtran.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\png\pngwutil.c">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\zlib\adler32.c">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\zlib\compress.c">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\zlib\crc32.c">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\zlib\deflate.c">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\zlib\gzio.c">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\zlib\infback.c">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\zlib\inffast.c">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\zlib\inflate.c">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\zlib\inftrees.c">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\zlib\trees.c">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\zlib\uncompr.c">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\cxImage\zlib\zutil.c">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="UserList\IUserListModule.cpp">
+      <Filter>UserList</Filter>
+    </ClCompile>
+    <ClCompile Include="SysConfig\ServerConfigDialog.cpp">
+      <Filter>SysConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\UIRecentSessionList.cpp">
+      <Filter>Session\UI\MainList</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\UI\UserDetailInfoDialog.cpp">
+      <Filter>Session\UI\MainList</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\ModuleBase.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpClient\TcpClientModule_Impl.cpp">
+      <Filter>TcpClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\ModuleObserver.cpp">
+      <Filter>Base\MKO</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\ModuleSubject.cpp">
+      <Filter>Base\MKO</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\UIEventManager.cpp">
+      <Filter>Base\UIEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Login\DoLoginServerHttpOperation.cpp">
+      <Filter>Login</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\ProtocolBuffer\IM.BaseDefine.pb.cc">
+      <Filter>Protocol Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\ProtocolBuffer\IM.Buddy.pb.cc">
+      <Filter>Protocol Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\ProtocolBuffer\IM.Login.pb.cc">
+      <Filter>Protocol Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\ProtocolBuffer\IM.Message.pb.cc">
+      <Filter>Protocol Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\ProtocolBuffer\IM.SwitchService.pb.cc">
+      <Filter>Protocol Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\ProtocolBuffer\IM.Group.pb.cc">
+      <Filter>Protocol Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\ProtocolBuffer\IM.Other.pb.cc">
+      <Filter>Protocol Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\DatabaseModule_UserInfoDB_Impl.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\DatabaseModule_ImageDB_Impl.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\DatabaseModule_GroupInfoDB_Impl.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\DatabaseModule_MessageDB_Impl.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\DatabaseModule_RecentSessionDB_Impl.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\ISessionModule.cpp">
+      <Filter>Session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\ProtocolBuffer\IM.File.pb.cc">
+      <Filter>Protocol Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupList\UI\ChangeDiscussionGrpMemberDialog.cpp">
+      <Filter>GroupList\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\Operation\DownloadAvatarHttpOperation.cpp">
+      <Filter>Session\operations</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\DatabaseModule_DepartmentInfoDB_Impl.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Emotion\EmoCfgParseTool.cpp">
+      <Filter>Emotion</Filter>
+    </ClCompile>
+    <ClCompile Include="FileTransfer\FileTransferDialog.cpp">
+      <Filter>FileTransfer</Filter>
+    </ClCompile>
+    <ClCompile Include="FileTransfer\FileTransferModule_Impl.cpp">
+      <Filter>FileTransfer</Filter>
+    </ClCompile>
+    <ClCompile Include="FileTransfer\FileTransferSocket.cpp">
+      <Filter>FileTransfer</Filter>
+    </ClCompile>
+    <ClCompile Include="FileTransfer\FileTransferUIThread.cpp">
+      <Filter>FileTransfer</Filter>
+    </ClCompile>
+    <ClCompile Include="FileTransfer\TransferFile.cpp">
+      <Filter>FileTransfer</Filter>
+    </ClCompile>
+    <ClCompile Include="FileTransfer\TransferManager.cpp">
+      <Filter>FileTransfer</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\DatabaseModule_FileTransferHistory_Impl.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCapture\ScreenCapture\ScreenCapture.cpp">
+      <Filter>ScreenCapture\ScreenCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCapture\ScreenCapture\ScreenSnapshot.cpp">
+      <Filter>ScreenCapture\ScreenCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCapture\ScreenCaptureModule_Impl.cpp">
+      <Filter>ScreenCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCapture\ScreenCapture\UI\BkgroundUI.cpp">
+      <Filter>ScreenCapture\ScreenCapture\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCapture\ScreenCapture\UI\DlgBase.cpp">
+      <Filter>ScreenCapture\ScreenCapture\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCapture\ScreenCapture\UI\EditToolbar.cpp">
+      <Filter>ScreenCapture\ScreenCapture\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCapture\ScreenCapture\UI\UIMgr.cpp">
+      <Filter>ScreenCapture\ScreenCapture\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCapture\ScreenCapture\CaptureMode\AutoSelectMode.cpp">
+      <Filter>ScreenCapture\ScreenCapture\CaptureMode</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCapture\ScreenCapture\CaptureMode\CaptureMode.cpp">
+      <Filter>ScreenCapture\ScreenCapture\CaptureMode</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCapture\ScreenCapture\CaptureMode\ManalEditMode.cpp">
+      <Filter>ScreenCapture\ScreenCapture\CaptureMode</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCapture\ScreenCapture\CaptureMode\ManalSelectMode.cpp">
+      <Filter>ScreenCapture\ScreenCapture\CaptureMode</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Modules.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Login\LoginModule_Impl.h">
+      <Filter>Login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\ILoginModule.h">
+      <Filter>Login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\ModuleDll.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpPool\HttpPoolModule_Impl.h">
+      <Filter>HttpPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\IHttpPoolModule.h">
+      <Filter>HttpPool</Filter>
+    </ClInclude>
+    <ClInclude Include="Login\LoginOperation.h">
+      <Filter>Login</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\DatabaseModule_Impl.h">
+      <Filter>Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\IDatabaseModule.h">
+      <Filter>Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\IMiscModule.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc\MiscModule_Impl.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="SysConfig\SysConfigModule_Impl.h">
+      <Filter>SysConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\ISysConfigModule.h">
+      <Filter>SysConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="Login\LoginDialog.h">
+      <Filter>Login</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupList\GroupListModule_Impl.h">
+      <Filter>GroupList</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\IGroupListModule.h">
+      <Filter>GroupList</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\IUserListModule.h">
+      <Filter>UserList</Filter>
+    </ClInclude>
+    <ClInclude Include="UserList\UserListModule_Impl.h">
+      <Filter>UserList</Filter>
+    </ClInclude>
+    <ClInclude Include="Session\SessionModule_Impl.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\ISessionModule.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\IEmotionModule.h">
+      <Filter>Emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotion\EmotionButton.h">
+      <Filter>Emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotion\EmotionDialog.h">
+      <Filter>Emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotion\EmotionModule_Impl.h">
+      <Filter>Emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Message\MessageModule_Impl.h">
+      <Filter>Message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\IMessageModule.h">
+      <Filter>Message</Filter>
+    </ClInclude>
+    <ClInclude Include="SysConfig\SysConfigDialog.h">
+      <Filter>SysConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\MessageEntity.h">
+      <Filter>Message</Filter>
+    </ClInclude>
+    <ClInclude Include="Message\ReceiveMsgManage.h">
+      <Filter>Message</Filter>
+    </ClInclude>
+    <ClInclude Include="Message\SendMsgManage.h">
+      <Filter>Message</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupList\UI\CreateDiscussionGrpDialog.h">
+      <Filter>GroupList\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Session\Operation\SendImgHttpOperation.h">
+      <Filter>Session\operations</Filter>
+    </ClInclude>
+    <ClInclude Include="Session\SessionManager.h">
+      <Filter>Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\UI\UIIMList.h">
+      <Filter>Session\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Login\ReloginManager.h">
+      <Filter>Login</Filter>
+    </ClInclude>
+    <ClInclude Include="Session\Operation\SyncTimerTimer.h">
+      <Filter>Session\operations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\UI\SessionDialog.h">
+      <Filter>Session\UI\SessionDialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\UI\SessionLayout.h">
+      <Filter>Session\UI\SessionDialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\UI\MainListLayout.h">
+      <Filter>Session\UI\MainList</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\UI\SearchLayout.h">
+      <Filter>Session\UI\MainList</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\UI\UIEAUserTreelist.h">
+      <Filter>Session\UI\MainList</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\UI\UIGroupsTreelist.h">
+      <Filter>Session\UI\MainList</Filter>
+    </ClInclude>
+    <ClInclude Include="P2PCmd\P2PCmdModule_Impl.h">
+      <Filter>P2PCmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\IP2PCmdModule.h">
+      <Filter>P2PCmd</Filter>
+    </ClInclude>
+    <ClInclude Include="Session\UI\UIIMEdit.h">
+      <Filter>Session\UI\SessionDialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\xfile.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\ximabmp.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\ximacfg.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\ximadef.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\ximage.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\ximagif.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\ximaiter.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\ximajpg.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\ximath.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\ximawbmp.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\xiofile.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\xmemfile.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\jpeg\jchuff.h">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\jpeg\jconfig.h">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\jpeg\jdct.h">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\jpeg\jdhuff.h">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\jpeg\jerror.h">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\jpeg\jinclude.h">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\jpeg\jmemsys.h">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\jpeg\jmorecfg.h">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\jpeg\jpegint.h">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\jpeg\jpeglib.h">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\jpeg\jversion.h">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\UI\UIIMListCommonDefine.h">
+      <Filter>Session\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\cxImage\ximapng.h">
+      <Filter>Emotion\cxImage\cxImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\png\png.h">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\png\pngconf.h">
+      <Filter>Emotion\cxImage\png</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\zlib\crc32.h">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\zlib\deflate.h">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\zlib\inffast.h">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\zlib\inffixed.h">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\zlib\inflate.h">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\zlib\inftrees.h">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\zlib\trees.h">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\zlib\zconf.h">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\zlib\zconf.in.h">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\zlib\zlib.h">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\cxImage\zlib\zutil.h">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="SysConfig\ServerConfigDialog.h">
+      <Filter>SysConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\UI\UIRecentSessionList.h">
+      <Filter>Session\UI\MainList</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\UI\UserDetailInfoDialog.h">
+      <Filter>Session\UI\MainList</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\ModuleBase.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\ITcpClientModule.h">
+      <Filter>TcpClient</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpClient\TcpClientModule_Impl.h">
+      <Filter>TcpClient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\ModuleObserver.h">
+      <Filter>Base\MKO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\ModuleSubject.h">
+      <Filter>Base\MKO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\IModuleInterface.h">
+      <Filter>Base\MKO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\IEvent.h">
+      <Filter>Base\UIEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\UIEventManager.h">
+      <Filter>Base\UIEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Login\DoLoginServerHttpOperation.h">
+      <Filter>Login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ProtocolBuffer\IM.BaseDefine.pb.h">
+      <Filter>Protocol Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ProtocolBuffer\IM.Buddy.pb.h">
+      <Filter>Protocol Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ProtocolBuffer\IM.Login.pb.h">
+      <Filter>Protocol Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ProtocolBuffer\IM.Group.pb.h">
+      <Filter>Protocol Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ProtocolBuffer\IM.Message.pb.h">
+      <Filter>Protocol Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ProtocolBuffer\IM.SwitchService.pb.h">
+      <Filter>Protocol Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ProtocolBuffer\IM.Other.pb.h">
+      <Filter>Protocol Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ProtocolBuffer\IM.File.pb.h">
+      <Filter>Protocol Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupList\UI\ChangeDiscussionGrpMemberDialog.h">
+      <Filter>GroupList\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Session\Operation\DownloadAvatarHttpOperation.h">
+      <Filter>Session\operations</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotion\EmoCfgParseTool.h">
+      <Filter>Emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="FileTransfer\FileTransferDialog.h">
+      <Filter>FileTransfer</Filter>
+    </ClInclude>
+    <ClInclude Include="FileTransfer\FileTransferModule_Impl.h">
+      <Filter>FileTransfer</Filter>
+    </ClInclude>
+    <ClInclude Include="FileTransfer\FileTransferSocket.h">
+      <Filter>FileTransfer</Filter>
+    </ClInclude>
+    <ClInclude Include="FileTransfer\FileTransferUIThread.h">
+      <Filter>FileTransfer</Filter>
+    </ClInclude>
+    <ClInclude Include="FileTransfer\TransferFile.h">
+      <Filter>FileTransfer</Filter>
+    </ClInclude>
+    <ClInclude Include="FileTransfer\TransferManager.h">
+      <Filter>FileTransfer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\IFileTransferModule.h">
+      <Filter>FileTransfer</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCapture\Common.h">
+      <Filter>ScreenCapture\ScreenCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCapture\ScreenCapture.h">
+      <Filter>ScreenCapture\ScreenCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCapture\ScreenSnapshot.h">
+      <Filter>ScreenCapture\ScreenCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCaptureModule_Impl.h">
+      <Filter>ScreenCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Modules\IScreenCaptureModule.h">
+      <Filter>ScreenCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCapture\UI\BkgroundUI.h">
+      <Filter>ScreenCapture\ScreenCapture\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCapture\UI\Dlgbase.h">
+      <Filter>ScreenCapture\ScreenCapture\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCapture\UI\EditToolbarUI.h">
+      <Filter>ScreenCapture\ScreenCapture\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCapture\UI\UIMgr.h">
+      <Filter>ScreenCapture\ScreenCapture\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCapture\CaptureMode\AutoSelectMode.h">
+      <Filter>ScreenCapture\ScreenCapture\CaptureMode</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCapture\CaptureMode\CaptureMode.h">
+      <Filter>ScreenCapture\ScreenCapture\CaptureMode</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCapture\CaptureMode\ManalEditMode.h">
+      <Filter>ScreenCapture\ScreenCapture\CaptureMode</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCapture\CaptureMode\ManalSelectMode.h">
+      <Filter>ScreenCapture\ScreenCapture\CaptureMode</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCapture\ScreenCapture\CaptureMode\ModeComm.h">
+      <Filter>ScreenCapture\ScreenCapture\CaptureMode</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Modules.def">
+      <Filter>Project Files</Filter>
+    </None>
+    <None Include="res\Modules.rc2">
+      <Filter>Project Files</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\jpeg\Jpeg.dsp">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\png\ANNOUNCE">
+      <Filter>Emotion\cxImage\png</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\png\CHANGES">
+      <Filter>Emotion\cxImage\png</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\png\INSTALL">
+      <Filter>Emotion\cxImage\png</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\png\KNOWNBUG">
+      <Filter>Emotion\cxImage\png</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\png\LICENSE">
+      <Filter>Emotion\cxImage\png</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\png\png.dsp">
+      <Filter>Emotion\cxImage\png</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\png\README">
+      <Filter>Emotion\cxImage\png</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\png\TODO">
+      <Filter>Emotion\cxImage\png</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\png\Y2KINFO">
+      <Filter>Emotion\cxImage\png</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\zlib\ChangeLog">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\zlib\FAQ">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\zlib\README">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\cxImage\zlib\zlib.dsp">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Modules.rc">
+      <Filter>Project Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\3rdParty\src\cxImage\jpeg\change.log">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </Text>
+    <Text Include="..\..\3rdParty\src\cxImage\jpeg\filelist.txt">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </Text>
+    <Text Include="..\..\3rdParty\src\cxImage\jpeg\Readme.txt">
+      <Filter>Emotion\cxImage\jpeg</Filter>
+    </Text>
+    <Text Include="..\..\3rdParty\src\cxImage\png\libpng-1.2.24.txt">
+      <Filter>Emotion\cxImage\png</Filter>
+    </Text>
+    <Text Include="..\..\3rdParty\src\cxImage\zlib\algorithm.txt">
+      <Filter>Emotion\cxImage\zlib</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

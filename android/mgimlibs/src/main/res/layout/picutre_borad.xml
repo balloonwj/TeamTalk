@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" 
+    android:background="@drawable/captcha_lib_image_layout_shape"
+    >
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="5dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="5dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="5dp"
+        android:scaleType="fitXY" />
+
+</LinearLayout>

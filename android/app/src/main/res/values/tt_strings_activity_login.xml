@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="title_activity_login">登录IM</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_name">用户名</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in_register"><b>登 录</b></string>
+    <string name="action_sign_in_short">进入</string>
+    <string name="action_forgot_password">Recover lost password</string>
+    <string name="login_progress_signing_in">正在登录&#8230;</string>
+    <string name="error_invalid_email">用户名不合法</string>
+    <string name="error_invalid_password">亲，密码太短了</string>
+    <string name="error_incorrect_user">请检查用户名密码是否正确</string>
+    <string name="error_name_required">请输入用户名</string>
+    <string name="error_pwd_required">请输入密码</string>
+    <string name="invalid_account">登录失败,请重试</string>
+    <string name="invalid_network">请检查网络是否正常！</string>
+     <string name="login_timeout">登陆超时,请重试</string>
+     <string name="login_failed">登陆失败,请重试</string>
+    <string name="action_kickout">用户在其他客户端登录</string>
+</resources>

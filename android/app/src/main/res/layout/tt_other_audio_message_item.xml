@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mogujie.tt.ui.widget.message.AudioRenderView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/default_bk"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp" >
+
+    <com.mogujie.tt.ui.widget.IMBaseImageView
+        android:id="@+id/user_portrait"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tt_default_user_portrait_corner" />
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="35dp"
+        android:layout_toRightOf="@id/user_portrait"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="2dp"
+            android:text="小明"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="35dp"
+            android:layout_toRightOf="@id/user_portrait" >
+
+            <LinearLayout
+                android:id="@+id/message_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/tt_other_item_bg_normal"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:paddingBottom="13dp"
+                android:paddingLeft="21dp"
+                android:paddingRight="13dp"
+                android:paddingTop="13dp" >
+
+                <View
+                    android:id="@+id/audio_antt_view"
+                    android:layout_width="11dp"
+                    android:layout_height="17dp"
+                    android:background="@anim/tt_voice_play_other" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/audio_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/message_layout"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@id/message_layout"
+                android:text="6"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/audio_unread_notify"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_toRightOf="@id/audio_duration"
+                android:background="@drawable/tt_unread_message_notify_bg"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/message_state_failed"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/audio_duration"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/message_image_desc"
+                android:src="@drawable/tt_msg_tip"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.mogujie.tt.ui.widget.message.AudioRenderView>

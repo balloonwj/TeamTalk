@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+  <ListContainerElement name="ListGroupMembersItem" height="40">
+    <HorizontalLayout>
+      <VerticalLayout name="logo_container" width="30" padding="7,5,0,0">
+        <Control name="AvatarInfo" width="30" height="30" />
+      </VerticalLayout>
+      <Label name="nickname" text="姓名" bordersize="0"  textcolor="#FF000000" disabledtextcolor="#FF808080" />
+	  <Button name="removebtn" padding="0,12,0,0" tooltip="删除" height="16" width="16" bkcolor="FFDFE2E5" normalimage="LoginDialog/close.png" hotimage="LoginDialog/close_h.png" pushedimage="LoginDialog/close_h.png"/>
+    </HorizontalLayout>
+  </ListContainerElement>
+</Window>

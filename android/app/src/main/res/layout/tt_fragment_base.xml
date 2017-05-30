@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_default_height"
+        android:background="@drawable/tt_top_default_bk"
+        android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            
+            android:id="@+id/top_left_container" >
+
+            <ImageView
+                android:id="@+id/left_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="6dp"
+                android:scaleType="center"/>
+
+            <TextView
+                android:id="@+id/left_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/left_btn"
+                android:gravity="center_vertical"
+                android:textColor="@color/default_title_color"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/base_fragment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/top_title_size"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="italic" />
+
+            
+
+            <com.mogujie.tt.ui.widget.SearchEditText
+                android:id="@+id/chat_title_search"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/tt_top_search_bg"
+                android:drawableLeft="@drawable/tt_search"
+                android:drawablePadding="10dp"
+                android:gravity="left|center_vertical"
+                android:hint="搜索联系人，部门，会话，群"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/default_key_color"
+                android:textSize="14sp" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/right_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right|center_vertical"
+            android:scaleType="center" 
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/right_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:textColor="@color/default_title_color"
+            android:textSize="14sp" />
+    </FrameLayout>
+        
+	<FrameLayout
+        android:id="@+id/contactTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:background="@drawable/tt_top_default_bk" 
+        android:visibility="gone">
+    	<com.mogujie.tt.ui.widget.TopTabButton
+	        android:id="@+id/contact_tile"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="top|center_horizontal"
+	        android:clickable="true" />
+    </FrameLayout>	
+    
+	<View
+           	android:layout_width="fill_parent"
+           	android:layout_height="0.5dp"
+           	android:background="@drawable/tt_divide_line" />
+    
+    <FrameLayout
+        android:id="@+id/searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <com.mogujie.tt.ui.widget.DrawableCenterEditText
+            android:id="@+id/search_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/tt_top_search_bg"
+            android:drawableLeft="@drawable/tt_top_search"
+            android:drawablePadding="9dp"
+            android:ellipsize="end"
+            android:hint="@string/menu_search"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColorHint="#9a9b9c"
+            android:textSize="14sp" />
+        
+    </FrameLayout>
+	<View
+           	android:layout_width="fill_parent"
+           	android:layout_height="0.5dp"
+           	android:paddingBottom="0dp"
+           	android:background="@drawable/tt_divide_line" />
+</LinearLayout>

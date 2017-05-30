@@ -1,0 +1,5 @@
+* 项目的工具类
+1. 不依赖具体的业务代码，较为独立
+2. 注意和helper区分。helper 业务联系紧密。脱离具体业务代码意义不大。
+3. mgimlibs也包含这么多的工具类 todo 转移到mgimlibs中，合并已知的
+4  有些代码的通用部分可以抽离出来，例如reconnect 中的isNetWorkAvalible

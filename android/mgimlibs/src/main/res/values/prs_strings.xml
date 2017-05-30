@@ -1,0 +1,9 @@
+<resources>
+	<string name="pull_to_refresh">下拉刷新~</string>
+	<string name="refreshing">正在更新&#8230;</string>
+	<string name="release_to_refresh">释放立即更新~</string>
+	<string name="pull_up_to_get_more">上拉获取更多</string>
+	<string name="release_to_get_more">可以松手了</string>
+	<string name="no_more">没有更多内容了哦</string>
+    <string name="last_update">上次更新:</string>
+</resources>

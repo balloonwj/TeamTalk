@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <fragment
+        android:id="@+id/fragment_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        class="com.mogujie.tt.ui.fragment.ChatFragment" />
+
+    <fragment
+        android:id="@+id/fragment_contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        class="com.mogujie.tt.ui.fragment.ContactFragment" />
+
+     <fragment
+        android:id="@+id/fragment_internal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        class="com.mogujie.tt.ui.fragment.InternalFragment" />
+
+    <fragment
+        android:id="@+id/fragment_my"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        class="com.mogujie.tt.ui.fragment.MyFragment" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/tt_tab_bk"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <com.mogujie.tt.ui.widget.NaviTabButton
+            android:id="@+id/tabbutton_chat"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <com.mogujie.tt.ui.widget.NaviTabButton
+            android:id="@+id/tabbutton_contact"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <com.mogujie.tt.ui.widget.NaviTabButton
+            android:id="@+id/tabbutton_internal"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <com.mogujie.tt.ui.widget.NaviTabButton
+            android:id="@+id/tabbutton_my"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="need_refresh_delta">10dp</dimen>
+    <dimen name="head_view_height">60dp</dimen>
+</resources>

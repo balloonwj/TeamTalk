@@ -1,0 +1,147 @@
+package IM.Server;
+import "IM.BaseDefine.proto";
+option optimize_for = LITE_RUNTIME;
+
+//service id:   0x0007
+
+//db_proxy
+message IMStopReceivePacket{
+	//cmd id:   0x0702
+	required uint32 result = 1;
+}
+
+//db_proxy
+message IMValidateReq{
+	//cmd id:	0x0703
+	required string user_name = 1;
+	required string password = 2;
+	optional bytes attach_data = 20;
+}
+
+//db_proxy
+message IMValidateRsp{
+	//cmd id:	0x0704
+	required string user_name = 1;
+	required uint32 result_code = 2;
+	optional string result_string = 3;
+	optional IM.BaseDefine.UserInfo user_info = 4;
+	optional bytes attach_data = 20;
+}
+
+//db_proxy
+message IMGetDeviceTokenReq{
+	//cmd id:	0x0705
+	repeated uint32 user_id = 1;
+	optional bytes attach_data = 20;
+}
+
+//db_proxy
+message IMGetDeviceTokenRsp{
+	//cmd id:	0x0706
+	repeated IM.BaseDefine.UserTokenInfo user_token_info = 1;
+	optional bytes attach_data = 20;
+}
+
+message IMRoleSet{
+	//cmd id:	0x0707
+	required uint32 master = 1;		//0-slave, 1-master
+}
+
+message IMOnlineUserInfo{
+	//cmd id:	0x0708
+	repeated IM.BaseDefine.ServerUserStat user_stat_list = 1;
+}
+
+message IMMsgServInfo{
+	//cmd id:	0x0709
+	required string ip1 = 1;
+	required string ip2 = 2;
+	required uint32 port = 3;
+	required uint32 max_conn_cnt = 4;
+	required uint32 cur_conn_cnt = 5;
+	required string host_name = 6;
+}
+
+message IMUserStatusUpdate{
+	//cmd id:	0x070a
+	required uint32 user_status = 1;
+	required uint32 user_id = 2;
+	required IM.BaseDefine.ClientType client_type = 3;
+}
+
+message IMUserCntUpdate{
+	//cmd id:	0x070b
+	required uint32 user_action = 1; 		//1-inc, 2-dec
+	required uint32 user_id = 2;
+}
+
+message IMServerKickUser{
+	//cmd id:	0x070d
+	required uint32 user_id = 1;
+	required IM.BaseDefine.ClientType client_type = 2;
+	required uint32 reason = 3;   	//KICK_REASON_DUPLICATE_USER = 1;
+}
+
+message IMServerPCLoginStatusNotify{
+	//cmd id:	0x070e
+	required uint32 user_id = 1;
+	required uint32 login_status = 2; 		//1: on   0: off
+}
+
+message IMPushToUserReq{
+	//cmd id:	0x070f
+	required string flash = 1;
+	required string data = 2;
+	repeated IM.BaseDefine.UserTokenInfo user_token_list = 3;
+}
+
+message IMPushToUserRsp{
+	//cmd id:	0x0710
+	repeated IM.BaseDefine.PushResult push_result_list = 1;
+}
+
+message IMGroupGetShieldReq{
+	//cmd id:			0x0711
+	required uint32 group_id = 1;
+	repeated uint32 user_id = 2;
+	optional bytes attach_data = 20;
+}
+
+message IMGroupGetShieldRsp{
+	//cmd id: 			0x0712
+	required uint32 group_id = 1;
+	repeated IM.BaseDefine.ShieldStatus shield_status_list = 2;
+	optional bytes attach_data = 20;
+}
+
+message IMFileTransferReq{
+	//cmd id:			0x0715
+	required uint32 from_user_id = 1;
+	required uint32 to_user_id = 2;
+	required string file_name = 3;
+	required uint32 file_size = 4;
+	required IM.BaseDefine.TransferFileType trans_mode = 5;
+	optional bytes attach_data = 20;
+}
+
+message IMFileTransferRsp{
+	//cmd id:			0x0716
+	required uint32 result_code = 1;
+	required uint32 from_user_id = 2;
+	required uint32 to_user_id = 3;
+	optional string file_name = 4;
+	optional uint32 file_size = 5;
+	optional string task_id = 6;
+	optional IM.BaseDefine.TransferFileType trans_mode = 7;
+	optional bytes attach_data = 20;
+}
+
+message IMFileServerIPReq{
+	//cmd id:			0x0717
+
+}
+
+message IMFileServerIPRsp{
+	//cmd id:			0x0718
+	repeated IM.BaseDefine.IpAddr ip_addr_list = 1;
+}

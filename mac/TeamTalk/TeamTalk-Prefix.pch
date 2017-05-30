@@ -1,0 +1,18 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import "DDSharedDuoduo.h"
+#import "CONSTANT.h"
+#import "Log4Cocoa.h"
+#import "StateMaintenanceManager.h"
+#import "NotificationHelp.h"
+#import "TcpProtocolHeader.h"
+#import "DDSundriesCenter.h"
+#import "DDClientState.h"
+#endif
+

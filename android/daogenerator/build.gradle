@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+//apply plugin:'application'
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'de.greenrobot:greendao-generator:1.3.1'
+    compile 'org.freemarker:freemarker:2.3.20'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+}
+
+artifacts {
+    archives jar
+}

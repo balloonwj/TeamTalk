@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+  <ListContainerElement>
+    <HorizontalLayout>
+      <VerticalLayout name="logo_container" width="40" padding="7,10,0,0">
+        <Control name="logo" width="40" height="40" />
+      </VerticalLayout>
+      <Label name="nickname" padding="5,0,0,0" bordersize="0" width="170" textcolor="#FF000000" disabledtextcolor="#FF808080" />
+      <Button name="unreadcnt" visible="false" padding="0,25,0,0" text="计数" enabled="false" width="30" height="13" bkimage="file=&apos;MainDialog/unrreadcntbk.png&apos; corner=&apos;2,8,2,2&apos;" textcolor="#FFFFFFFF" disabledtextcolor="#FFFFFFFF" align="center" hotimage="file=&apos;MainDialog/unrreadcntbk.png&apos; corner=&apos;2,8,2,2&apos;" /> 
+	  <Button name="creatGroup" visible="false" width="31" height="23" padding="0,5,5,0" tooltip="创建讨论组" bkimage="file='MainDialog/creatGroup.png'  dest='2,4,33,19'" hotimage="file='SessionDialog/btn_hot.png' corner='2,3,2,2'" pushedimage="file='SessionDialog/btn_push.png' corner='2,5,2,2'"  /> 
+ </HorizontalLayout>
+  </ListContainerElement>
+</Window>

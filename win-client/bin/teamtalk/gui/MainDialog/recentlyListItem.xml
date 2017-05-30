@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+  <ListContainerElement>
+    <HorizontalLayout>
+      <VerticalLayout name="logo_container" width="40" padding="7,10,0,0">
+        <Control name="logo" width="40" height="40" />
+      </VerticalLayout>
+      <VerticalLayout padding="6,0,0,0">
+        <HorizontalLayout padding="0,2,0,0">
+          <Label name="nickname" padding="0,3,0,0" text="姓名" bordersize="0" width="165" textcolor="#FF000000" disabledtextcolor="#FF808080" />
+          <Label name="lastContentTime" text="11:11" bordersize="0" textcolor="#FF999999" />
+        </HorizontalLayout>
+        <HorizontalLayout padding="0,2,0,0">
+          <Label name="lastmsg"  padding="0,0,0,3" endellipsis="true" bordersize="0" width="166" textcolor="#FF999999" disabledtextcolor="#FF808080" />
+ 		  <Button name="unreadcnt" padding="0,2,0,0" visible="false" text="计数" enabled="false" width="30" height="13" bkimage="file=&apos;MainDialog/unrreadcntbk.png&apos; corner=&apos;2,8,2,2&apos;" textcolor="#FFFFFFFF" disabledtextcolor="#FFFFFFFF" align="center" hotimage="file=&apos;MainDialog/unrreadcntbk.png&apos; corner=&apos;2,8,2,2&apos;" /> 
+        </HorizontalLayout>		
+      </VerticalLayout>
+    </HorizontalLayout>
+  </ListContainerElement>
+</Window>

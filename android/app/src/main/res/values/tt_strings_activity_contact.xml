@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="desc_avatar">头像</string>
+    <string name="contact_name">最近联系人</string>
+    <string name="menu_undo">后退</string>
+    <string name="menu_search">搜索</string>
+    <string name="menu_users">用户</string>
+    <string name="chat_title">TeamTalk</string>
+    <string name="loading_contacts">加载中...</string>
+    <string name="request_unread_msg_faild">请求未读消息失败</string>
+    <string name="load_contacts_failed">数据请求失败,请重试</string>
+    <string name="get_unread_msg_count_failed">获取未读消息计数失败</string>
+    <string name="get_user_info_failed">获取用户信息失败</string>
+    <string name="get_recent_contact_failed">当前联系人加载失败</string>
+    <string name="network_was_disconnected">连接已经断开</string>
+    <string name="no_recent_contact">最近还没有人联系过你哦</string>
+
+</resources>

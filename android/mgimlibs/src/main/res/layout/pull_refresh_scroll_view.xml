@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="1200dp"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <com.pullrefresh.scrollview.HeadLoadingView
+        android:id="@+id/head_ly"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="-60dp" >
+    </com.pullrefresh.scrollview.HeadLoadingView>
+
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/content_ly" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:orientation="vertical" > -->
+
+
+    <!-- </LinearLayout> -->
+
+    <FrameLayout
+        android:id="@+id/foot_ly"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+    </FrameLayout>
+
+</LinearLayout>

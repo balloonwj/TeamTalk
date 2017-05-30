@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_fragment_title_bk_color"
+    android:orientation="vertical"
+    android:id="@+id/act_base_root"
+    >
+
+    <FrameLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_default_height"
+        android:background="@drawable/tt_top_default_bk" >
+
+        <ImageView
+            android:id="@+id/left_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/tt_back_btn" />
+
+        <TextView
+            android:id="@+id/left_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="32dp"
+            android:textColor="@color/default_black_color"
+            android:textSize="14sp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/base_activity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/top_title_size"/>
+
+        <ImageView
+            android:id="@+id/right_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:scaleType="center" />
+    </FrameLayout>
+    
+    <View
+           	android:layout_width="fill_parent"
+           	android:layout_height="0.5dp"
+           	android:background="@drawable/tt_divide_line" />
+
+</LinearLayout>

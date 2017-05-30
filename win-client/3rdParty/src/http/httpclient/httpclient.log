@@ -1,0 +1,43 @@
+﻿Build started 2017/5/15 22:24:26.
+     1>Project "F:\mycode\TeamTalk\win-client\3rdParty\src\http\httpclient\httpclient.vcxproj" on node 4 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\mycode\TeamTalk\win-client\solution\..\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D HTTPCLIENT_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\\" /Fd"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\vc120.pdb" /Gd /TP /wd4251 /wd4996 /analyze- /errorReport:prompt base64.cpp dll_init.cpp file_reader.cpp file_writer.cpp http_client.cpp http_header_parser.cpp http_post_file.cpp http_request.cpp http_response.cpp http_response_receiver.cpp "proxy_socket .cpp" socket_helper.cpp streaming_socket.cpp url_parser.cpp util.cpp
+         util.cpp
+         url_parser.cpp
+         streaming_socket.cpp
+         socket_helper.cpp
+         proxy_socket .cpp
+         http_response_receiver.cpp
+         http_response.cpp
+         http_request.cpp
+         http_post_file.cpp
+         http_header_parser.cpp
+         http_client.cpp
+         file_writer.cpp
+         file_reader.cpp
+         dll_init.cpp
+         base64.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\httpclient.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\httpclient.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\mycode\TeamTalk\win-client\solution\..\lib\Debug\httpclient.lib" /MACHINE:X86 /DLL "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\base64.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\dll_init.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\file_reader.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\file_writer.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\http_client.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\http_header_parser.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\http_post_file.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\http_request.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\http_response.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\http_response_receiver.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\proxy_socket .obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\socket_helper.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\streaming_socket.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\url_parser.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\httpclient_Debug\util.obj"
+            Creating library F:\mycode\TeamTalk\win-client\solution\..\lib\Debug\httpclient.lib and object F:\mycode\TeamTalk\win-client\solution\..\lib\Debug\httpclient.exp
+         httpclient.vcxproj -> F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\httpclient.dll
+     1>Done Building Project "F:\mycode\TeamTalk\win-client\3rdParty\src\http\httpclient\httpclient.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:22.11

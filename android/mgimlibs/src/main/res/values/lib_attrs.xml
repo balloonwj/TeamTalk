@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MGWebImageViewWithCover">
+        <attr name="cover" format="reference" />
+    </declare-styleable>
+    
+    <declare-styleable name="MGWebImageView">
+        <attr name="shape">
+            <enum name="circle" value="0" />
+            <enum name="round_corner" value="1" />
+        </attr>
+        <attr name="cornerSize" format="dimension" />
+    </declare-styleable>
+    
+    <declare-styleable name="HorizontalScattered">
+        <attr name="item_left_margin" format="dimension" />
+        <attr name="item_top_margin" format="dimension" />
+        <attr name="item_right_margin" format="dimension" />
+        <attr name="item_bottom_margin" format="dimension" />
+        <attr name="row_count_limited" format="integer" />
+    </declare-styleable>
+    
+    <declare-styleable name="FixedProportionImageView">
+         <!-- 比例，公式: heightBased ? W/H : 	H/W -->
+        <attr name="fixedProportion" format="reference|float" />
+        <!-- 默认以控件的宽为基准计算高度，如果设置为true，则以控件的高为基准 -->
+        <attr name="heightBased" format="boolean"></attr>
+
+        <!-- 某个控件的color mask值，用于在click事件的时候给控件蒙上一层颜色 -->
+        <attr name="maskedColor" format="reference|color" />
+        <attr name="needColorMask" format="boolean" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <com.mogujie.tt.ui.widget.SearchEditText
+            android:id="@+id/filter_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="23dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/tt_search_edt_bk"
+            android:drawableLeft="@drawable/tt_search"
+            android:drawablePadding="10dp"
+            android:gravity="left|center_vertical"
+            android:hint="@string/menu_search"
+            android:paddingLeft="4dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/default_key_color"
+            android:textSize="14sp" />
+
+        <GridView
+            android:id="@+id/group_manager_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="140dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/white"
+            android:columnWidth="42dp"
+            android:gravity="center"
+            android:horizontalSpacing="3dp"
+            android:numColumns="auto_fit"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="3dp" 
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/default_line_color" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/contact_list_item_bk" >
+
+            <ListView
+                android:id="@+id/all_contact_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:divider="@null" />
+
+            <TextView
+                android:id="@+id/dialog"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/tt_show_head_toast_bg"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="30dp"
+                android:visibility="invisible" />
+
+            <com.mogujie.tt.ui.widget.SortSideBar
+                android:id="@+id/sidrbar"
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right|center"
+                android:layout_marginBottom="95dp"
+                android:layout_marginTop="75dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/tt_progressbar"
+        android:indeterminateDuration="4000"
+        android:visibility="gone" />
+
+</RelativeLayout>

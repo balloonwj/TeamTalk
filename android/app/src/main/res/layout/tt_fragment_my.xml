@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_bk"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/user_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ececec"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
+            >
+
+            <com.mogujie.tt.ui.widget.IMBaseImageView
+                android:id="@+id/user_portrait"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/tt_default_user_portrait_corner"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/user_portrait"
+                android:gravity="center|center_vertical"
+                android:layout_centerVertical="true"
+
+                >
+
+                <TextView
+                    android:id="@+id/nickName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"/>
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nickName"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/default_light_grey_color"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/tt_default_arrow" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/settingPage"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:text="@string/notify_setting" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/tt_default_arrow"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/tt_divide_line"
+            />
+
+	    <RelativeLayout
+	        android:id="@+id/clearPage"
+	        android:layout_width="match_parent"
+	        android:layout_height="45dp" >
+	
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="20dp"
+	            android:textColor="@android:color/black"
+	            android:textSize="15sp"            
+	            android:text="@string/thumb_remove" />
+	        
+	        <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="15dp"
+	            android:src="@drawable/tt_default_arrow"
+                android:visibility="gone"/>
+	
+	    </RelativeLayout>
+	    
+	    <View
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:layout_marginLeft="10dp"
+	        android:background="@drawable/tt_divide_line"
+	        />
+	
+	    <RelativeLayout
+	        android:id="@+id/exitPage"
+	        android:layout_width="match_parent"
+	        android:layout_height="45dp">
+	        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="20dp"
+	            android:textColor="@android:color/black"
+	            android:textSize="15sp"            
+	            android:text="@string/exit" />
+	        
+	         <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="15dp"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/tt_default_arrow"
+                 android:visibility="gone"/>
+	        
+	    </RelativeLayout>
+	    
+	    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/tt_divide_line"
+        />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/tt_progressbar"
+        android:indeterminateDuration="4000"
+        android:visibility="visible" />
+
+</RelativeLayout>

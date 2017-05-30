@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ProjectFils">
+      <UniqueIdentifier>{53ac5c2c-60ff-4140-9f6b-773b124b4bd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{1dcb2f95-42cc-475e-b123-23eeee2e9381}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DUI Resouece">
+      <UniqueIdentifier>{5d381f25-b8af-48be-8153-dfae5576a037}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>ProjectFils</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>ProjectFils</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>ProjectFils</Filter>
+    </ClInclude>
+    <ClInclude Include="teamtalk.h">
+      <Filter>ProjectFils</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\MainDialog.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>ProjectFils</Filter>
+    </ClCompile>
+    <ClCompile Include="teamtalk.cpp">
+      <Filter>ProjectFils</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MainDialog.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MainDialog_TrayIcon.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MainDialog_Event.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\teamtalk.ico">
+      <Filter>ProjectFils</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="teamtalk.rc">
+      <Filter>ProjectFils</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\teamtalk.rc2">
+      <Filter>ProjectFils</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\bin\teamtalk\gui\CreateDiscussionGrpDialog\ChangeDiscussionMemberDialog.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\CreateDiscussionGrpDialog\CreateDiscussionGrpDialog.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\CreateDiscussionGrpDialog\ListCreatFromItem.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\CreateDiscussionGrpDialog\ListGroupMembersItem.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\EmotionDialog\emotion.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\EmotionDialog\QSBFace.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\FileTransferDialog\FileTransferDialog.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\FileTransferDialog\FileTransferListItem.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\LoginDialog\LoginDialog.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\MainDialog\UserDetailInfoDialog.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\MainDialog\recentlyListItem.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\MainDialog\MainDialog.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\MainDialog\groupListItem.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\MainDialog\eaUserListItem.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\menu\lineStatus.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\menu\SendFile.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\menu\TrayIconMenu.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\menu\userListMenu.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\SessionDialog\groupMembersListItem.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\SessionDialog\SessionDialog.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\SysConfigDialog\ServerConfigDialog.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+    <Xml Include="..\..\bin\teamtalk\gui\SysConfigDialog\SysConfigDialog.xml">
+      <Filter>DUI Resouece</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

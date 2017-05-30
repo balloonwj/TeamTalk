@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Default name="Menu" value="inset=&quot;2,2,2,2&quot; itemtextpadding=&quot;30,0,0,0&quot; bkimage=&quot;file='menu\menu_bk.png' corner='30,4,4,4'&quot; hole=&quot;false&quot;" />
+  <Menu>
+	<MenuElement name="OnlineMenuItem" text="在线" bkimage="file='menu/online.png' source='0,0,16,16' dest='5,5,21,21'"/>
+	<MenuElement name="OfflineMenuItem" text="离线" bkimage="file='menu/offline.png' source='0,0,16,16' dest='5,5,21,21'"/>
+  </Menu>
+</Window>

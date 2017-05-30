@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>聊天</title>
+    <link rel="stylesheet" href="css/module-content.css" />
+</head>
+<body>
+    <div id="msgview" class="im_mainbox_middle_main_contentbox">
+        <div class="im_mainbox_placeholder"></div>
+		<a href="moguim://moguim/:history" class="im_history_btn" id="im_history_btn" target="_blank">查看历史聊天记录</a>
+        <p class="im_message_weektip_t" id="hisline">以上是历史消息</p>
+    </div>
+
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/json2.min.js"></script>
+    <script src="js/lib/underscore.min.js"></script>
+    <script src="js/module-msgview.js"></script>
+
+    <!-- message -->
+    <script type="template/text" id="tpl_message1">
+        <div class="message <%= mtype %>">
+			<a href="moguim://moguim/:chat2?<%= uuid %>" target="_blank">
+				<img src="<%= avatar %>" width="40" height="40" alt="<%= name %>" class="avatar" />
+			</a>
+            <i class="message_tip"></i>
+            <div class="message_content">
+                <div class="msg_shadowline">
+                    <div class="message_name"><a href="moguim://moguim/:chat2?<%= uuid %>" target="_blank"><%= name %></a></div>
+                    <div class="message_time"><%= time %></div>
+                </div>
+                <p><%= content %></p>
+            </div>
+        </div>
+    </script>
+    <script type="template/text" id="tpl_message2">
+        <div class="message <%= mtype %>">
+			<a href="moguim://moguim/:chat2?<%= uuid %>" target="_blank">
+				<img src="<%= avatar %>" width="40" height="40" alt="<%= name %>" class="avatar" />
+			</a>
+            <i class="message_tip"></i>
+            <div class="message_content">
+                <div class="msg_shadowline">
+                    <div class="message_name"><a href="moguim://moguim/:chat2?<%= uuid %>" target="_blank"><%= name %></a></div>
+                    <div class="message_time"><%= time %></div>
+                </div>
+                <p><a href="<%= src %>" target="_blank"><img src="<%= src %>" width="<%= width %>" height="<%= height %>" /></a></p>
+            </div>
+        </div>
+    </script>
+    <script type="template/text" id="tpl_message3">
+        <div class="message <%= mtype %>">
+			<a href="moguim://moguim/:chat2?<%= uuid %>" target="_blank">
+				<img src="<%= avatar %>" width="40" height="40" alt="<%= name %>" class="avatar" />
+			</a>
+            <i class="message_tip"></i>
+            <div class="message_content">
+                <div class="msg_shadowline">
+                    <div class="message_name"><a href="moguim://moguim/:chat2?<%= uuid %>" target="_blank"><%= name %></a></div>
+                    <div class="message_time"><%= time %></div>
+                </div>
+                <p><%= content %></p>
+                <div class="message_goods J_goodsinfo" data-id="<%= goodsMsgId %>">
+                    <div class="loading"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="template/text" id="tpl_goodsinfo">
+        <% if (goodsTitle) { %>
+        <a hidefocus="true" href="<%= goodsUrl %>" target="_blank" class="message_goods_link">
+            <img src="<%= goodsPicurl %>" width="60" height="60" alt="<%= goodsTitle %>" />
+        </a>
+        <p class="message_goods_tit"><%= goodsTitle %></p>
+        <p class="message_goods_price">￥<%= goodsPrice %></p>
+        <% } %>
+    </script>
+    <script type="template/text" id="tpl_message4">
+        <p class="im_message_weektip"><span><i class="im_message_weektip_t">系统消息：</i><%= content %></span></p>
+    </script>
+	<script type="template/text" id="tpl_message5">
+        <p class="im_message_weektip">收到文件：<i class="font-normal" title="<%= filepath %>">"<%= filename %>"</i> (<%= filesize %>) <a href="moguim://moguim/:openfile?<%= fileid %>">打开文件</a> <a href="moguim://moguim/:openfolder?<%= fileid %>">打开文件夹</a></p>
+    </script>
+	<script type="template/text" id="tpl_message6">
+        <div class="message <%= mtype %>">
+            <img src="<%= avatar %>" width="40" height="40" alt="<%= name %>" class="avatar" />
+            <i class="message_tip"></i>
+            <div class="message_content">
+                <div class="msg_shadowline">
+                    <div class="message_name"><%= name %></div>
+                    <div class="message_time"><%= time %></div>
+                </div>
+                <p class="message_voice_line">
+					<a class="message_voice J_voicebtn" target="_blank" data-id="<%= voiceid %>" href="moguim://moguim/:playvoice?<%= voiceid %>"></a>
+					<span class="voice_info"><%= voicetime %></span>
+					<span class="<%= voiceisread === 'true' ? '' : 'unread' %>"></span>
+				</p>
+            </div>
+        </div>
+    </script>
+    <!-- message end -->
+
+    <script>/*
+    $(document).ready(function() {
+        var message = {
+            name: '布吉',
+            time: '13:12:04',
+            content: 'ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp',
+            avatar: 'http://s7.mogujie.com/b7/avatar/130902/scccw_kqyvqn2dkfbewzcugfjeg5sckzsew_472x593.jpg',
+            src: 'http://s7.mogujie.com/b7/pic/130916/scccw_kqywsslikfbhszdwgfjeg5sckzsew_280x210.gif_100x100.jpg',
+            width: '100',
+            height: '100',
+            goodsTitle: '2013新款欧美简约女装百搭时尚娃娃领镶钻无袖雪纺衫小衫背心上衣',
+            goodsPrice: '89.00',
+            goodsPicurl: 'http://s12.mogujie.cn/b7/bao/130819/q22xe_kqyuuq3ikfbg2rdwgfjeg5sckzsew_400x600.jpg_100x100.jpg',
+            msgtype: '1',
+            mtype: 'other'
+        };
+		
+		var message = {
+            name: '布吉',
+            time: '13:12:04',
+            avatar: 'http://s7.mogujie.com/b7/avatar/130902/scccw_kqyvqn2dkfbewzcugfjeg5sckzsew_472x593.jpg',
+            msgtype: '6',
+            mtype: 'other',
+			voiceid: '2014-04-28-110509-8423EF5C29B-2059-4c51-91ED-2D91D043F5541gqwv2',
+			voicetime: '1分',
+			voiceisread: 'false'
+        };
+
+    //     var message1 = {
+    //         name: '布吉',
+    //         time: '13:12:14',
+    //         content: '消息内容，内容内容',
+    //         avatar: 'http://s7.mogujie.com/b7/avatar/130902/scccw_kqyvqn2dkfbewzcugfjeg5sckzsew_472x593.jpg',
+    //         src: 'http://s7.mogujie.com/b7/pic/130916/scccw_kqywsslikfbhszdwgfjeg5sckzsew_280x210.gif_100x100.jpg',
+    //         width: '100',
+    //         height: '100',
+    //         goodsTitle: '2013新款欧美简约女装百搭时尚娃娃领镶钻无袖雪纺衫小衫背心上衣',
+    //         goodsPrice: '89.00',
+    //         goodsPicurl: 'http://s12.mogujie.cn/b7/bao/130819/q22xe_kqyuuq3ikfbg2rdwgfjeg5sckzsew_400x600.jpg_100x100.jpg',
+    //         msgtype: '2',
+    //         mtype: 'other'
+    //     };
+
+    //     var message2 = {
+    //         name: '快刀',
+    //         time: '13:12:24',
+    //         content: '消息内容，内容内容<a href="http://mogujie.com/fUnZk" target="_blank">http://mogujie.com/fUnZk</a>',
+    //         avatar: 'http://s7.mogujie.com/b7/avatar/130902/scccw_kqyvqn2dkfbewzcugfjeg5sckzsew_472x593.jpg',
+    //         src: 'http://s7.mogujie.com/b7/pic/130916/scccw_kqywsslikfbhszdwgfjeg5sckzsew_280x210.gif_100x100.jpg',
+    //         width: '100',
+    //         height: '100',
+    //         goodsTitle: '2013新款欧美简约女装百搭时尚娃娃领镶钻无袖雪纺衫小衫背心上衣',
+    //         goodsPrice: '89.00',
+    //         goodsPicurl: 'http://s12.mogujie.cn/b7/bao/130819/q22xe_kqyuuq3ikfbg2rdwgfjeg5sckzsew_400x600.jpg_100x100.jpg',
+    //         msgtype: '1',
+    //         mtype: 'me'
+    //     };
+
+         var message3 = {
+             name: '快刀',
+             time: '13:12:34',
+             content: '消息内容，内容内容<a href="http://mogujie.com/fUnZk" target="_blank">http://mogujie.com/fUnZk</a>',
+             avatar: 'http://s7.mogujie.com/b7/avatar/130902/scccw_kqyvqn2dkfbewzcugfjeg5sckzsew_472x593.jpg',
+             src: 'http://s7.mogujie.com/b7/pic/130916/scccw_kqywsslikfbhszdwgfjeg5sckzsew_280x210.gif_100x100.jpg',
+             goodsMsgId: '1x1x1x',
+             msgtype: '3',
+             mtype: 'me'
+         };
+
+    //     var message4 = {
+    //         content: '消息内容，内容内容',
+    //         msgtype: '4'
+    //     };
+
+        var messages = [{
+            name: '快刀',
+            time: '13:12:24',
+            content: '消息内容，内容内容<a href="http://mogujie.com/fUnZk" target="_blank">http://mogujie.com/fUnZk</a>',
+            avatar: 'http://s7.mogujie.com/b7/avatar/130902/scccw_kqyvqn2dkfbewzcugfjeg5sckzsew_472x593.jpg',
+            src: 'http://s7.mogujie.com/b7/pic/130916/scccw_kqywsslikfbhszdwgfjeg5sckzsew_280x210.gif_100x100.jpg',
+            width: '100',
+            height: '100',
+            goodsTitle: '2013新款欧美简约女装百搭时尚娃娃领镶钻无袖雪纺衫小衫背心上衣',
+            goodsPrice: '89.00',
+            goodsPicurl: 'http://s12.mogujie.cn/b7/bao/130819/q22xe_kqyuuq3ikfbg2rdwgfjeg5sckzsew_400x600.jpg_100x100.jpg',
+            msgtype: '1',
+            mtype: 'me'
+        }, {
+            name: '布吉',
+            time: '13:12:04',
+            content: 'ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp',
+            avatar: 'http://s7.mogujie.com/b7/avatar/130902/scccw_kqyvqn2dkfbewzcugfjeg5sckzsew_472x593.jpg',
+            src: 'http://s7.mogujie.com/b7/pic/130916/scccw_kqywsslikfbhszdwgfjeg5sckzsew_280x210.gif_100x100.jpg',
+            width: '100',
+            height: '100',
+            goodsTitle: '2013新款欧美简约女装百搭时尚娃娃领镶钻无袖雪纺衫小衫背心上衣',
+            goodsPrice: '89.00',
+            goodsPicurl: 'http://s12.mogujie.cn/b7/bao/130819/q22xe_kqyuuq3ikfbg2rdwgfjeg5sckzsew_400x600.jpg_100x100.jpg',
+            msgtype: '1',
+            mtype: 'other'
+        }, {
+            name: '布吉',
+            time: '13:12:14',
+            content: '消息内容，内容内容',
+            avatar: 'http://s7.mogujie.com/b7/avatar/130902/scccw_kqyvqn2dkfbewzcugfjeg5sckzsew_472x593.jpg',
+            src: 'http://s7.mogujie.com/b7/pic/130916/scccw_kqywsslikfbhszdwgfjeg5sckzsew_280x210.gif_100x100.jpg',
+            width: '100',
+            height: '100',
+            goodsTitle: '2013新款欧美简约女装百搭时尚娃娃领镶钻无袖雪纺衫小衫背心上衣',
+            goodsPrice: '89.00',
+            goodsPicurl: 'http://s12.mogujie.cn/b7/bao/130819/q22xe_kqyuuq3ikfbg2rdwgfjeg5sckzsew_400x600.jpg_100x100.jpg',
+            msgtype: '2',
+            mtype: 'other'
+        }, {
+            msgtype: '5',
+			filepath: 'C:\\xixx\\xx\\x.xx',
+			filename: '哈哈.xx',
+			filesize: '46.6kb',
+			fileid: 'xoxoxo'
+        }, {
+			name: '布吉',
+            time: '13:12:04',
+            avatar: 'http://s7.mogujie.com/b7/avatar/130902/scccw_kqyvqn2dkfbewzcugfjeg5sckzsew_472x593.jpg',
+            msgtype: '6',
+            mtype: 'other',
+			voiceid: '2014-04-28-110509-8423EF5C29B-2059-4c51-91ED-2D91D043F5541gqwv2',
+			voicetime: '1分',
+			voiceisread: 'true'
+		}];
+
+        message = JSON.stringify(message);
+    //     message1 = JSON.stringify(message1);
+    //     message2 = JSON.stringify(message2);
+         message3 = JSON.stringify(message3);
+    //     message4 = JSON.stringify(message4);
+        messages = JSON.stringify(messages);
+
+    //     // 客户端调用 Demo
+    //     // message: json 字符串 '{"name":"布吉","time":"2013-08-26 13:12:04","content":"消息内容，内容内容","src":"","msgtype":"1"}'
+        sendMessage(message);
+    //     sendMessage(message1);
+    //     sendMessage(message2);
+         sendMessage(message3);
+    //     sendMessage(message4);
+
+
+
+        setTimeout(function() {
+            historyMessage(messages);
+        }, 5000);
+    });*/
+    </script>
+</body>
+</html>

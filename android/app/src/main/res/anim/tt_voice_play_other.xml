@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <!--tt_voice_node_mine // tt_voice_node_other-->
+    <item
+        android:drawable="@drawable/tt_voice_node_other"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/tt_voice_node_other_playing001"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/tt_voice_node_other_playing002"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/tt_voice_node_other_playing003"
+        android:duration="200"/>
+
+</animation-list>

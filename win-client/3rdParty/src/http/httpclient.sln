@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "httpclient", "httpclient\httpclient.vcproj", "{0E873164-0137-4027-BF44-7FE5E1FAAA3D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcproj", "{AD0F2A92-6EAA-4C03-8AE8-592828A12ACF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0E873164-0137-4027-BF44-7FE5E1FAAA3D} = {0E873164-0137-4027-BF44-7FE5E1FAAA3D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E873164-0137-4027-BF44-7FE5E1FAAA3D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0E873164-0137-4027-BF44-7FE5E1FAAA3D}.Debug|Win32.Build.0 = Debug|Win32
+		{0E873164-0137-4027-BF44-7FE5E1FAAA3D}.Release|Win32.ActiveCfg = Release|Win32
+		{0E873164-0137-4027-BF44-7FE5E1FAAA3D}.Release|Win32.Build.0 = Release|Win32
+		{AD0F2A92-6EAA-4C03-8AE8-592828A12ACF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AD0F2A92-6EAA-4C03-8AE8-592828A12ACF}.Debug|Win32.Build.0 = Debug|Win32
+		{AD0F2A92-6EAA-4C03-8AE8-592828A12ACF}.Release|Win32.ActiveCfg = Release|Win32
+		{AD0F2A92-6EAA-4C03-8AE8-592828A12ACF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

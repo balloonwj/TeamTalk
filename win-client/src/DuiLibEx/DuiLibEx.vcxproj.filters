@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Project Files">
+      <UniqueIdentifier>{4ac863b3-24a7-419c-a8dd-5f3a4ebc0fbb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DuiLibEx.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DuiLibEx.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\DuilibEx\DuilibExDll.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DuiLibEx.def">
+      <Filter>Project Files</Filter>
+    </None>
+    <None Include="res\DuiLibEx.rc2">
+      <Filter>Project Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DuiLibEx.rc">
+      <Filter>Project Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

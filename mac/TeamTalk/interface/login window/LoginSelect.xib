@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DDLoginWindowController">
+            <connections>
+                <outlet property="avatarIcon" destination="3Wh-ZV-E69" id="J2Y-uo-LEz"/>
+                <outlet property="loginButton" destination="KOB-uv-CT7" id="yrd-gi-5zV"/>
+                <outlet property="loginLoading" destination="IjA-jo-uat" id="JcZ-Ag-O7u"/>
+                <outlet property="txtPassword" destination="FOE-5j-1WN" id="Z5a-3I-zDV"/>
+                <outlet property="txtUrl" destination="IfL-zP-SeO" id="i1r-LY-VNv"/>
+                <outlet property="txtUserName" destination="cZ7-uO-ONq" id="xQj-j4-Xz9"/>
+                <outlet property="window" destination="WEv-Hp-MzE" id="hnb-zR-0Dy"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="none" id="WEv-Hp-MzE" userLabel="Window" customClass="DDCustomWindow">
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="411" y="354" width="265" height="355"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
+            <value key="minSize" type="size" width="159.30199999999999" height="100"/>
+            <view key="contentView" id="QOw-G8-KVZ">
+                <rect key="frame" x="0.0" y="-6" width="265" height="355"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Thu-I1-8nJ">
+                        <rect key="frame" x="0.0" y="-58" width="265" height="418"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login-background" id="0rd-oi-4wq"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="O8h-Ep-Sca">
+                        <rect key="frame" x="66" y="173" width="133" height="133"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login-avatar-background" id="IbC-Cv-2Y6"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3Wh-ZV-E69" customClass="EGOImageView">
+                        <rect key="frame" x="82" y="190" width="102" height="102"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="syg-ik-hH2"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Xck-Lx-3hG">
+                        <rect key="frame" x="77" y="323" width="110" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="TeamTalk-Top" id="hdr-i4-D4O"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="mR5-ks-U5u">
+                        <rect key="frame" x="23" y="121" width="219" height="42"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login-input-background" id="bZ1-KO-nhA"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="FoH-Ic-Cz9">
+                        <rect key="frame" x="23" y="76" width="219" height="42"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login-input-background" id="MzM-62-2KO"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="X7b-Fq-8nf">
+                        <rect key="frame" x="37" y="137" width="9" height="11"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login-account" id="anO-Wy-Oak"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="NLe-Co-cfj">
+                        <rect key="frame" x="34" y="91" width="13" height="8"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login-password" id="bdU-Uj-mUG"/>
+                    </imageView>
+                    <textField verticalHuggingPriority="750" id="cZ7-uO-ONq">
+                        <rect key="frame" x="52" y="131" width="174" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" placeholderString="内网拼音用户名" id="J7k-st-xl7">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="L70-dX-q6V"/>
+                        </connections>
+                    </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="n3j-uT-YUJ">
+                        <rect key="frame" x="23" y="26" width="219" height="42"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login-input-background" id="V9G-uK-6vm"/>
+                    </imageView>
+                    <textField verticalHuggingPriority="750" id="IfL-zP-SeO">
+                        <rect key="frame" x="52" y="36" width="174" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" title="http://access.teamtalk.im:8080/msg_server" placeholderString="接入服务URL" id="vjm-n9-592">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="FOE-5j-1WN" customClass="NSSecureTextField">
+                        <rect key="frame" x="52" y="84" width="156" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" placeholderString="内网密码" id="Sq0-ax-Bja" customClass="NSSecureTextFieldCell">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="h2e-lk-9Ji"/>
+                        </connections>
+                    </textField>
+                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="IjA-jo-uat">
+                        <rect key="frame" x="216" y="87" width="16" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </progressIndicator>
+                    <button id="KOB-uv-CT7">
+                        <rect key="frame" x="214" y="86" width="20" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="login-logining" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="FVi-11-WLU">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="login:" target="-2" id="S0Z-3A-Xzc"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="XOv-II-mXf">
+                        <rect key="frame" x="40" y="7" width="161" height="11"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="TeamTalk v1.0(0) by mogujie.com" id="k6s-OY-6ay">
+                            <font key="font" metaFont="miniSystem"/>
+                            <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="402.5" y="302.5"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="TeamTalk-Top" width="112" height="23"/>
+        <image name="login-account" width="9" height="10"/>
+        <image name="login-avatar-background" width="133" height="133"/>
+        <image name="login-background" width="263" height="312"/>
+        <image name="login-input-background" width="219" height="42"/>
+        <image name="login-logining" width="20" height="20"/>
+        <image name="login-password" width="13" height="8"/>
+    </resources>
+</document>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:gravity="center_horizontal"
+  android:background="#d3d3d3">
+                
+    <ImageButton
+       android:id="@+id/btn_pop"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:layout_margin="10dip" />
+</LinearLayout>

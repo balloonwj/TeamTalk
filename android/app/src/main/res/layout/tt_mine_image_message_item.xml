@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mogujie.tt.ui.widget.message.ImageRenderView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/default_bk"
+    android:paddingBottom="20dp"
+    android:paddingRight="10dp">
+    <!--xmlns:BubbleImageView="http://schemas.android.com/apk/res-auto"-->
+
+    <com.mogujie.tt.ui.widget.IMBaseImageView
+        android:id="@+id/user_portrait"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tt_default_user_portrait_corner" />
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/user_portrait"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="4dp"
+        android:layout_toLeftOf="@id/user_portrait" >
+
+        <ImageView
+            android:id="@+id/message_state_failed"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/message_image_desc"
+            android:src="@drawable/tt_msg_tip"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/message_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/message_state_failed"
+            android:background="@drawable/tt_mine_image_vertical_bk"
+            >
+
+            <com.mogujie.tt.ui.widget.BubbleImageView
+                android:id="@+id/message_image"
+                android:layout_width="80dp"
+                android:layout_height="150dp"
+                android:maxHeight="150dp"
+                android:maxWidth="80dp"
+                android:adjustViewBounds="true"
+                android:padding="0dp"
+                android:scaleType="centerCrop"/>
+                <!--BubbleImageView:bubble_angle="5dp"-->
+                <!--BubbleImageView:bubble_arrowHeight="10dp"-->
+                <!--BubbleImageView:bubble_arrowLocation="right"-->
+                <!--BubbleImageView:bubble_arrowOffset="-5dp"-->
+                <!--BubbleImageView:bubble_arrowTop="15dp"-->
+                <!--BubbleImageView:bubble_arrowWidth="5dp" />-->
+
+            <com.mogujie.tt.ui.widget.MGProgressbar
+                android:id="@+id/tt_image_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="4dp"
+                android:gravity="center"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</com.mogujie.tt.ui.widget.message.ImageRenderView>

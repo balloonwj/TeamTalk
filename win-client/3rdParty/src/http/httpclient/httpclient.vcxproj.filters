@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="http">
+      <UniqueIdentifier>{303c0986-681e-4bdb-bd33-5902fcf13458}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{6a6f3165-c374-4f8c-8100-495c84a92f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="socket">
+      <UniqueIdentifier>{c02ca508-33b3-4395-b09d-54818a41237e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="global_defs.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http_client.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http_delegate.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http_global.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http_header_parser.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http_post_file.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http_request.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http_response.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http_response_receiver.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="url_parser.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy_config.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy_socket.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket_helper.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_socket.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="base64.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="file_reader.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="file_writer.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="http.h" />
+    <ClInclude Include="standard_header.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="http_client.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http_header_parser.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http_post_file.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http_request.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http_response.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http_response_receiver.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="url_parser.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy_socket .cpp">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="socket_helper.cpp">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_socket.cpp">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="base64.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="file_reader.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="file_writer.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="dll_init.cpp" />
+  </ItemGroup>
+</Project>

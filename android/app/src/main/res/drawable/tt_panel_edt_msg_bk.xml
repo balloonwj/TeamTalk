@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/edt_msg_pressed" android:state_pressed="true"/>
+    <item android:drawable="@drawable/edt_msg_pressed" android:state_focused="true"/>
+    <item android:drawable="@drawable/edt_msg_normal"/>
+
+</selector>
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/tt_pannel_edt_normal" android:state_window_focused="false"/>
+    <item android:drawable="@drawable/tt_panel_edt_focused" android:state_focused="true"/>
+
+</selector>

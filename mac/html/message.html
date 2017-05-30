@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TeamTalk</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <link rel="stylesheet" href="./pure-min.css">
+        <link rel="stylesheet" href="./main.css">
+        <link href="./hook.css" rel="stylesheet">
+        <script type="text/javascript" src="./jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="./template.js"></script>
+        <script type="text/javascript" src="./msg.js"></script>
+        <script src="./mousewheel.js"></script>
+        <script src="./hook.min.js"></script>
+    </head>
+    <body>
+        <script>
+            function sendMessage(params){
+                 msgRender.render(JSON.parse(params));
+                 var result = {'message':'发送信息'};
+                 return result;
+            }
+            function resize(params){
+                document.getElementById('view').value = params;
+                var div = document.getElementsByClassName("chat-content");
+                div[0].style.height=params+"px";
+                var result = {'message':params};
+                return result;
+            }
+        </script>
+        <div class="load-more hide">
+        </div>
+        <div class="chat-zone">
+            <div class="chat-main clearfix">
+                <div class="chat-content fl">
+                    <div class="J-chat-display">
+                        <script id="J_Chat_Display_Text_Tpl" type="text/html">
+                            <div class="message {{type}} message-{{message.id}} clearfix" data-time="{{message.msgTime}}">
+                                <img src="{{user.avatar_100}}" class="avatar"> 
+                                <div class="message_content"> 
+                                    <p class="message_userinfo">{{user.nick}}</p> 
+                                    <div class="message_render">
+                                        <p class="message_render_content">{{#message.content_value}}</p>   
+                                    </div>
+                                </div> 
+                                <div class="message-status message-status-{{message.status}}">
+                                </div> 
+                                <div class="triangle-css3"></div>
+                            </div>
+                        </script>
+                        <script id="J_Chat_Display_Audio_Tpl" type="text/html">
+                            <div class="message {{type}} clearfix"> 
+                                <img src="{{user.avatar_100}}" class="avatar"> 
+                                <div class="message_content"> 
+                                    <p class="message_userinfo">{{user.nick}}</p> 
+                                    <div class="message_render message_render_audio">
+                                        <p>{{message.content}}</p>   
+                                    </div>
+                                </div>
+                                <div class="message-status message-status-{{message.status}}">
+                                </div> 
+                                <div class="unread">
+                                </div>
+                                <div class="second">
+                                    {{message.info.length}}''
+                                </div>
+                                <div class="triangle-css3"></div>
+                            </div>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

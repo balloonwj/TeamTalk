@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+  <ListContainerElement height="40" name="ListGroupMembersItem" >
+    <HorizontalLayout>
+      <Control name="AvatarInfo"  width="30" height="30" padding="7,5,0,0"/>
+      <Label name="nickname"  padding="10,3,0,0" bordersize="0" textcolor="#FF000000" disabledtextcolor="#FF808080" />
+	  <Button name="Creator"  padding="0,14,0,0"  width="16" height="16" bkimage="SessionDialog/group_creator.png" visible="false" enabled="false"/>
+   </HorizontalLayout>
+  </ListContainerElement>
+</Window>

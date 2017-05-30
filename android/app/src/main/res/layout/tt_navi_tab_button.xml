@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/tab_btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/tab_btn_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="default_tab_image"
+            android:scaleType="centerInside"
+            android:src="@drawable/tt_default_user_portrait_corner" />
+
+        <TextView
+            android:id="@+id/tab_unread_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+			android:layout_toRightOf="@id/tab_btn_default"
+            android:background="@drawable/tt_message_notify"
+            android:layout_marginLeft="-5dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:gravity="center"
+            android:text="99+"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tab_btn_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tab_btn_default"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="聊天"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</LinearLayout>

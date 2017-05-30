@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="300dp"
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="30dp" >
+
+    <TextView
+        android:id="@+id/imTitle"
+        style="@style/imDialogText.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        tools:text="title"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/imSubTitle"
+        style="@style/imDialogText.SubTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        tools:text="message"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/imContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/imNegativeButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tt_dialog_negative_btn_bg"
+            android:singleLine="true"
+            tools:text="取消"
+            android:textColor="@color/tt_dialog_negative_text_color"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/imPositiveButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/tt_dialog_positive_btn_bg"
+            android:singleLine="true"
+            tools:text="确定"
+            android:textColor="@color/tt_positive_text_color"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</LinearLayout>

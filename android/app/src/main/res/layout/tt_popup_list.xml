@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_list"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/message_item_popup_height"
+    android:clickable="true"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/speaker_btn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="1.5"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:text="@string/call_mode"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/copy_btn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:text="@string/copy"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/resend_btn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="2dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:text="@string/resend"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</LinearLayout>

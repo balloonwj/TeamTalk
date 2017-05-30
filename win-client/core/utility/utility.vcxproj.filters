@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Project Files">
+      <UniqueIdentifier>{f25a53ea-9185-4bc7-8e7e-0095cd659011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API">
+      <UniqueIdentifier>{9cd4a2d5-82cc-4965-8722-891bc6640f94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{54871609-8514-4f45-a700-e15bb333ce30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Json">
+      <UniqueIdentifier>{450ebbf4-7b29-455a-a217-f13d3021faf6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utility.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utilCommonAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CppSQLite3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Multilingual.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TTThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\json\src\lib_json\json_reader.cpp">
+      <Filter>Source Files\Json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\json\src\lib_json\json_value.cpp">
+      <Filter>Source Files\Json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\src\json\src\lib_json\json_writer.cpp">
+      <Filter>Source Files\Json</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IniOperation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utilStrCodingAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utility.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\utility\utilityDll.h">
+      <Filter>Project Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\utility\utilCommonAPI.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\utility\CppSQLite3.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\utility\Multilingual.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\json\include\json\assertions.h">
+      <Filter>Source Files\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\json\include\json\autolink.h">
+      <Filter>Source Files\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\json\include\json\config.h">
+      <Filter>Source Files\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\json\include\json\features.h">
+      <Filter>Source Files\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\json\include\json\forwards.h">
+      <Filter>Source Files\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\json\include\json\json.h">
+      <Filter>Source Files\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\json\include\json\reader.h">
+      <Filter>Source Files\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\json\include\json\value.h">
+      <Filter>Source Files\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\json\include\json\writer.h">
+      <Filter>Source Files\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\json\src\lib_json\json_batchallocator.h">
+      <Filter>Source Files\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\src\json\src\lib_json\json_tool.h">
+      <Filter>Source Files\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\utility\TTThread.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\utility\IniOperation.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\utility\utilStrCodingAPI.h">
+      <Filter>API</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\utility.rc2">
+      <Filter>Project Files</Filter>
+    </None>
+    <None Include="utility.def">
+      <Filter>Project Files</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\json\src\lib_json\json_internalarray.inl">
+      <Filter>Source Files\Json</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\json\src\lib_json\json_internalmap.inl">
+      <Filter>Source Files\Json</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\json\src\lib_json\json_valueiterator.inl">
+      <Filter>Source Files\Json</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\json\src\lib_json\sconscript">
+      <Filter>Source Files\Json</Filter>
+    </None>
+    <None Include="..\..\3rdParty\src\json\src\lib_json\version.h.in">
+      <Filter>Source Files\Json</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="utility.rc">
+      <Filter>Project Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+package IM.Other;
+option java_package = "com.mogujie.tt.protobuf";
+//option java_outer_classname = "MOGUJIEIMMessage";
+option optimize_for = LITE_RUNTIME;
+
+//service id: 0x0007
+
+message IMHeartBeat{
+	//cmd id:  		0x0701
+}
+

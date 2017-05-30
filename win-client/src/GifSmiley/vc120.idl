@@ -1,0 +1,69 @@
+import "C:\Program Files (x86)\Windows Kits\8.1\Include\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\8.1\Include\um\mshtml.idl";
+import "c:\program files (x86)\windows kits\8.1\include\um\dimm.idl";
+import "c:\program files (x86)\windows kits\8.1\include\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\8.1\Include\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\8.1\include\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\8.1\Include\um\mshtmhst.idl";
+import "c:\program files (x86)\windows kits\8.1\include\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\8.1\Include\um\exdisp.idl";
+import "C:\Program Files (x86)\Windows Kits\8.1\Include\um\objsafe.idl";
+
+[
+	object,
+	uuid(CB64102B-8CE4-4A55-B050-131C435A3A3F),
+	dual,
+	helpstring("IGifSmileyCtrl Interface"),
+	pointer_default(unique)
+] 
+#line 31 "f:\\mycode\\teamtalk\\win-client\\src\\gifsmiley\\gifsmileyctrl.h"
+interface IGifSmileyCtrl : IDispatch {
+#line 34 "f:\\mycode\\teamtalk\\win-client\\src\\gifsmiley\\gifsmileyctrl.h"
+	[propput,bindable,requestedit,id(-501)] HRESULT  BackColor([in] OLE_COLOR clr);
+#line 36 "f:\\mycode\\teamtalk\\win-client\\src\\gifsmiley\\gifsmileyctrl.h"
+	[propget,bindable,requestedit,id(-501)] HRESULT  BackColor([out,retval] OLE_COLOR *pclr);
+#line 38 "f:\\mycode\\teamtalk\\win-client\\src\\gifsmiley\\gifsmileyctrl.h"
+	[propget,bindable,requestedit,id(-515)] HRESULT  HWND([out,retval] long *pHWND);
+#line 40 "f:\\mycode\\teamtalk\\win-client\\src\\gifsmiley\\gifsmileyctrl.h"
+	[id(1)] HRESULT  LoadFromFile([in] BSTR bstrFileName);
+	[id(2)] HRESULT  LoadFromFileSized([in] BSTR bstrFileName, [in] INT nWidth, [in] INT nHeight);
+	[id(3)] HRESULT  SetHostWindow([in] long hwndHostWindow, [in] INT nNotyfyMode);
+	[propget,id(4),helpstring("property FileName")] HRESULT  FileName([out,retval] BSTR *pVal);
+	[id(5)] HRESULT  FreeImage();
+};
+
+[
+	object,
+	uuid(0418FB4B-E1AF-4e32-94AD-FF322C622AD3),
+	dual,
+	helpstring("IGifSmileyCtrl2 Interface"),
+	pointer_default(unique)
+] 
+#line 57 "f:\\mycode\\teamtalk\\win-client\\src\\gifsmiley\\gifsmileyctrl.h"
+interface IGifSmileyCtrl2 : IDispatch {
+#line 59 "f:\\mycode\\teamtalk\\win-client\\src\\gifsmiley\\gifsmileyctrl.h"
+	[id(4)] HRESULT  SetHint([in] BSTR bstrHint);
+	[id(5)] HRESULT  GetHint([out,retval] BSTR *bstrHint);
+};
+
+
+[ version(1.0), uuid(AFA51984-FE21-4725-BE31-D16F4EBD0C89), helpstring("GifSmiley 1.0 Type Library") ]
+library GifSmiley
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		control,
+		version(1.0),
+		uuid(DB35DD77-55E2-4905-8075-EB351BB5CBC1),
+		helpstring("GifSmileyCtrl Class")
+	] 
+#line 77 "f:\\mycode\\teamtalk\\win-client\\src\\gifsmiley\\gifsmileyctrl.h"
+	coclass CGifSmileyCtrl {
+		[default]	interface IGifSmileyCtrl2;
+		interface IGifSmileyCtrl;
+	};
+
+}
+

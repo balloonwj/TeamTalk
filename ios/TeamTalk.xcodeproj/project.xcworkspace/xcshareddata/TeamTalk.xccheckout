@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>48AB2CD0-F597-4298-8EE3-26C594CC2242</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TeamTalk</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5018AB18E729C553C78C25196DC0639B4E393143</key>
+		<string>gitlab.mogujie.org:im/franky.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TeamTalk.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5018AB18E729C553C78C25196DC0639B4E393143</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>gitlab.mogujie.org:im/franky.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5018AB18E729C553C78C25196DC0639B4E393143</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5018AB18E729C553C78C25196DC0639B4E393143</string>
+			<key>IDESourceControlWCCName</key>
+			<string>franky</string>
+		</dict>
+	</array>
+</dict>
+</plist>

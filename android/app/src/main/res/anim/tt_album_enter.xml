@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:interpolator="@android:anim/accelerate_interpolator"
+
+    android:fromYDelta="100%"
+
+    android:toYDelta="0%"
+
+    android:duration="300">
+
+</translate>
+-->
+
+
+<!-- 上下滑入式 -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <translate
+        android:duration="400"
+        android:fromYDelta="100%"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:toYDelta="0%" >
+    </translate>
+
+<!--     <alpha
+        android:duration="300"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" /> -->
+
+</set>

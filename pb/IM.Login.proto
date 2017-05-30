@@ -1,0 +1,112 @@
+package IM.Login;
+import "IM.BaseDefine.proto";
+option java_package = "com.mogujie.tt.protobuf";
+//option java_outer_classname = "MOGUJIEIMMessage";
+option optimize_for = LITE_RUNTIME;
+
+//service id:	0x0001
+
+message IMMsgServReq{
+	//cmd id:		0x0101
+}
+
+message IMMsgServRsp{
+	//cmd id:		0x0102
+	required IM.BaseDefine.ResultType result_code = 1;
+	optional string prior_ip = 2;
+	optional string backip_ip = 3; 
+	optional uint32 port = 4;
+}
+
+message IMLoginReq{
+	//cmd id:		0x0103
+	required string user_name = 1;
+	required string password = 2;
+	required IM.BaseDefine.UserStatType online_status = 3;
+	required IM.BaseDefine.ClientType client_type = 4;
+	optional string client_version = 5;
+}
+
+message IMLoginRes{
+	//cmd id:		0x0104
+	required uint32 server_time = 1;
+	required IM.BaseDefine.ResultType result_code = 2;
+	optional string result_string = 3;
+	optional IM.BaseDefine.UserStatType online_status = 4;
+	optional IM.BaseDefine.UserInfo user_info = 5;
+}
+
+message IMLogoutReq{
+	//cmd id:		0x0105
+}
+
+message IMLogoutRsp{
+	//cmd id:		0x0106
+	required uint32 result_code = 1;
+}
+
+message IMKickUser{
+	//cmd id:		0x0107
+	required uint32 user_id = 1;
+	required IM.BaseDefine.KickReasonType kick_reason = 2;
+}
+
+message IMDeviceTokenReq{
+	//cmd id:		0x0108
+	required uint32 user_id = 1;
+	required string device_token = 2;
+	optional IM.BaseDefine.ClientType client_type = 3;
+	optional bytes attach_data = 20;
+}
+
+message IMDeviceTokenRsp{
+	//cmd id: 		0x0109
+	required uint32 user_id = 1;
+	optional bytes attach_data = 20;
+}
+
+//只给移动端请求
+message IMKickPCClientReq{
+	//cmd id:		0x010a
+	required uint32 user_id = 1;
+}
+
+message IMKickPCClientRsp{
+	//cmd id: 		0x010b
+	required uint32 user_id = 1;
+	required uint32 result_code = 2;
+}
+
+
+// 一旦设置以后，22:00 -- 07:00不发送
+message IMPushShieldReq {
+    //cmd id:			0x010c
+    required uint32 user_id = 1;
+    required uint32 shield_status = 2;// 1:开启，0：关闭
+    optional bytes attach_data = 20;  // 服务端用，客户端不用设置
+}
+
+message IMPushShieldRsp {
+    //cmd id:			0x010d
+    required uint32 user_id = 1;
+    required uint32 result_code = 2;			// 值： 0:successed 1:failed
+    optional uint32 shield_status = 3;          // 值： 如果result_code值为0(successed)，则shield_status值设置， 1:开启， 0:关闭
+
+    optional bytes attach_data = 20;            // 服务端用，客户端不用设置
+}
+
+// 如果用户重新安装app，第一次启动登录成功后，app主动查询
+// 服务端返回IMQueryPushShieldRsp
+message IMQueryPushShieldReq {
+    //cmd id:			0x010e
+    required uint32 user_id = 1;
+    optional bytes attach_data = 20;// 服务端用，客户端不用设置
+}
+
+message IMQueryPushShieldRsp {
+    //cmd id:			0x010f
+    required uint32 user_id = 1;
+    required uint32 result_code = 2;			// 值： 0:successed 1:failed
+    optional uint32 shield_status = 3;          // 值： 如果result_code值为0(successed)，则shield_status值设置， 1:开启， 0:关闭
+    optional bytes attach_data = 20;
+}

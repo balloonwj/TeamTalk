@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+  <ListContainerElement name="ListCreatFromItem">
+    <HorizontalLayout>
+      <VerticalLayout name="logo_container" width="30" padding="7,5,0,0">
+        <Control name="logo" width="30" height="30" />
+      </VerticalLayout>
+      <VerticalLayout padding="6,0,0,0" >
+        <HorizontalLayout padding="0,2,0,0">
+          <Label name="nickname" bordersize="0" width="60" textcolor="#FF000000" disabledtextcolor="#FF808080" />
+        </HorizontalLayout>
+      </VerticalLayout>
+    </HorizontalLayout>
+  </ListContainerElement>
+</Window>

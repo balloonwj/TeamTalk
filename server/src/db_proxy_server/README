@@ -1,0 +1,8 @@
+prepare before compile the server
+1. install MySQL client library in /usr/local/mysql/
+	add /usr/local/mysql/bin to $PATH
+2. install Redis client library 
+	git clone https://github.com/redis/hiredis.git
+	cd hiredis
+	make 
+	sudo make install

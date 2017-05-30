@@ -1,0 +1,43 @@
+﻿Build started 2017/5/15 22:24:49.
+     1>Project "F:\mycode\TeamTalk\win-client\core\utility\utility.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\ /I"F:\mycode\TeamTalk\win-client\solution\..\include" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\include" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src\\" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src\json\include\\" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _USRDLL /D UTILITY_DLL /D _CRT_SECURE_NO_WARNINGS /D JSON_DLL_BUILD /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\utility.pch" /Fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\\" /Fd"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\ /I"F:\mycode\TeamTalk\win-client\solution\..\include" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\include" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src\\" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src\json\include\\" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _USRDLL /D UTILITY_DLL /D _CRT_SECURE_NO_WARNINGS /D JSON_DLL_BUILD /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\\" /Fd"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\3rdParty\src\json\src\lib_json\json_reader.cpp ..\..\3rdParty\src\json\src\lib_json\json_value.cpp ..\..\3rdParty\src\json\src\lib_json\json_writer.cpp
+         json_writer.cpp
+         json_value.cpp
+         json_reader.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\ /I"F:\mycode\TeamTalk\win-client\solution\..\include" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\include" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src\\" /I"F:\mycode\TeamTalk\win-client\solution\..\3rdParty\src\json\include\\" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _USRDLL /D UTILITY_DLL /D _CRT_SECURE_NO_WARNINGS /D JSON_DLL_BUILD /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\utility.pch" /Fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\\" /Fd"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CppSQLite3.cpp IniOperation.cpp md5.cpp Multilingual.cpp TTThread.cpp utilCommonAPI.cpp utility.cpp utilStrCodingAPI.cpp
+         utilStrCodingAPI.cpp
+         utility.cpp
+         utilCommonAPI.cpp
+         TTThread.cpp
+         Multilingual.cpp
+         md5.cpp
+         IniOperation.cpp
+         CppSQLite3.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /I"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\\" /nologo /fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\utility.res" utility.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\utility.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\..\3rdParty\lib /LIBPATH:"F:\mycode\TeamTalk\win-client\solution\\..\lib\Debug" sqlite3.lib network.lib mfcs120ud.lib MSVCRTD.lib Netapi32.lib /NODEFAULTLIB:MSVCRTD.lib /NODEFAULTLIB:mfcs120ud.lib /DEF:".\utility.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\utility.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\mycode\TeamTalk\win-client\solution\..\lib\Debug\utility.lib" /MACHINE:X86 /DLL "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\utility.res"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\json_reader.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\json_value.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\json_writer.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\CppSQLite3.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\IniOperation.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\md5.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\Multilingual.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\stdafx.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\TTThread.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\utilCommonAPI.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\utility.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\utility_Debug\utilStrCodingAPI.obj"
+            Creating library F:\mycode\TeamTalk\win-client\solution\..\lib\Debug\utility.lib and object F:\mycode\TeamTalk\win-client\solution\..\lib\Debug\utility.exp
+         utility.vcxproj -> F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\utility.dll
+     1>Done Building Project "F:\mycode\TeamTalk\win-client\core\utility\utility.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:13.31

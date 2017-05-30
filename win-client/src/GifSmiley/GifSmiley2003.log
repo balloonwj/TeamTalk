@@ -1,0 +1,83 @@
+﻿Build started 2017/5/15 22:24:35.
+     1>Project "F:\mycode\TeamTalk\win-client\src\GifSmiley\GifSmiley2003.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _USRDLL /D _ATL_ATTRIBUTES /D _ATL_DLL /D _UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\GifSmiley_Debug\GifSmiley.pch" /Fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\GifSmiley_Debug\\" /Fd"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\GifSmiley_Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _USRDLL /D _ATL_ATTRIBUTES /D _ATL_DLL /D _UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\GifSmiley_Debug\\" /Fd"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\GifSmiley_Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GifSmiley.cpp GifSmileyCtrl.cpp mAniImage.cpp
+         GifSmiley.cpp
+         GifSmileyCtrl.cpp
+         mAniImage.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /l"0x0409" /I"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\GifSmiley_Debug\\" /nologo /fo"F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\GifSmiley_Debug\GifSmiley.res" GifSmiley.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\GifSmiley.dll" /INCREMENTAL:NO /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\GifSmiley.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\mycode\TeamTalk\win-client\solution\..\lib\Debug\GifSmiley.lib" /MACHINE:X86 /SAFESEH /DLL "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\GifSmiley_Debug\GifSmiley.res"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\GifSmiley_Debug\GifSmiley.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\GifSmiley_Debug\GifSmileyCtrl.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\GifSmiley_Debug\mAniImage.obj"
+         "F:\mycode\TeamTalk\win-client\solution\\..\obj\Debug\GifSmiley_Debug\stdafx.obj"
+     1>GifSmiley.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+            Creating library F:\mycode\TeamTalk\win-client\solution\..\lib\Debug\GifSmiley.lib and object F:\mycode\TeamTalk\win-client\solution\..\lib\Debug\GifSmiley.exp
+         Microsoft (R) 32b/64b MIDL Compiler Version 8.00.0603 
+         Copyright (c) Microsoft Corporation. All rights reserved.
+         Processing .\vc120.idl
+         vc120.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\prsht.idl
+         prsht.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\wtypes.idl
+         wtypes.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\wtypesbase.idl
+         wtypesbase.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h
+         basetsd.h
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\guiddef.h
+         guiddef.h
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\mshtml.idl
+         mshtml.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\ocidl.idl
+         ocidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\oleidl.idl
+         oleidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\objidl.idl
+         objidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\unknwn.idl
+         unknwn.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\oaidl.idl
+         oaidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\servprov.idl
+         servprov.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\urlmon.idl
+         urlmon.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\msxml.idl
+         msxml.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\dimm.idl
+         dimm.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\shtypes.idl
+         shtypes.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\dispex.idl
+         dispex.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\dxgitype.idl
+         dxgitype.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\dxgiformat.idl
+         dxgiformat.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\mshtmhst.idl
+         mshtmhst.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\docobj.idl
+         docobj.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\exdisp.idl
+         exdisp.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\objsafe.idl
+         objsafe.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\oaidl.acf
+         oaidl.acf
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\ocidl.acf
+         ocidl.acf
+         GifSmiley2003.vcxproj -> F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\GifSmiley.dll
+       PostBuildEvent:
+         Regsvr32.exe /s "F:\mycode\TeamTalk\win-client\solution\\..\bin\teamtalk\Debug\GifSmiley.dll"
+         :VCEnd
+     1>Done Building Project "F:\mycode\TeamTalk\win-client\src\GifSmiley\GifSmiley2003.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:25.17

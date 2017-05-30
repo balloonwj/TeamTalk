@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 消息页面复制 -->
+    <string name="call_mode">听筒模式</string>
+    <string name="speaker_mode">扬声器模式</string>
+    <string name="copy">复制</string>
+    <string name="resend">重发</string>
+    <string name="send_message">发表</string>
+    <string name="title_activity_pick_photo">PickPhotoActivity</string>
+    <string name="send">发送</string>
+    <string name="preview">预览</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="exit">退出</string>
+    <string name="thumb_remove">清理图片缓存</string>
+    <string name="notify_setting">通知设置</string>
+    <string name="thumb_remove_finish">清理完成</string>
+    <string name="title_activity_preview">PreviewActivity</string>
+    <string name="request_login_faild">请求登陆消息服务器失败</string>
+    <string name="sdcard_unavaluable">请检查存储卡是否可用</string>
+    <string name="image_path_unavaluable">图片路径无效</string>
+    <string name="disconnected">连接已断开</string>
+    <string name="requesting">正在获取信息...</string>
+    <string name="connecting">正在连接...</string>
+    <string name="chat">发信息</string>
+    <string name="contact_all">全部</string>
+    <string name="contact_department">部门</string>
+    <string name="top_left_back">返回</string>
+    <string name="group_name_tip">群聊名称</string>
+    <string name="chat_failed_search">未搜索到匹配的结果</string>
+    <string name="save">保存</string>
+    <string name="chat_detail">聊天详情</string>
+    <string name="choose_contact">选择联系人</string>
+    <string name="switch_login_server">切换登陆服务器</string>
+    <string name="switch_login_server_title">输入登陆服务器地址</string>
+    
+
+</resources>

@@ -1,0 +1,159 @@
+package IM.Buddy;
+import "IM.BaseDefine.proto";
+option java_package = "com.mogujie.tt.protobuf";
+//option java_outer_classname = "MOGUJIEIMMessage";
+option optimize_for = LITE_RUNTIME;
+
+//service id   0x0002
+
+message IMRecentContactSessionReq{
+	//cmd id:		0x0201
+	required uint32 user_id = 1;
+	required uint32 latest_update_time = 2;
+	optional bytes attach_data = 20;
+}
+
+message IMRecentContactSessionRsp{
+	//cmd id:		0x0202
+	required uint32 user_id = 1;
+	repeated IM.BaseDefine.ContactSessionInfo contact_session_list = 2;
+	optional bytes attach_data = 20;
+}
+
+message IMUserStatNotify{
+	//cmd id:		0x0203
+	required IM.BaseDefine.UserStat user_stat = 1;
+}
+
+message IMUsersInfoReq{
+	//cmd id:		0x0204
+	required uint32 user_id = 1;
+	repeated uint32 user_id_list = 2;
+	optional bytes attach_data = 20;
+}
+
+message IMUsersInfoRsp{
+	//cmd id:		0x0205
+	required uint32 user_id = 1;
+	repeated IM.BaseDefine.UserInfo user_info_list = 2;
+	optional bytes attach_data = 20;
+}
+
+message IMRemoveSessionReq{
+	//cmd id:		0x0206
+	required uint32 user_id = 1;
+	required IM.BaseDefine.SessionType session_type = 2;
+	required uint32 session_id = 3;
+	optional bytes attach_data = 20;
+}
+
+message IMRemoveSessionRsp{
+	//cmd id:		0x0207
+	required uint32 user_id = 1;
+	required uint32 result_code = 2;
+	required IM.BaseDefine.SessionType session_type = 3;
+	required uint32 session_id = 4;
+	optional bytes attach_data = 20;
+}
+
+message IMAllUserReq{
+	//cmd id:		0x0208
+	required uint32 user_id = 1;
+	required uint32 latest_update_time = 2;
+	optional bytes attach_data = 20;
+}
+
+message IMAllUserRsp{
+	//cmd id:		0x0209
+	required uint32 user_id = 1;
+	required uint32 latest_update_time = 2;
+	repeated IM.BaseDefine.UserInfo user_list = 3;		
+	optional bytes attach_data = 20;
+}
+
+message IMUsersStatReq{
+	//cmd id:		0x020a
+	required uint32 user_id = 1;
+	repeated uint32 user_id_list = 2;
+	optional bytes attach_data = 20;
+}
+
+message IMUsersStatRsp{
+	//cmd id:		0x020b
+	required uint32 user_id = 1;
+	repeated IM.BaseDefine.UserStat user_stat_list = 2;
+	optional bytes attach_data = 20;
+}
+
+message IMChangeAvatarReq{
+	//cmd id:		0x020c
+	required uint32 user_id = 1;
+	required string avatar_url = 2;
+	optional bytes attach_data = 20;
+}
+
+message IMChangeAvatarRsp{
+	//cmd id:		0x020d
+	required uint32 user_id = 1;
+	required uint32 result_code = 2;
+	optional bytes attach_data = 20;
+}
+
+//只给移动端通知
+message IMPCLoginStatusNotify{
+	//cmd id:		0x020e
+	required uint32 user_id = 1;
+	required IM.BaseDefine.UserStatType login_stat = 2;
+}
+
+ message IMRemoveSessionNotify{
+ 	//cmd id:		0x020f
+ 	required uint32 user_id = 1;
+	required IM.BaseDefine.SessionType session_type = 2;
+	required uint32 session_id = 3;
+ }
+
+message IMDepartmentReq{
+	//cmd id:		0x0210
+	required uint32 user_id = 1;
+	required uint32 latest_update_time = 2;
+	optional bytes attach_data = 20;
+}
+
+message IMDepartmentRsp{
+	//cmd id:		0x0211
+	required uint32 user_id = 1;
+	required uint32 latest_update_time = 2;
+	repeated IM.BaseDefine.DepartInfo dept_list = 3;
+	optional bytes attach_data = 20;
+}
+
+message IMAvatarChangedNotify {
+
+    //cmd id:		0x02012
+    required uint32 changed_user_id = 1;      // 谁修改了avatar
+    required string avatar_url = 2;           //
+}
+
+message IMChangeSignInfoReq{
+   //cmd id:		0x0213
+
+    required uint32 user_id = 1;
+    required string sign_info = 2;
+    optional bytes attach_data = 20;
+}
+
+message IMChangeSignInfoRsp{
+    //cmd id:		0x0214
+    required uint32 user_id = 1;
+    required uint32 result_code = 2;
+    optional string sign_info = 3;      // 此字段服务端用，客户端直接忽略
+    optional bytes attach_data = 20;
+}
+
+    // 个性签名修改通知（广播）
+message IMSignInfoChangedNotify {
+    //cmd id:		0x0215
+    required uint32 changed_user_id = 1;     // 谁修改了个性签名
+    required string sign_info = 2;
+}
