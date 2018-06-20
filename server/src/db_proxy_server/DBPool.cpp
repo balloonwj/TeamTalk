@@ -229,7 +229,7 @@ int CDBConn::Init()
 	mysql_options(m_mysql, MYSQL_OPT_RECONNECT, &reconnect);
 	mysql_options(m_mysql, MYSQL_SET_CHARSET_NAME, "utf8mb4");
 
-	if (!mysql_real_connect(m_mysql, m_pDBPool->GetDBServerIP(), m_pDBPool->GetUsername(), ""/*m_pDBPool->GetPasswrod()*/,
+	if (!mysql_real_connect(m_mysql, m_pDBPool->GetDBServerIP(), m_pDBPool->GetUsername(), m_pDBPool->GetPasswrod(),
 			m_pDBPool->GetDBName(), m_pDBPool->GetDBServerPort(), NULL, 0)) {
 		log("mysql_real_connect failed: %s", mysql_error(m_mysql));
 		return 2;
